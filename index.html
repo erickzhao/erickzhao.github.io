@@ -1,45 +1,2756 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Erickzhao.GitHub.io by erickzhao</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
 
-  </head>
-  <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/erickzhao">View On GitHub</a></li>
-        </nav>
-      </div><!-- end header -->
+body .markdown-body
+{
+  padding: 30px;
+}
 
-    <div class="wrapper">
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
 
-      <section>
-        <div id="title">
-          <h1>Erickzhao.GitHub.io</h1>
-          <p>site test</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/erickzhao">erickzhao</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
 
-        <p>hello</p>
-      </section>
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
 
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
-  </body>
-</html>
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>README</title></head><body><article class="markdown-body"><h2 id="grade-school-algorithms"><a name="user-content-grade-school-algorithms" href="#grade-school-algorithms" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Grade School Algorithms</h2>
+<ul>
+<li>Unary addition: taking a set A and a set B, their sum C will be the union of A and B. You have to count everything out individually.</li>
+<li>Unary multiplication: taking a set A and a set B, their product B will be the substition of each element of set A by a set B&rsquo;.</li>
+</ul>
+<p>Unary representation is quite inefficient. It works well for addition of small sets because it&rsquo;s easy to visualize, but once sets get too large, your representation will contain too many characters.</p>
+<h4 id="algorithm-1-addition"><a name="user-content-algorithm-1-addition" href="#algorithm-1-addition" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Algorithm 1: Addition</h4>
+<p><strong>Addition (base 10): Add two <em>N</em> digit numbers <em>a</em> and <em>b</em> represented by an array of digits.</strong></p>
+<pre><code class="java">carry = 0
+for i = 0 to N-1 do 
+    r[i]  &lt;-- R[a[i],b[i],carry] // only keeps track of the right-most digit of the sum.
+    carry &lt;-- L[a[i],b[i],carry] // only keeps track of the left-most digit of the sum.
+
+    /* 
+    Note that:
+    R[a[i],b[i],carry] = (a[i]+b[i]+carry) % 10
+    L[a[i],b[i],carry] = (a[i]+b[i]+carry) / 10
+    */
+
+end for
+r[N] &lt;-- carry
+;
+</code></pre>
+
+<p>Example:</p>
+<pre><code>2343+4519=?
+
+N = 4
+a[]:   [2 3 4 5]
+b[]:   [4 5 1 9]
+r[]: [0 0 0 0 0] 
+/*r[] has one more index because adding 2 numbers of equal magnitude 
+can only lead to a result that's 1 magnitude higher.*/
+
+The first iteration of the loop would look like this:
+    r[0] = R[a[0],b[0],0] = (5 + 9 + 0) % 10 = 14 % 10 = 4
+    carry = L[a[0],b[0],0] = 14 / 10 = 1
+
+So your r[] would be updated to look like so:        [0 0 0 0 4]
+Running your iteration would lead to a final r[] of: [0 6 8 6 4]
+</code></pre>
+<p>Generalization to any base B:</p>
+<pre><code>R[a[i],b[i],carry] = (a[i]+b[i]+carry) % B
+L[a[i],b[i],carry] = (a[i]+b[i]+carry) / B
+</code></pre>
+<p>A base 8 example:</p>
+<pre><code> (1205)_8
++ (736)_8
+---------
+ (2143)_8
+
+ Which is equal to 1123_X (X being the symbol for 10)
+</code></pre>
+<h4 id="algorithm-2-multiplication"><a name="user-content-algorithm-2-multiplication" href="#algorithm-2-multiplication" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Algorithm 2: Multiplication</h4>
+<p><strong>Multiplication (base 10): Multiply two <em>N</em> digit numbers <em>a</em> and <em>b</em> represented by an array of digits.</strong></p>
+<pre><code class="java">// Part 1: actually multiplying
+
+for j = 0 to N - 1 do 
+    carry &lt;-- 0
+    for i = 0 to N - 1 do //Looking at all digits from 1st number multiplied by 1 digit of the 2nd number
+
+        prod        &lt;-- (a[i] * b[j] + carry)
+        tmp[j][i+j] &lt;-- prod % 10 //keeps least significant digit
+        carry       &lt;-- prod / 10 //drops least significant digit
+
+    end for
+    temp[j][N+j] &lt;-- carry 
+end for 
+
+// Part 2: summing all the products together
+
+carry &lt;-- 0 
+
+for i = 0 to 2 * N - 1 do
+    sum &lt;-- carry
+    for j = 0 to N - 1 do
+        sum &lt;-- sum + tmp[j][i]
+    end for
+    r[i]  &lt;-- sum % 10
+    carry &lt;-- sum / 10
+end for
+
+r[2*N] &lt;-- carry;
+
+</code></pre>
+
+<p>Generalizing for any base B:</p>
+<pre><code>Replace all modulo and division operations by B instead of 10.
+</code></pre>
+<h2 id="analysis-of-algorithms"><a name="user-content-analysis-of-algorithms" href="#analysis-of-algorithms" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Analysis of Algorithms</h2>
+<p>We analyze the space and time required to run an algorithm. The space used is less important than time. We do not analyze the time required to run each possible combination of inputs. This would take into account too many cases and would include too many details, rendering our analysis useless.</p>
+<p>In reality, we analyze time as a function of the size of the inputs (which is the parameter <strong>N</strong>). For all inputs of the same size, we would have a precise bound.</p>
+<h4 id="analysis-of-addition"><a name="user-content-analysis-of-addition" href="#analysis-of-addition" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Analysis of Addition</h4>
+<pre><code>carry = 0  //CONSTANT TIME
+
+for i = 0 to N-1 do //LOOP = LINEAR TIME
+    r[i]  &lt;-- (a[i]+b[i]+carry) % 10 //CONSTANT TIME
+    carry &lt;-- (a[i]+b[i]+carry) / 10 //CONSTANT TIME
+end for
+
+r[N] &lt;-- carry //CONSTANT TIME
+
+Given c, c', c''
+
+c    &gt;= T("carry &lt;-- 0")
+c''  &gt;= T("r[N]&lt;--carry")
+c'   &gt;= T("r[i]..., carry"")
+c'*N &gt;= T("for...")
+
+
+
+Time(N) &lt;= c + c'N + c'' &lt;= c_1 + c_2 * N
+Time(N) is O(N).
+</code></pre>
+<p>The constants c<sub>1</sub> and c<sub>2</sub> depend on the hardware that you run the algorithm on. The important thing to take home is that this algorithm has linear time, meaning that doubling the inputs will double time. This statement becomes more true for larger input sets.</p>
+<h4 id="analysis-of-multiplication"><a name="user-content-analysis-of-multiplication" href="#analysis-of-multiplication" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Analysis of Multiplication</h4>
+<pre><code>// Part 1: actually multiplying
+
+for j = 0 to N - 1 do                         //LINEAR TIME
+    carry &lt;-- 0                               //CONSTANT TIME
+    for i = 0 to N - 1 do                     //LINEAR TIME
+
+        prod        &lt;-- (a[i] * b[j] + carry) //CONSTANT TIME
+        tmp[j][i+j] &lt;-- prod % 10             //CONSTANT TIME
+        carry       &lt;-- prod / 10             //CONSTANT TIME
+
+    end for
+    temp[j][N+j]                              //CONSTANT TIME
+end for
+
+// Part 2: summing all the products together
+
+carry &lt;-- 0
+
+for i = 0 to 2 * N - 1 do                     //LINEAR TIME
+    sum &lt;-- carry                             //CONSTANT TIME
+    for j = 0 to N - 1 do                     //LINEAR TIME
+        sum &lt;-- sum + tmp[j][i]               //CONSTANT TIME
+    end for
+    r[i]  &lt;-- sum % 10                        //CONSTANT TIME
+    carry &lt;-- sum / 10                        //CONSTANT TIME
+end for
+r[2*N] &lt;-- carry                              //CONSTANT TIME
+
+Time(N) = c_1 + c_2*N + c_3*N^2
+Time(N) is O(N^2)
+</code></pre>
+<p>Since both parts of the algorithm have two nested for loops with linear time, they will be of quadratic time (since N x N = N<sup>2</sup>).</p>
+<h4 id="big-o-notation"><a name="user-content-big-o-notation" href="#big-o-notation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Big O Notation</h4>
+<p>This notation drops all lower exponents and constants in Time(N).<br />
+For example, addition is O(N) and multiplication is O(N<sup>2</sup>).</p>
+<p>Today, the best multiplication algorithm has a running time of O (N x 2<sup>log<em> N</sup>). This is very close to linear time, as the iterated logarithm (log</em>) function increases incredibly slowly. Of course, this makes for a much more sophistic algorithm.</p>
+<h1 id="bases-and-binary-representation"><a name="user-content-bases-and-binary-representation" href="#bases-and-binary-representation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Bases and Binary Representation</h1>
+<h4 id="base-8-to-base-2"><a name="user-content-base-8-to-base-2" href="#base-8-to-base-2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Base 8 to Base 2</h4>
+<p>(2143)<sub>8</sub> = 2 x 8<sup>3</sup> + 1 x 8<sup>2</sup> + 4 x 8<sup>1</sup> + 3 x 8<sup>0</sup></p>
+<p>Since 8 = 2<sup>3</sup>, you can simply convert the digit in base 8 to its binary representation. Each digit of 8 is equivalent to three binary digits. Thus, the conversion can be done by only local operations.</p>
+<p>(2143)<sub>8</sub> = (010 001 100 011)<sub>2</sub> = (010001100011)<sub>2</sub></p>
+<p>An equivalent process is done to convert binary numbers to the much more readable hexadecimal base unit.</p>
+<h4 id="base-2-to-base-10"><a name="user-content-base-2-to-base-10" href="#base-2-to-base-10" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Base 2 to Base 10</h4>
+<p>(10010010101010101)<sub>2</sub> = (75093)<sub>10</sub></p>
+<p>We take each power of 2 in base 10, multiply them by their binary digit, and sum the digits up.</p>
+<pre><code>Powers of 2 in base 10:
+
+2 ** 0  = 1     |   2 ** 11 = 2'048 
+2 ** 1  = 2     |   2 ** 12 = 4'096
+2 ** 2  = 4     |   2 ** 13 = 8'192
+2 ** 3  = 8     |   2 ** 14 = 16'384
+2 ** 4  = 16    |   2 ** 15 = 32'768 
+2 ** 5  = 32    |   2 ** 16 = 65'536
+2 ** 6  = 64    |   2 ** 17 = 131'072
+2 ** 7  = 128   |   2 ** 18 = 262'144
+2 ** 8  = 256   |   2 ** 19 = 524'288
+2 ** 9  = 512   |   2 ** 20 = 1'048'576
+2 ** 10 = 1'024 |   2 ** 21 = 2'097'152
+</code></pre>
+<p>This process is special to base 2 because we only have two options for each digit: included or excluded from the sum. Doing the same process in the other direction much more complicated operations, since include/exclude aren&rsquo;t the only operations. You can have from 0 to 9 times of each digit.</p>
+<h4 id="algorithm-3-convert-integer-to-binary"><a name="user-content-algorithm-3-convert-integer-to-binary" href="#algorithm-3-convert-integer-to-binary" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Algorithm 3: Convert integer to binary</h4>
+<p><strong>Input: a number <em>n</em></strong></p>
+<p><strong>Output: the number <em>m</em> expressed in base 2 using a bit array <em>b[]</em></strong></p>
+<pre><code>i &lt;-- 0
+while m &gt; 0 do
+    b[i] &lt;-- m%2
+    m    &lt;-- m/2
+    i    &lt;-- i+1
+end while
+</code></pre>
+<p>Example:</p>
+<pre><code>75093 = 0b10101010111001000
+
+/2    %2  | /2    %2
+----- --  | ----- --
+37546  1  | 73     1
+18773  0  | 36     1
+9386   1  | 18     0
+4693   0  | 9      0
+2346   1  | 4      1
+1173   0  | 2      0
+586    1  | 1      0
+293    0  | 0      0
+146    1  |
+</code></pre>
+<p>Why does it work? </p>
+<pre><code>Note how any number can be represented as:
+m = b * (m/b) + m%b
+
+Since integer division of a number drops the remainder. When you add the remainder back, you get the original number again.
+</code></pre>
+<p>Generalizing for Base B:</p>
+<pre><code>Replace 2 by B.
+</code></pre>
+<h4 id="binary-representation-in-computers"><a name="user-content-binary-representation-in-computers" href="#binary-representation-in-computers" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Binary representation in computers</h4>
+<p>Computer memory does not expand or retract depending on the size of the data, so we always work with a fixed size of memory. The smallest unit of memory is a <em>byte</em>. A byte contains 8 bit registers for memory. </p>
+<p>Data representation on a byte is circular because adding to the maximum value of (11111111)<sub>2</sub> resets the number to 00000000 (which is equivalent to all operations being modulo 256).</p>
+<ul>
+<li>Unsigned representation: Each byte contains a positive value from 0 to 255 (2<sup>8</sup>-1).</li>
+<li>Signed representation: Each byte contains a value from -128(-2<sup>7</sup>) to 127(2<sup>7</sup>-1). The greatest bit is used to tell the sign of the number.</li>
+</ul>
+<p>Here is a table of binary numbers:</p>
+<pre><code>Binary     Signed   Unsigned
+--------   ------   --------
+00000000   0        0
+00000001   1        1
+.          .        .
+.          .        .
+01111111   127      127
+10000000   128     -128
+10000001   129     -127
+.          .        .
+.          .        .
+11111111   255     -1
+</code></pre>
+<p>On modern computers, we use more than one byte to represent our numbers. Thus, the bounds of our numbers would change depending on the amount of bits allocated to a number.</p>
+<p>Interesting example of the rollover:</p>
+<p><pre><code class="java">
+//This loop runs to infinity!
+for (short s = 32767;s&lt;32768;s++){
+    System.out.println(s);
+}
+    /*Output:
+
+     32767
+    -32768
+    -32767
+       ...
+         0
+         1
+       ...
+     32766
+     32767
+       ...
+    */
+</code></pre><br />
+In our computer memory, we store the location of our bytes in addresses. Address size varies depending on the number of bits of your computer.</p>
+<h4 id="how-this-works-in-java"><a name="user-content-how-this-works-in-java" href="#how-this-works-in-java" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>How this works in Java</h4>
+<p>In Java, we use different amounts of bytes for different primitive types.</p>
+<pre><code>Boolean 00000000                                (1 byte)
+
+Byte    00000000                                (1 byte)
+
+Char    00000000                                (1 byte)
+
+Short   00000000 00000000                       (2 bytes)
+
+Int     00000000 00000000 00000000 000000000    (4 bytes)
+
+Long    00000000 00000000 00000000 000000000    (8 bytes)
+        00000000 00000000 00000000 000000000
+
+Float   00000000 00000000 00000000 000000000    (4 bytes)
+
+Double  00000000 00000000 00000000 000000000    (8 bytes)
+        00000000 00000000 00000000 000000000
+</code></pre>
+<p>The address keeps track of the first byte, since the bytes used are adjacent to each other. For instance, the address of an integer will only track the first byte and will automatically know that the other three bytes are adjacent.</p>
+<h1 id="array-algorithms"><a name="user-content-array-algorithms" href="#array-algorithms" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Array Algorithms</h1>
+<h4 id="algorithm-4-insertion-sort"><a name="user-content-algorithm-4-insertion-sort" href="#algorithm-4-insertion-sort" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Algorithm 4: Insertion Sort</h4>
+<p><strong>Input: an array a[] with N elements that can be compared (&lt;,=,&gt;).</strong></p>
+<p><strong>Output: the array a[] containing the same elements in increasing order.)</strong></p>
+<pre><code>for k = 1 to N-1 do
+    tmp &lt;-- a[k]
+    i   &lt;-- k
+    while (i&gt;0) &amp; (tmp&lt;a[i-1]) do
+        a[i] &lt;-- a[i-1]
+        i    &lt;-- i-1
+    end while
+    a[i] = tmp
+end for
+</code></pre>
+<p>Example:</p>
+<pre><code>a:[11|(13),2,5,21,99,12,51] tmp:13 //13 belongs after 11 so we don't move it
+a:[11,13|(2),5,21,99,12,51] tmp:2  //2 is smaller than 11 &amp; 13, so it gets shifted
+a:[2,11,13|(5),21,99,12,51] tmp:5  //5 goes between 2 and 11
+a:[2,5,11,13|(21),99,12,51] tmp:21 //21 is already sorted
+a:[2,5,11,13,21|(99),12,51] tmp:99 //99 already sorted
+a:[2,5,11,13,21,99|(12),51] tmp:12 //12 goes under 13
+a:[2,5,11,12,13,21,99|(51)] tmp:51 //51 goes between 21 and 99
+
+a:[2,5,11,12,13,21,51,99] //The array is now sorted.
+</code></pre>
+<h4 id="analysis-of-insertion-sort"><a name="user-content-analysis-of-insertion-sort" href="#analysis-of-insertion-sort" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Analysis of Insertion Sort</h4>
+<p>The inner while loop will take between constant and linear time depending on how sorted the algorithm is. For example, if the array is already sorted, then the while loop will only have one iteration. If the array is sorted in reverse, then we will have the worst case instead.</p>
+<p>Since the outside for loops runs in linear time, the algorithm runs from linear to quadratic time.</p>
+<p>Best case: Ω(N) = N<br />
+Worst case: O(N) = N<sup>2</sup></p>
+<h1 id="linked-lists"><a name="user-content-linked-lists" href="#linked-lists" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Linked Lists</h1>
+<p>A list is an ordered set of elements.</p>
+<p>Adding/removing elements from the beginning of an array is long and time-consuming, because you have to shift all subsequent elements. The same operations performed at the end are a lot easier.</p>
+<p>Rather than an array representation, a linked list would work a lot better. Individual cells in these lists contain both a value and a pointer to the next cell. We lose the nice organization of elements that we have in arrays, but there is information that allows us to chain elements together.</p>
+<p>The advantage of arrays is that you can go to a specific index just by its index number. With linked lists, you need to start from the head or the tail and work from there.</p>
+<p>Singly Linked Lists:</p>
+<pre><code>class SNode{ //an individual node
+    Type        element
+    SNode       next
+}
+
+class SLinkedList{
+    SNode       head;
+    SNode       tail;
+    int         size;
+}
+
+addFirst(newNode){
+    newNode.next = head
+    head = newNode
+    size = size + 1
+}
+
+removeFirst(){
+    //tmp is used to maintain knowledge of the previous head.
+    tmp = head
+    head = head.next
+    tmp.next = null
+    size = size - 1
+}
+
+addLast(newNode){
+    tail.next = newNode
+    tail = tail.next
+    tail.next = null
+}
+
+removeLast(){
+    if (head == tail)
+        head = null
+        tail = null
+        size = 0
+    else
+        tmp = head
+        while (tmp.next != tail){
+            tmp = tmp.next
+        }
+        tmp.next = null
+        tail = tmp
+        size = size - 1
+}
+</code></pre>
+<h4 id="java-generics"><a name="user-content-java-generics" href="#java-generics" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Java Generics</h4>
+<p>A way of writing your code that allows you to specify your type right as you use it. The definition of your class would not depend on which element type you input into it.</p>
+<pre><code>Example: Singly linked lists
+
+class SNode&lt;E&gt;{
+    E           element;
+    SNode&lt;E&gt;    next;
+        :
+}
+
+class SLinkedList&lt;E&gt;{
+    SNode&lt;E&gt;    head;
+    SNode&lt;E&gt;    tail;
+    int         size;
+        :
+}
+</code></pre>
+<h4 id="doubly-linked-lists"><a name="user-content-doubly-linked-lists" href="#doubly-linked-lists" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Doubly Linked Lists</h4>
+<p>Contain a link to the previous node as well as the next node. This helps to make navigating your list easier. The drawback of this is that they take more space. Thus, if you don&rsquo;t need to use the increased functionality of doubly linked lists, you should used singly linked lists instead. In essence, a doubly linked list is like having two singly linked lists going in opposite directions. </p>
+<pre><code>class SNode&lt;E&gt;{
+    E           element;
+    SNode&lt;E&gt;    next;
+    SNode&lt;E&gt;    prev;
+        :
+}
+
+class SLinkedList&lt;E&gt;{
+    SNode&lt;E&gt;    head;
+    SNode&lt;E&gt;    tail;
+    int         size;
+        :
+}
+</code></pre>
+<p>One operation that we consider often is finding an element from a Linked List the same way you would extract the element from an array.</p>
+<pre><code>getNode(i){
+    if (i&lt;size/2){
+        tmp = head;
+        index = 0;
+
+        while (index&lt;i){
+            tmp = tmp.next;
+            index++;
+        }
+    } else{
+        tmp = tail;
+        index = size - 1
+
+        while (index&gt;i){
+            tmp = tmp.prev;
+            index--;
+        }
+    }
+    return tmp;
+}
+</code></pre>
+<p>Another operation is removing a node from a Linked List.</p>
+<pre><code>remove(node){
+    node.prev.next = node.next;
+    node.next.prev = node.prev;
+    size = size - 1;
+}
+</code></pre>
+<p>Note how the above code does not work for the head and tail, because of the lack of next/prev in these nodes. The solution to this is to add a dummy head and a dummy tail to your list structure. (Another solution would be to test for if the node is a head or tail.)</p>
+<pre><code>class DLinkedList&lt;E&gt;{
+    DNode&lt;E&gt;        dummyHead;
+    DNode&lt;E&gt;        dummyTail;
+    int             size;
+}
+</code></pre>
+<h4 id="arrays-vs-linked-lists"><a name="user-content-arrays-vs-linked-lists" href="#arrays-vs-linked-lists" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Arrays vs. Linked Lists</h4>
+<pre><code>.               array           S.L.L.          D.L.L.
+.               -----           ------          ------
+addFirst        N               1               1
+removeFirst     N               1               1
+addLast         1               1               1
+removeLast      1               N               1
+getNode(i)      1               i               min(i, N/2 - i)
+</code></pre>
+<h4 id="linked-lists-operations"><a name="user-content-linked-lists-operations" href="#linked-lists-operations" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Linked Lists operations</h4>
+<pre><code>add(i,element)  //Inserts element into i-th position
+set(i,element)  //Sets the element at the i-th position to a specific value
+remove(i)       //Removes element from i-th position
+get(i)          //Returns the element from i-th position
+clear()         //Removes all elements from the list
+isEmpty()       //Returns a boolean indicating if the list is empty
+size()          //Returns the size of the list
+</code></pre>
+<h4 id="java-linkedlist"><a name="user-content-java-linkedlist" href="#java-linkedlist" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Java LinkedList</h4>
+<ul>
+<li>Implemented as a doubly linked list.</li>
+<li>Node class is private to avoid messing with the data structure itself such that the operations fail.</li>
+</ul>
+<p>Linked list operation speeds:</p>
+<pre><code>add(element)            1
+add(i,element)          n
+set(i,element)          n
+remove(i)               n
+get(i)                  n
+clear()                 1
+isEmpty()               1
+size()                  1
+</code></pre>
+<p>Note how add, set, remove, and get are expensive operations. For instance, if you wanted to print all the elements of a list in order, you would have an O(N<sup>2</sup>) operation. For this reason, you would want to implement some properties of arrays into linked lists, which brings us to&hellip;</p>
+<h4 id="java-arraylist"><a name="user-content-java-arraylist" href="#java-arraylist" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Java ArrayList</h4>
+<ul>
+<li>Implementation using arrays of growing sizes</li>
+<li>Cannot access using a[i] notation</li>
+</ul>
+<p>ArrayLists store the array, the size of the array, and the capacity of the array.<br />
+Adding elements is done by creating a new array with double the capacity and adding the new element inside.<br />
+The cost of doing so is actually <strong>linear</strong>. The extra cost of creating a new array is proportional to the amount of elements already in the array. The charge is constant per element, so the cost is <strong>amortized constant time</strong>.</p>
+<p>To get to an array of 2<sup>k</sup> length, you need to create arrays for all powers of 2 preceding it. The sum of these would actually be 2k.</p>
+<h4 id="linkedlist-vs-arraylist"><a name="user-content-linkedlist-vs-arraylist" href="#linkedlist-vs-arraylist" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>LinkedList vs ArrayList</h4>
+<pre><code>.                       LinkedList      ArrayList
+.                       ----------      ---------
+add(element)            1               1
+add(i,element)          n               n
+set(i,element)          n               1 //more efficient
+remove(i)               n               n
+get(i)                  n               1 //more efficient
+clear()                 1               1
+isEmpty()               1               1
+size()                  1               1
+</code></pre>
+<h1 id="abstract-data-types"><a name="user-content-abstract-data-types" href="#abstract-data-types" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Abstract Data Types</h1>
+<p>An Abstract Data Type (ADT) is an abstraction of a data structure: no coding is involved.</p>
+<p>It specifies:<br />
+<em> What can be stored in it<br />
+</em> What operations can be done on/by it</p>
+<p>There are a lot of formalized and standardized ADTs in Java. They are implemented through an interface.</p>
+<h2 id="stacks"><a name="user-content-stacks" href="#stacks" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Stacks</h2>
+<p>A <strong>stack</strong> is a container of objects athat are inserted and removed accoridng to the last-in-first-out principle.<br />
+Objects can be inserted at any time, but only this least(most recently inserted) object can be removed.<br />
+Inserting an item is known as pushing onto the stack.<br />
+Popping off the stack is synonymous with removing an item.</p>
+<h4 id="methods"><a name="user-content-methods" href="#methods" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Methods</h4>
+<p>Two main methods:</p>
+<ul>
+<li>push(o): Inserts object o onto top of stack.</li>
+<li>pop(): Removes the top object of stack and returns it. If the stack is empty, then an error occurs.</li>
+</ul>
+<p>The following methods should also be defined:</p>
+<ul>
+<li>size(): returns the number of objects in stack</li>
+<li>isEmpty(): returns a boolean indicating if sstack is empty</li>
+<li>top(): returns the top object of the stack, without removing it; if the stack is empty then an error occurs.</li>
+</ul>
+<h4 id="examples"><a name="user-content-examples" href="#examples" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Examples</h4>
+<p>Simple push/pop operations on an empty stack:</p>
+<pre><code>1. push(3)      
+2. push(6)
+3. push(4)
+4. push(1)                          1       5
+5. pop()                        4   4   4   4   4
+6. push(5)                  6   6   6   6   6   6   6
+7. pop()                3   3   3   3   3   3   3   3   
+8. pop()                -   -   -   -   -   -   -   -
+.                       1.  2.  3.  4.  5.  6.  7.  8.
+</code></pre>
+<p>Mathematical operations: </p>
+<pre><code>3 + (4 - x) * 7 + (y - 2 * (2 + x))
+
+                                            (
+                                (       (   (   (   
+                            -   -   -   -   -   -   -
+</code></pre>
+<ol>
+<li>Push an open parenthesis on the stack.</li>
+<li>Keep going until you see another opening parenthesis or a closing parenthesis.</li>
+<li>If you see a closing one, pop the stack. If you see an opening one, you push it onto the stack.</li>
+</ol>
+<p>If the stack contains any objects at the end, it means that something was wrong with the parenthesis matching.</p>
+<p>To actually calculate this operation, you&rsquo;d need two stacks:</p>
+<p><img alt="" src="http://i.imgur.com/VwmZDij.png" /></p>
+<p>When an operator wants to be pushed onto the stack, but has lower priority than the top of the stack, the stack gets popped and the operation is performed on the top of the number stack.</p>
+<p>This process in pseudocode:</p>
+<pre><code>t = gettoken()
+while type(t)!=eol do
+    if type(t)=number then...
+    if type(t)=operator then...
+    if t="(" then...
+    if t=")" then...
+    t=gettoken()
+end while
+
+while not isemptyO() do
+    op=popO()
+    arg2=popA()
+    arg1=popA()
+    pushA(exec(arg1,op,arg2))
+end while
+
+return popA()
+
+//Processing arithmetics
+
+if type(t) == number then pushA(t)
+
+if type(t) == operator then
+    if prio(t) &lt;= prio(topO())
+        then op = popO()
+             arg2 = popA()
+             arg1 = popA()
+             pushA(exec(arg1,op,arg2))
+
+        pushO(t)
+
+if t == "(" then pushO(t)
+
+if t == ")" then
+    op = popO()
+    while op != "(" do
+        arg2 = popA()
+        arg1 = popA()
+        pushA(exec(arg1,op,arg2))
+        op = popO()
+    end while
+</code></pre>
+<p>A bunch of different brackets:</p>
+<pre><code>(   (   [   ]   )   )   [   ]   {   [   ]   }
+
+        [
+    (   (   (                       [
+(   (   (   (   (       [       {   {   {
+-   -   -   -   -   -   -   -   -   -   -   -
+</code></pre>
+<p>A bunch of different (unmatching) brackets:</p>
+<pre><code>        (   (   [   )   ]   )   [   [   ]   ]   {   [   ]   }
+
+
+                        //The stack fails because the element popped from the stack
+                [       //doesn't correspond to the next bracket.
+            (   (
+        (   (   (
+    -   -   -   -   x
+</code></pre>
+<p>HTML uses a stack for its markup tags, which transform plain text into what you see on a webpage. <br />
+For instance:</p>
+<pre><code>&lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;&lt;CENTER&gt;...
+
+
+
+                    &lt;TITLE&gt;                         &lt;CENTER&gt;
+            &lt;HEAD&gt;  &lt;HEAD&gt;  &lt;HEAD&gt;          &lt;BODY&gt;  &lt;BODY&gt;
+    &lt;HTML&gt;  &lt;HTML&gt;  &lt;HTML&gt;  &lt;HTML&gt;  &lt;HTML&gt;  &lt;HTML&gt;  &lt;HTML&gt;
+    ------  ------  ------- ------  ------  ------  -------- ...
+</code></pre>
+<h4 id="stacks-in-the-java-virtual-machine"><a name="user-content-stacks-in-the-java-virtual-machine" href="#stacks-in-the-java-virtual-machine" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Stacks in the Java Virtual Machine</h4>
+<ul>
+<li>Each process running in a Java program has its own Java Method Stack</li>
+<li>Each time a method is called, it is pushed onto the stack.</li>
+<li>The choice of a stack for this operation allows Java to do several useful things<ul>
+<li>Perform recursive method calls</li>
+<li>Print stack traces to locate an error</li>
+</ul>
+</li>
+</ul>
+<p>Each item on the stack keeps count of the method information, as well as something called a program counter. This shows the line where the method has been interrupted by another method that was added on top of it in the stack. Once the other method is removed, the program reverts to the line saved in the program counter.</p>
+<h4 id="application-time-series"><a name="user-content-application-time-series" href="#application-time-series" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Application: Time Series</h4>
+<p>The span <em>s<sub>i</sub></em> of a stock&rsquo;s price on a certain day <em>i</em> is the max number of consecutive days (up to the current day) the price of the stock has been less than or equal to its price on day <em>i</em>.</p>
+<p><img alt="" src="http://i.imgur.com/QZ32TZ3.png" /></p>
+<p>There is a straightforward (but inefficient) way to compute the span of a stock on each of <em>n</em> days. You can just look back from each day individually. This would cause you to have two loops, meaning that your algorithm would have a time of <strong>O(n<sup>2</sup>)</strong>.</p>
+<p>A stack would help make this a lot more efficient. </p>
+<p>We see that <em>s<sub>i</sub></em><em> on day </em>i<em> can be easily computed if we know the closest day preceding </em>i<em>, such that the price is greater than on that day than on day </em>i<em>. If such a day exists, let&rsquo;s call it </em>h(i)<em>. Otherwise, we conventionally define </em>h(i)<em>=-1. The span is now computed as </em>s<sub>i</sub><em>=</em>i<em>-</em>h(i)*.</p>
+<p>We use a stack to keep track of <em>h(i)</em>.</p>
+<p><img alt="" src="http://i.imgur.com/kqy5d4R.png" /></p>
+<h2 id="queues"><a name="user-content-queues" href="#queues" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Queues</h2>
+<ul>
+<li>A queue differs from a stack in that its insertion and removal routines follow the first-in-first-out (FIFO) principle.</li>
+<li>Elements may be inserted at any time, but only the element which has been in the queue the longest may be removed.</li>
+<li>Elements are inserted at the rear (enqueued) and removed from the front (dequeued)</li>
+</ul>
+<p>The queue has two fundamental methods:</p>
+<ul>
+<li>enqueue(o): Inserts an object o at rear of queue</li>
+<li>dequeue(): Removes object from front of queue and returns it. An error occurs if queue is empty. <em>An error occurs if queue is empty.</em></li>
+</ul>
+<p>There are also a couple more optional methods:</p>
+<ul>
+<li>size(): Returns number of objects in the queue</li>
+<li>isEmmpty(): Returns a boolean value that indicates whether the queue is empty.</li>
+<li>front(): Returns (without removing) the element in front of the queue. <em>An error occurs if queue is empty.</em></li>
+</ul>
+<p>Example:</p>
+<pre><code>Operation   State
+---------   -----
+add(a)      a
+add(b)      ab
+remove()    b
+add(c)      bc
+add(d)      bcd
+add(e)      bcde
+remove()    cde
+add(f)      cdef
+remove()    def
+add(g)      defg
+</code></pre>
+<p>Queues are more interesting to implement than stacks because of how the insertion and extraction points are on opposite ends.</p>
+<h4 id="queues-as-arrays"><a name="user-content-queues-as-arrays" href="#queues-as-arrays" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Queues as arrays</h4>
+<p>You could implement queues in both LinkedLists and Arrays. However, there is no noticeable advantage for having a queue in a list, so it&rsquo;s simpler to just use an array.</p>
+<p>To implement it in an array, we store in which indices the Head and the Tail are located. When an element is added, we store it in the next empty index, and the tail now points to the index. Likewise, when an element is removed, we remove the element at the head, and the head now points to the next index.</p>
+<p>The queue is only full when it is equal to the size of the array it is contained in.</p>
+<p>An array implementation:</p>
+<pre><code>enqueue(element){
+    if (size == length)
+        increase length of array
+    a[(head+size)%length]=element
+    size++
+}
+
+dequeue(){
+    out = a[head]
+    head = (head+1)%length
+    size--
+    return out
+}
+</code></pre>
+<p>When the queue array runs out of space, we transfer it into a bigger array:</p>
+<pre><code>create a bigger array
+for i = 0 to length-1
+    big[i] = small[(head+i)%small.length]
+</code></pre>
+<h1 id="running-times-and-asymptotic-notations"><a name="user-content-running-times-and-asymptotic-notations" href="#running-times-and-asymptotic-notations" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Running Times and Asymptotic Notations</h1>
+<h4 id="brute-force"><a name="user-content-brute-force" href="#brute-force" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Brute force</h4>
+<p>For many non-trivial problems, there is a natural brute force search algorithm that tries every possible solution.</p>
+<ul>
+<li>Typically takes 2<sup>N</sup> time or worse for inputs of size N.</li>
+<li>Unacceptable in practice.</li>
+</ul>
+<h4 id="desirable-scaling-property"><a name="user-content-desirable-scaling-property" href="#desirable-scaling-property" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Desirable scaling property</h4>
+<p>When the input size doubles, the algorithm should only slow down by some constant factor C. This is equivalent to saying that there exist constants a&gt;0 and d&gt;0 such that on every input of size N, its running time is bounded by a N<sup>d</sup> steps.</p>
+<p><strong>Definition</strong>: An algorithm is <strong>poly-time</strong> if the above scaling property holds.</p>
+<h4 id="worst-case-analysis"><a name="user-content-worst-case-analysis" href="#worst-case-analysis" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Worst case analysis</h4>
+<p>The worst case is the upper bound on the running time of an algorithm on any input of size N.</p>
+<ul>
+<li>Generally captures efficiency in practice</li>
+<li>Seems draconian, but it&rsquo;s hard to find an effective alternative</li>
+</ul>
+<h4 id="average-case-analysis"><a name="user-content-average-case-analysis" href="#average-case-analysis" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Average case analysis</h4>
+<p>The average case is the bound on running time of an algorithm on a <strong>random</strong> input as a function of input size N.</p>
+<ul>
+<li>Hard (or impossible) to accurately model real instances by random distribution.</li>
+<li>Algorithm tuned for a certain distribution may perform poorly on other inputs.</li>
+</ul>
+<h4 id="worst-case-polynomial-time"><a name="user-content-worst-case-polynomial-time" href="#worst-case-polynomial-time" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Worst case polynomial-time</h4>
+<p><strong>Definition</strong>: An algorithm is <strong>efficient</strong> if its running time is polynomial. This is justified by practice.<br />
+<strong>Caveat</strong>: Although 6.02E23 x N<sup>20</sup> is technically poly-time, it would be useless in practice.<br />
+In practice, poly-time algorithms that people develop almost always have low constants and low exponents. Breaking through the exponential barrier of brute force typically exposes some crucial structure of the problem.<br />
+Exceptions: </p>
+<ul>
+<li>Some poly-time algorithms do have high constants or exponents, and are useless in practice. </li>
+<li>Some exponential-time (or worse) algortithms are widely used because the worst-case instances seem to be rare.</li>
+</ul>
+<p>Example: Primality Testing</p>
+<ul>
+<li>If you have an N-bit number, it is a 2<sup>N</sup> number. Thus, doing operations to the square root of our number will still yield (sqrt(2))<sup>N</sup> running time.</li>
+<li>There have been improvements that have led to better running times such as log<sup>4</sup>N (Miller). We have not yet found a proof to the conjecture behind Miller&rsquo;s algorithm.</li>
+<li>Another algorithm by Miller&rsquo;s colleague Rabin would give log<sup>3</sup>N, but would be wrong on primes a quarter of the time.</li>
+<li>One guaranteed test discovered has had log<sup>12</sup>N, which is slow to the point of impracticality. Rabin&rsquo;s algorithm would in practice be better because of the insane running time from the foolproof algorithm.</li>
+</ul>
+<p>Why does this matter?</p>
+<p><img alt="" src="http://i.imgur.com/OV8chh5.png" /></p>
+<h2 id="asymptotic-order-of-growth-and-notation"><a name="user-content-asymptotic-order-of-growth-and-notation" href="#asymptotic-order-of-growth-and-notation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Asymptotic order of Growth and Notation</h2>
+<ul>
+<li>Upper Bounds: T(n) is O(f(n)) if there exist constants c &gt; 0 and n<sub>0</sub> ≥ 0 such that for all n ≥ n<sub>0</sub> we have T(n) ≤ c x f(n).</li>
+<li>Lower Bounds: T(n) is Ω(f(n)) if there exist constants c &gt; 0 and n<sub>0</sub> ≥ 0 such that for all n ≥ n<sub>0</sub> we have T(n) ≥ c x f(n).</li>
+<li>Tight Bounds: T(n) is Θ(n) if T(n) is both O(f(n)) and Ω(f(n)).</li>
+</ul>
+<p>Example: T(n) = 32n<sup>2</sup> + 17n + 32</p>
+<ul>
+<li>T(n) is O(n<sup>2</sup>) since there exists c = 81 and n<sub>0</sub> = 1 such that for all n ≥ 1 we have T(n) ≤ 32n<sup>2</sup> + 17n<sup>2</sup> + 32n<sup>2</sup> = 81n<sup>2</sup>.</li>
+<li>T(n) is Ω(n<sup>2</sup>) since there exists c = 1 and n<sub>0</sub> = 0 such that for all n ≥ 1 we have T(n) ≥ n<sup>2</sup>.</li>
+</ul>
+<p><strong>Note:</strong> Using T(n) = O(f(n)) is wrong because the expression doesn&rsquo;t actually denote equality.</p>
+<p><strong>Meaningless statement:</strong> &ldquo;Any comparison-based sorting algorithm requires at least O(n log n) comparisons.&rdquo;</p>
+<ul>
+<li>The statement uses upper bound to describe a lower bound.</li>
+<li>The constant function f(n)=1 is O(n log n).</li>
+<li>The statement doesn&rsquo;t type-check.</li>
+</ul>
+<h4 id="properties"><a name="user-content-properties" href="#properties" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Properties</h4>
+<ul>
+<li>Transitivity: if f is O(g) and g is O(h), then f is O(h).</li>
+<li>Additivity: if f is O(h) and g is O(h), then f + g is O(h).</li>
+</ul>
+<p>Note: These apply for O, Ω, and Θ.</p>
+<h4 id="frequently-used-functions"><a name="user-content-frequently-used-functions" href="#frequently-used-functions" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Frequently used functions</h4>
+<ul>
+<li>Polynomials: a<sub>0</sub>+a<sub>1</sub>n+&hellip;+a<sub>d</sub>n<sup>d</sup> is Θ(n<sup>d</sup>) if a<sub>d</sub>&gt;0.</li>
+<li>Polynomial time: Running time is O(n<sup>d</sup>) for some constant <em>d</em> independent of the input size <em>n</em>.</li>
+<li>Logarithms: O(log<sub>a</sub>n) = O(log<sub>b</sub>n) for any constants a,b &gt; 0.<ul>
+<li>For every x &gt; 0, log n is O(n<sup>x</sup>). (i.e. every log grows slower than every polynomial.)</li>
+</ul>
+</li>
+<li>Exponentials. For every r &gt; 1 and every d &gt; 0, n<sup>d</sup> is O(r<sup>n</sup>). (i.e. every exponential grows faster than every polynomial.)</li>
+</ul>
+<h4 id="asymptotic-notation"><a name="user-content-asymptotic-notation" href="#asymptotic-notation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Asymptotic notation</h4>
+<p>Sometimes, one can also obtain an asymptotically tight bound directly by computing a limit as <em>n</em> goes to infinity. Essentially, if the ratio of functions f(n) and g(n) converges to a positive constant as <em>n</em> goes to infinity, then f(n) is Θ(g(n)).</p>
+<p><img alt="" src="http://i.imgur.com/7CB8VLS.png" /></p>
+<h4 id="on-log-n-time"><a name="user-content-on-log-n-time" href="#on-log-n-time" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>O(n log n) time</h4>
+<ul>
+<li>Also known as <strong>linearithmetic</strong> time. This time complexity arises in divide-and-conquer time.</li>
+<li>Sorting: Mergesort and Heapsort are sorting algorithms that perform O(n log n) comparisons.</li>
+<li>Largest Empty Interval: Given n time-stamps x<sub>1</sub>,&hellip;,x<sub>n</sub> on which copies of a file arrive at a server, what is the largest interval of time when no copies of the file arrive?</li>
+<li>O(n log n) solution: Sort the time-stamps. Scan the sorted list in order, identifying the maximum gap between successive time-stamps.</li>
+</ul>
+<h4 id="quadratic-time"><a name="user-content-quadratic-time" href="#quadratic-time" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Quadratic time</h4>
+<ul>
+<li>Enumerates all pairs of elements.</li>
+<li>Closest pairs of points: Given a list of n points in the plane (x<sub>1</sub>,y<sub>1</sub>),&hellip;,(x<sub>n</sub>,y<sub>n</sub>), find the closest pair.</li>
+<li>Quadratic solution: For each pair of elements, determine whether they are smaller than the current minimum.</li>
+</ul>
+<p>Pseudocode:</p>
+<pre><code>min &lt;-- (x1-x2)^2 + (y1 - y2)^2
+
+for i = 1 to n{
+    for j = i+1 to n{
+        d &lt;-- (x[i]-x[j])^2+(y[i]-y[j])^2
+        if (d&lt;min)
+            min &lt;-- d
+    }
+}
+</code></pre>
+<h4 id="cubic-time"><a name="user-content-cubic-time" href="#cubic-time" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Cubic time</h4>
+<ul>
+<li>Enumerates all triples of elements.</li>
+<li>Set disjointness: Given n sets S<sub>1</sub>,&hellip;,S<sub>n</sub> each of which is a subset of 1,2,&hellip;,n, is there some pair of these which are disjoint?</li>
+<li>Cubic time solution: For each pair of sets, determine if they are disjoint.</li>
+</ul>
+<p>Pseudocode:</p>
+<pre><code>foreach set Si{
+    foreach other set Sj{
+        determine whether p also belongs to Sj
+    }
+    if (no element of Si belongs to Sj)
+        report that Si and Sj are disjoint
+}
+</code></pre>
+<h4 id="polynomial-time"><a name="user-content-polynomial-time" href="#polynomial-time" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Polynomial time</h4>
+<ul>
+<li>Independent set of size k: Given a graph, are there k nodes such that no two are joined by an edge?</li>
+<li>Polynomial solution: Enumerate all subsets of k nodes.</li>
+</ul>
+<p>Pseudocode:</p>
+<pre><code>foreach subset S of k nodes{
+    check whether S is an independent set
+    if (S is an independent set){
+        report S is an independent set
+    }
+}
+</code></pre>
+<h4 id="exponential-time"><a name="user-content-exponential-time" href="#exponential-time" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Exponential time</h4>
+<ul>
+<li>Independent set: Given an graph, what is the max size of an independent size?</li>
+<li>O(n^2 2^n) solution: Enumerate all subsets.</li>
+</ul>
+<p>Pseudocode:</p>
+<pre><code>s* &lt;-- NULL
+
+foreach subset S of nodes{
+    check whether S is an independent set
+
+    if (S is largest independnet set seen so far){
+        update s*&lt;---S
+    }
+}
+</code></pre>
+<h1 id="induction-and-recursion"><a name="user-content-induction-and-recursion" href="#induction-and-recursion" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Induction and Recursion</h1>
+<h2 id="induction-proofs"><a name="user-content-induction-proofs" href="#induction-proofs" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Induction proofs</h2>
+<h4 id="process"><a name="user-content-process" href="#process" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Process</h4>
+<p><strong>Predicate.</strong><br />
+P(n): f(n) = some formula in n</p>
+<p><strong>Statement.</strong><br />
+for all n ≥ 1, P(n) is true.</p>
+<p><strong>Proof.</strong><br />
+<em> Base case: prove that P(1) is true.<br />
+</em> Induction step: Show that for all n ≥ 1, P(n) being true implies P(n+1) being true as well.</p>
+<h4 id="example"><a name="user-content-example" href="#example" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Example</h4>
+<p>Predicate: P(n): 1+2+&hellip;+n = n(n+1)/2</p>
+<p>Base case: When n = 1, we have 1 = 2/2.</p>
+<p>Induction step: let n ≥ 1. Assume for induction hypothesis that P(n) is true. We show P(n+1) is true as well:</p>
+<pre><code>1+2+...+n+(n+1) = n(n+1)/2+n+1
+                = (n+1)(n/2)+1
+                = (n+1)(n+2)/2
+</code></pre>
+<p><strong>Note: Although the predicate works, using Σ summation notation is a lot more formal.</strong></p>
+<h2 id="iteration-vs-recursion"><a name="user-content-iteration-vs-recursion" href="#iteration-vs-recursion" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Iteration vs Recursion</h2>
+<p>f(n) = 1 + 2 + &hellip; + n</p>
+<pre><code>f(n)
+sum &lt;-- 0
+for i = 2 to n {
+    sum &lt;-- sum+i
+}
+return sum
+</code></pre>
+<p>f(n) = 0 if n=0<br />
+f(n) = f(n-1)+1 if n&gt;0</p>
+<pre><code>f(n)
+if n = 0 (return 0)
+else {return f(n-1)+n}
+</code></pre>
+<h4 id="redoing-the-induction-proof-with-recursion"><a name="user-content-redoing-the-induction-proof-with-recursion" href="#redoing-the-induction-proof-with-recursion" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Redoing the induction proof with recursion</h4>
+<p>Predicate.<br />
+f(n) = n(n+1)/2<br />
+Statement.</p>
+<p>Base case:</p>
+<h2 id="generalized-induction-proofs"><a name="user-content-generalized-induction-proofs" href="#generalized-induction-proofs" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Generalized induction proofs</h2>
+<h4 id="process_1"><a name="user-content-process_1" href="#process_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Process</h4>
+<p><strong>Predicate.</strong><br />
+P(n): f(n) = some formula in n</p>
+<p><strong>Statement.</strong><br />
+for all n ≥ 1, P(n) is true.</p>
+<p><strong>Proof.</strong><br />
+<em> Base case: prove that P(1) is true.<br />
+</em> Induction step: Let n ≥ 1. Show that P(1)&hellip;P(n) being true implies P(n+1) being true as well.</p>
+<h4 id="example-fibonacci-sequence"><a name="user-content-example-fibonacci-sequence" href="#example-fibonacci-sequence" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Example: Fibonacci Sequence</h4>
+<pre><code>fib(n) = n                   if n≤1
+fib(n) = fib(n-1) + fib(n-2) if n&gt;1
+
+//Recursive implementation:
+
+fib(n)
+if n&lt;2 {return n}
+else {return fib(n-1)+fib(n-2)}
+
+//Iterative implementation:
+
+fib(n)
+a&lt;--0
+b&lt;--1
+for i = 1 to n{
+    b &lt;-- a + b
+    a &lt;-- b - a
+}
+return a
+</code></pre>
+<p><strong>Note: The recursive implementation is very inefficient, as we already compute smaller values in our Fibonacci sequence while finding larger values, leading to many repeat computations (the number of which actually follows the Fibonacci sequence itself, interestingly enough). On the other hand, the iterative version carries the values of the previous Fibonacci values, which leads to each computation being made only once.</strong></p>
+<h4 id="example-1"><a name="user-content-example-1" href="#example-1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Example 1</h4>
+<p><strong>Statement.</strong><br />
+for all n ≥ 0, P(n): fib(n) ≤ 2<sup>n</sup> is true.</p>
+<p><strong>Proof.</strong><br />
+<em> Base case: 0 ≤ 1 is true and 1 ≤ 2 is true.<br />
+</em> Induction step: Let n ≥ 1. Show that P(1)&hellip;P(n) being true implies P(n+1) being true as well:</p>
+<pre><code>fib(n+1) = fib(n)+fib(n-1)
+         ≤ 2^n + 2^(n-1)
+         ≤ 2^(n-1)*3
+         &lt; 2^(n+1)
+</code></pre>
+<h4 id="example-2"><a name="user-content-example-2" href="#example-2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Example 2</h4>
+<p><strong>Statement.</strong><br />
+for all n ≥ 1, P(n): fib(n) ≤ ϕ<sup>n</sup> is true.</p>
+<p><strong>Proof.</strong><br />
+<em> Base case: 1 ≤ ϕ is true and 1 ≤ ϕ<sup>2</sup> is true. (Only if ϕ ≥ 1.)<br />
+</em> Induction step: Let n ≥ 1. Show that P(1)&hellip;P(n) being true implies P(n+1) being true as well:</p>
+<pre><code>fib(n+1) = fib(n)+fib(n-1)
+         ≤ ϕ^n + ϕ^(n-1)
+         ≤ ϕ^(n-1)*(ϕ+1)
+         &lt; ϕ^(n+1)
+
+(Only if 0 ≤ ϕ^2-ϕ-1)
+</code></pre>
+<h4 id="example-3"><a name="user-content-example-3" href="#example-3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Example 3</h4>
+<p><strong>Statement.</strong><br />
+for all n ≥ 1, P(n): fib(n) ≥ ϕ<sup>n-2</sup> is true.</p>
+<p><strong>Proof.</strong><br />
+<em> Base case: 1 ≥ ϕ<sup>-1</sup> is true and 1 = ϕ<sup>0</sup> is true. (Only if ϕ ≥ 1.)<br />
+</em> Induction step: Let n ≥ 1. Show that P(1)&hellip;P(n) being true implies P(n+1) being true as well:</p>
+<pre><code>fib(n+1) = fib(n)+fib(n-1)
+         ≥ ϕ^(n-2) + ϕ^(n-3)
+         ≥ ϕ^(n-3)*(ϕ+1)
+         ≥ ϕ^(n-1)
+
+(Only if 0 ≥ ϕ^2-ϕ-1)
+</code></pre>
+<h4 id="weak-binet-formula"><a name="user-content-weak-binet-formula" href="#weak-binet-formula" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Weak Binet Formula</h4>
+<p>For all n ≥ 1, fib(n) ≤ ϕ<sup>n</sup> is true.<br />
+(Only if 0 ≤ ϕ<sup>2</sup>-ϕ-1)<br />
+For all n ≥ 1, fib(n) ≥ ϕ<sup>n</sup> is true.<br />
+(Only if 0 ≤ ϕ<sup>2</sup>-ϕ-1)</p>
+<p>So these statements are both true only if  0 = ϕ<sup>2</sup>-ϕ-1.</p>
+<p>ϕ here is the Golden Ratio.</p>
+<h2 id="recursive-algorithms"><a name="user-content-recursive-algorithms" href="#recursive-algorithms" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Recursive Algorithms</h2>
+<p>There are many algorithms that are easier to think of recursively than iteratively. An example of this is Mergesort.</p>
+<h4 id="mergesort"><a name="user-content-mergesort" href="#mergesort" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Mergesort</h4>
+<h5 id="overview"><a name="user-content-overview" href="#overview" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Overview</h5>
+<ul>
+<li>Divide array into two halves.</li>
+<li>Recursively sort each half.</li>
+<li>Merge two halves to make sorted whole.</li>
+</ul>
+<p><img alt="" src="http://i.imgur.com/AfjDuk5.png" /></p>
+<h5 id="merge-step"><a name="user-content-merge-step" href="#merge-step" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Merge step</h5>
+<ul>
+<li>Keep track of smallest element in each sorted half.</li>
+<li>Insert smallest of two elements into auxiliary array.</li>
+<li>Repeat until done.</li>
+</ul>
+<h5 id="recurrence-relation"><a name="user-content-recurrence-relation" href="#recurrence-relation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Recurrence relation</h5>
+<p>Definition: T(n) = number of comparisons to mergesort an input of size n.</p>
+<p>Mergesort recurrence:</p>
+<p><img alt="" src="http://i.imgur.com/UsFM7ww.png" /></p>
+<p>Solution: T(n) is O(n log n).</p>
+<h4 id="tower-of-hanoi"><a name="user-content-tower-of-hanoi" href="#tower-of-hanoi" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Tower of Hanoi</h4>
+<p><strong>Goal:</strong> Move the n discs from stack #3 to stack #2.</p>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li>Only remove one disk at a time.</li>
+<li>Cannot stack a larger disk on top of a smaller disk.</li>
+</ul>
+<p><strong>Inductive solution:</strong></p>
+<p>Hanoi(n,S3,S2,S1) // n&gt;=1</p>
+<p>Base case (n = 1): move disk 1 from stack 3 to stack 2.</p>
+<pre><code>if n&gt;1, then Hanoi(n-1,S3,S1,S2)
+move disk n from S3 to S2
+if n&gt;1, then Hanoi(n-1,S1,S2,S3)
+</code></pre>
+<p>Example: If we have 5 disks</p>
+<pre><code>Hanoi(5,S3,S2,S1) //n&gt;=1
+
+if 5&gt;1 then Hanoi(4,S3,S1,S2)
+    if 4&gt;1 then Hanoi (3,S3,S2,S1)
+        if 3&gt;1 then Hanoi (2,S3,S1,S2)
+            if 2&gt;1 then Hanoi (1,S3,S2,S1)
+                move disk 1 from S3 to S2
+</code></pre>
+<p>All these executions are stacked on the execution stack that compiles all processes.</p>
+<p><strong>Recurrence relation:</strong></p>
+<p>Def. T(n) = number of moves to Hanoi of n.</p>
+<p>Hanoi recurrence.</p>
+<p>[INSERT IMAGE]</p>
+<p>Solution. T(n) is O(2<sup>n</sup>).</p>
+<p>Proofs: [INSERT PROOF]</p>
+<h1 id="master-theorem"><a name="user-content-master-theorem" href="#master-theorem" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Master Theorem</h1>
+<h4 id="definition"><a name="user-content-definition" href="#definition" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Definition</h4>
+<p>The <em>Master Theorem</em> is a formula that can be applied to divide-and-conquer algorithms to calculate their running time given their recurrence relation.</p>
+<p>Given a relation: </p>
+<pre><code>T(n) = aT(n/b) + f(n)
+where: a ≥ 1, b &gt; 1, and f(n) &gt; 0
+</code></pre>
+<h4 id="three-cases"><a name="user-content-three-cases" href="#three-cases" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Three cases</h4>
+<p><em>Case 1</em>: Leaves dominate the running time.<br />
+If f(n) is O(n<sup>L</sup>) for some constant L &lt; log<sub>b</sub>a, T(n) is ϴ(n<sup>log<sub>b</sub>a</sup>).</p>
+<p><em>Case 2</em>: Initial case dominates the running time.<br />
+If f(n) is Ω(n<sup>L</sup>) for some constant L &gt; log<sub>b</sub>a, T(n) is ϴ(f(n)).</p>
+<p><em>Case 3</em>: Nothing dominates the running time.<br />
+If f(n) is ϴ(n<sup>log<sub>b</sub>a</sup> log<sup>k</sup>n), for some k ≥ 0, T(n) is ϴ(n<sup>log<sub>b</sub>a</sup> log<sup>k+1</sup>n).</p>
+<h4 id="recursion-tree-illustration"><a name="user-content-recursion-tree-illustration" href="#recursion-tree-illustration" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Recursion tree illustration</h4>
+<p><img alt="" src="http://i.imgur.com/3m3A82T.png" /></p>
+<h1 id="divide-and-conquer-algorithms"><a name="user-content-divide-and-conquer-algorithms" href="#divide-and-conquer-algorithms" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Divide and conquer algorithms</h1>
+<h4 id="definition_1"><a name="user-content-definition_1" href="#definition_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Definition</h4>
+<ul>
+<li>Break up problem into several parts</li>
+<li>Solve each part recursively</li>
+<li>Combine solutions to sub-problems in overall solution</li>
+</ul>
+<h4 id="binary-search"><a name="user-content-binary-search" href="#binary-search" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Binary Search</h4>
+<p><em>Input</em>: array <em>a</em>, value <em>v</em>, lower and upper bound indices <em>low</em>, <em>high</em>.<br />
+<em>Output</em>: the index <em>i</em> of element <em>v</em> (if present), -1 (if <em>v</em> is not present).</p>
+<pre><code>if low==high then
+    if a[low]==v then
+        return low
+    else
+        return -1
+    end if
+else
+    mid &lt;--(low+high)/2
+    if v&lt;=a[mid] then
+        return binarySearch(a,v,low,mid)
+    else
+        return binarySearch(a,v,mid+1,high)
+    end if
+end if
+</code></pre>
+<p><em>Recurrence relation</em></p>
+<p><img alt="" src="http://i.imgur.com/ilsG2S1.png" /></p>
+<h4 id="karatsuba-multiplication"><a name="user-content-karatsuba-multiplication" href="#karatsuba-multiplication" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Karatsuba multiplication</h4>
+<p><img alt="" src="http://i.imgur.com/i1CEswL.png" /></p>
+<p><em>Recursion Tree</em><br />
+<img alt="" src="http://i.imgur.com/0mAdvkP.png" /></p>
+<h1 id="graphs"><a name="user-content-graphs" href="#graphs" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Graphs</h1>
+<p>A vast number of problems in practice are solved with graphs. A subset of graphs, trees, are incredibly useful.</p>
+<h4 id="definition_2"><a name="user-content-definition_2" href="#definition_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Definition:</h4>
+<ul>
+<li>A graph G = (V,E) is composed of V (set of vertices) and E (set of edges connecting the vertices in V)</li>
+<li>An edge e = (u,v) is a pair of vertices</li>
+</ul>
+<p>Example:</p>
+<p><img alt="" src="http://i.imgur.com/lxU16CH.png" /></p>
+<h4 id="applications"><a name="user-content-applications" href="#applications" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Applications:</h4>
+<ul>
+<li>Electronic circuits (finding the path of least resistance)</li>
+<li>Networks (roads, flights, communications)</li>
+<li>World Wide Web (hyperlinks connecting web pages)</li>
+</ul>
+<p>These two examples have no orientation in their graphs. However, we can have direction between vertices, such as in the graph for a project workflow.</p>
+<h4 id="terminology"><a name="user-content-terminology" href="#terminology" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Terminology:</h4>
+<ul>
+<li><strong>Adjacent vertices</strong>: connected by an edge.</li>
+<li><strong>Degree (of a vertex)</strong>: number of adjacet vertices. The sum of all the degrees in the graph, you get twice the number of edges. This is because every edge is a pair of 2 vertices.</li>
+<li><strong>Path</strong>: sequence of vertices v<sub>1</sub>,v<sub>2</sub>,&hellip;,v<sub>k</sub> such that consecutive vertices v<sub>i</sub> and v<sub>i+1</sub> are adjacent.</li>
+<li><strong>Cycle</strong>: simple path, but where the last vertex is the same as the first.</li>
+<li><strong>Connected graph</strong>: any 2 vertices are connected by some path.</li>
+<li><strong>Subgraph</strong>: subset of vertices and edges forming a graph.</li>
+<li><strong>Connected component</strong>: maximal connected subgraph.</li>
+<li><strong>Tree</strong>: connected graph without cycles</li>
+<li><strong>Forest</strong>: Collection of trees</li>
+<li><strong>Complete graph</strong>: all pairs of vertices are adjacent</li>
+<li><strong>Spanning tree</strong>: a subgraph of G which is a tree that contains all of its vertices.</li>
+</ul>
+<h2 id="connectivity"><a name="user-content-connectivity" href="#connectivity" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Connectivity</h2>
+<p>The edges and vertices in a graph are generally two independent parameters.</p>
+<p>Let m = #edges, n = #vertices</p>
+<ul>
+<li>For a complete graph: m = n(n-1)/2</li>
+<li>For a tree: m = n - 1</li>
+<li>If m &lt; n - 1, G is not connected</li>
+</ul>
+<p>Making a graph a cycle would make it more fault-tolerant and only requires n edges.</p>
+<h4 id="konigsberg-bridge-problem"><a name="user-content-konigsberg-bridge-problem" href="#konigsberg-bridge-problem" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Konigsberg bridge problem</h4>
+<p><img alt="" src="http://www.contracosta.edu/legacycontent/math/KBRIDG3.GIF" /><br />
+<img alt="" src="http://jwilson.coe.uga.edu/EMAT6680Fa2012/Faircloth/Essay2alf/proof1.jpg" /></p>
+<p>Can one walk across all 7 bridges of Konigsberg without crossing any twice? Euler proved that this problem is unsolvable.</p>
+<h2 id="the-graph-adt"><a name="user-content-the-graph-adt" href="#the-graph-adt" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>The graph ADT</h2>
+<p>The graph ADT is a positional container whose positions are the vertices and the edges of the graph.</p>
+<p><img alt="" src="http://i.imgur.com/tky9nlQ.png" /></p>
+<h2 id="data-structures-for-graphs"><a name="user-content-data-structures-for-graphs" href="#data-structures-for-graphs" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Data Structures for Graphs</h2>
+<p>These data structures store the vertices and edges of a graph into two containers, where each edge object has references to the vertices it connects.</p>
+<h4 id="edge-list"><a name="user-content-edge-list" href="#edge-list" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Edge List</h4>
+<p>The edge list structure stores the vertices and edges into unsorted sequences. It&rsquo;s the easiest to implement. Finding the edges incident on a given vertex is inefficient since it requires examining the entire edge sequence.</p>
+<p><img alt="" src="http://i.imgur.com/wvYjozs.png" /></p>
+<h4 id="adjacency-list"><a name="user-content-adjacency-list" href="#adjacency-list" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Adjacency List</h4>
+<p>The adjacency list of a vertex stores all adjacent vertices. You can construct a graph with the adjacency lists of all vertices. The adjacency list extends the edge list structure by adding incidence containers to each vertex.</p>
+<p><img alt="" src="http://i.imgur.com/3qelxo6.png" /></p>
+<h4 id="adjacency-matrix"><a name="user-content-adjacency-matrix" href="#adjacency-matrix" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Adjacency Matrix</h4>
+<p>The adjacency matrix is a matrix M with entries for all pairs of vertices. Boolean values indicate whether or not there are existing edges between two vertices. Notice how for undirected edges, the matrix is symmetric.</p>
+<p><img alt="" src="http://i.imgur.com/qtoq11x.png" /></p>
+<h1 id="trees"><a name="user-content-trees" href="#trees" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Trees</h1>
+<p>Trees describe hierarchical structures (e.g. organizational structure of a corporation, file directory in a Unix-based system, or the table of contents of a manual)</p>
+<h4 id="terminology_1"><a name="user-content-terminology_1" href="#terminology_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Terminology</h4>
+<p><img alt="" src="http://i.imgur.com/DWbSrR9.png" /></p>
+<h4 id="methods_1"><a name="user-content-methods_1" href="#methods_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Methods</h4>
+<ul>
+<li><em>Generic container methods</em>: size(), isEmpty(), elements()</li>
+<li><em>Positional container methods</em>: positions(), swapElements(p,q), replaceElements(p,e)</li>
+<li><em>Query methods</em>: isRoot(p), isInternal(p), isExternal(p)</li>
+<li><em>Accessor methods</em>: root(), parent(p), children(p)</li>
+<li><em>Update methods</em>: application-specific</li>
+</ul>
+<h2 id="binary-trees"><a name="user-content-binary-trees" href="#binary-trees" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Binary Trees</h2>
+<p><strong>Ordered tree</strong>: The children of each node are ordered.</p>
+<p><strong>Binary tree</strong>: Ordered tree with all internal nodes of degree 2.</p>
+<p><strong>Recursive definition of a binary tree</strong>: A binary tree is either an external node (leaf) or an internal node (root) with two binary subtrees (left and right).</p>
+<p>Examples: </p>
+<p><strong>Arithmetic expression</strong></p>
+<p><img alt="" src="http://i.imgur.com/al2HBtI.png" /></p>
+<p><strong>Decision trees</strong></p>
+<p><img alt="" src="http://i.imgur.com/3JIizeB.png" /></p>
+<h4 id="properties_1"><a name="user-content-properties_1" href="#properties_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Properties</h4>
+<p><img alt="" src="http://i.imgur.com/vJX7oDN.png" /></p>
+<h4 id="methods_2"><a name="user-content-methods_2" href="#methods_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Methods</h4>
+<ul>
+<li><strong>Accessor methods</strong>: leftChild(p), rightChild(p), sibling(p)</li>
+<li><strong>Update methods</strong>: expandExternal(p), removeAboveExternal(p)</li>
+</ul>
+<h5 id="linked-data-structure-for-binary-trees"><a name="user-content-linked-data-structure-for-binary-trees" href="#linked-data-structure-for-binary-trees" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Linked data structure for binary trees</h5>
+<p>Note: Focusing on one branch of the binary tree will be the same as a doubly linked list.</p>
+<p><img alt="" src="http://i.imgur.com/geYIqa8.png" /></p>
+<h5 id="general-tree-representation"><a name="user-content-general-tree-representation" href="#general-tree-representation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>General tree representation</h5>
+<p><img alt="" src="http://i.imgur.com/h1cWk75.png" /></p>
+<p>We can still use binary trees to represent general trees. If you have a general tree, you can sub it with a binary tree, where siblings are on the right side of the node, and children are on the left side of the node.</p>
+<h2 id="depth-first-search"><a name="user-content-depth-first-search" href="#depth-first-search" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Depth-first search</h2>
+<p>Depth-first search is an algorithm that traverses trees and graphs. To implement it, we will be using a stack (FILO) process, as we go further into our tree and backtrack once we reach a dead end. </p>
+<h4 id="example_1"><a name="user-content-example_1" href="#example_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Example</h4>
+<ul>
+<li>A DPS in an undirected graph G is like wandering in a labyrinth with a string and a can of red paint without getting lost.</li>
+<li>We start at a vertex <strong>s</strong>, tying the end of our string to the point and painting <strong>s</strong> as &ldquo;visited&rdquo;. Next, we label <strong>s</strong> as our current vertex <strong>u</strong>.</li>
+<li>Now we travel along an arbitrary edge (u,v).</li>
+<li>If edge (u,v) leads us to an already visted vertex <strong>v</strong>, we return to <strong>u</strong>.</li>
+<li>
+<p>If vertex <em>v</em> is unvisited, we unroll our string to move to <em>v</em>, paint <em>v</em> &ldquo;visited&rdquo;, set <em>v</em> as our current vertex, and repeat the previous steps.</p>
+</li>
+<li>
+<p>Eventually, we will get to a point where the edges on <em>u</em> lead to visited vertices. We then backtrack by unrolling our string to a previous visited vertex <em>v</em>. Then <em>v</em> becomes our current vertex and we repeat the previous steps.</p>
+</li>
+<li>
+<p>If all incident edges of <em>v</em> lead to visited vertices, we backtrack as we did before. We continue to backtrack along the path we have traveled, finding and exploring unexplored edges, and repeating the procedure.</p>
+</li>
+<li>
+<p>When we backtrack to vertex <em>s</em> and there are no more unexplored edges incident on <em>s</em>, we have completed our DFS search.</p>
+</li>
+</ul>
+<h4 id="algorithm"><a name="user-content-algorithm" href="#algorithm" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Algorithm</h4>
+<p><strong>Input</strong>: Vertex v in a graph</p>
+<p><strong>Output</strong>: A labeling of the edges as &ldquo;discovery&rdquo; edges and &ldquo;backedges&rdquo;</p>
+<p>Discovery edges: Edges leading to new node</p>
+<p>Back edges: Edges leading to a visited node</p>
+<pre><code>for each edge e incident on v do
+    if edge e is unexplored then
+        let w be the other endpoint of e
+        if vertex w is unexplored then
+            label e as a discovery edge
+            recursively call DFS(w)
+        else
+
+        label e as backedge
+</code></pre>
+<p><img alt="" src="http://i.imgur.com/ZTHQS6H.png" /></p>
+<h4 id="determining-incident-edges"><a name="user-content-determining-incident-edges" href="#determining-incident-edges" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Determining Incident Edges</h4>
+<p>DFS depends on how you obtain incident edges. If we start at A and we examine the edge to F, then to B, then E, C, and finally G:</p>
+<pre><code>A-&gt;F-&gt;B-&gt;E-&gt;C-&gt;G
+</code></pre>
+<p>At the end of the algorithm execution, all vertices will be visited once and all edges twice (once from each of its vertices). The discovery edges will form a spanning tree of the connected component of s.</p>
+<h4 id="properties_2"><a name="user-content-properties_2" href="#properties_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Properties</h4>
+<p>If <em>G</em> is an undirected graph on which a DFS traversal starting at a vertex <em>s</em> has been performed, then:</p>
+<ul>
+<li>The traversal visits all vertices in the connected component of <em>s</em>.</li>
+<li>The discovery edges form a spanning tree of the connected component of <em>s</em>.</li>
+</ul>
+<h4 id="runtime-analysis"><a name="user-content-runtime-analysis" href="#runtime-analysis" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Runtime analysis</h4>
+<p>Recall:<br />
+<em> DFS is called on each vertex exactly once.<br />
+</em> Every edge is examined exactly twice, once from each of its vertices.</p>
+<p>Thus, for n<sub>s</sub> vertices and m<sub>s</sub> edges in the connected componnet of the vertex <em>s</em>, the total running time for DFS starting at <em>s</em> is <em>O(n<sub>s</sub>+m<sub>s</sub>)</em>, but only if:<br />
+<em> The graph is represented in a data structure (like the adjacency list) where vertex and edge methods take constant time.<br />
+</em> Marking a vertex as explored and testing to see if a verrex has been explored takes O(degree)<br />
+* By marking visited nodes, we can systematically consider the edges incident on the current vertex so we do not examine the same edge more than once.</p>
+<h2 id="breadth-first-search"><a name="user-content-breadth-first-search" href="#breadth-first-search" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Breadth-First Search</h2>
+<p>BFS is very similar to DFS, but visits everything on a certain level before descending to the next. Each level contains all elements at a certain distance away from the starting point.</p>
+<p><img alt="" src="http://i.imgur.com/NebNFAM.png" /></p>
+<p>BFS traverses a connected component of a graph, and in doing so defines a spanning tree that has several useful properties:</p>
+<ul>
+<li>The starting vertex <em>s</em> has level 0 and is an anchor.</li>
+<li>In the first round, the string is unrolled the length of one edge, and all the edges that are one edge away from the anchor are visited.</li>
+<li>These edges are placed into level 1.</li>
+<li>In the second round, all the new edges that can be reached by unrolling the string another edge away are placed in level 2.</li>
+<li>This continues until every vertex has been assigned a level.</li>
+<li>The label of any vertex <em>v</em> corresponds to the length of the shortest path from <em>s</em> to <em>v</em>.</li>
+</ul>
+<h4 id="algorithm_1"><a name="user-content-algorithm_1" href="#algorithm_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Algorithm</h4>
+<p><em>Input</em>: a vertex s in a graph</p>
+<p><em>Output</em>: A labelling of the edges as discovery edges and cross edges.</p>
+<pre><code>initialize container L_0 to contain vertex s
+
+i&lt;--0
+
+while L_i is not empty  do
+    create container L_i+1 to initially be empty
+    for each vertex v in L_i do
+        for each edge e incident on v do
+            if edge e is unexplored then
+                let w be the other endpoint of e
+                if vertex w is unexplored then
+                    label e as a discovery edge
+                    insert w into L_i+1
+                else
+                    label e as a cross edge
+    i&lt;--i+1
+</code></pre>
+<h4 id="properties_3"><a name="user-content-properties_3" href="#properties_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Properties</h4>
+<ul>
+<li>All vertices in the connected component of s will be visited. </li>
+<li>The discovery edges form a spanning tree T of the connected component of s.</li>
+<li>For each vertex v at level i, the path of the BFS tree T between s and v has i edges, and any other path of G between s and v has at least i edges.</li>
+<li>If (u,v) is an edge that is not in the BFS tree, then the level numbers of u and v differ by at most one.</li>
+</ul>
+<h4 id="runtime-analysis_1"><a name="user-content-runtime-analysis_1" href="#runtime-analysis_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Runtime analysis</h4>
+<p>BFS traversal of a graph G with n vertices and m edges will take time O(m+n). Also, there exist O(n+m) time algorithms based on BFS for the following problems:</p>
+<ul>
+<li>Testing whether G is connected</li>
+<li>Computing a spanning tree of G</li>
+<li>Computing the connected components of G</li>
+<li>Computing for every vertex <em>v</em>, the minimum number of edges on any path between <em>s</em> and <em>v</em>.</li>
+</ul>
+<h2 id="binary-search-trees"><a name="user-content-binary-search-trees" href="#binary-search-trees" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Binary Search Trees</h2>
+<p>Purpose: to create a dictionary ADT to store information organized as a tree that can be looked up as efficiently as possible.</p>
+<ul>
+<li>A dictionary is an abstract model of a database.</li>
+<li>Like a priority queue, a dictionary stores key-element pairs.</li>
+<li>The main operation supported by a dictionary is searching by key.</li>
+</ul>
+<h4 id="methods_3"><a name="user-content-methods_3" href="#methods_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Methods</h4>
+<ul>
+<li>
+<p>Simple container methods:</p>
+<ul>
+<li>size()</li>
+<li>isEmpty()</li>
+<li>elements()</li>
+</ul>
+</li>
+<li>
+<p>Query methods:</p>
+<ul>
+<li>findElement(k)</li>
+<li>findAllElements(k)</li>
+</ul>
+</li>
+<li>
+<p>Update methods:</p>
+<ul>
+<li>insertItem(k,e)</li>
+<li>removeElement(k)</li>
+<li>removeAllElements(k)</li>
+</ul>
+</li>
+<li>
+<p>Special element:</p>
+<ul>
+<li>NO SUCH KEY, returned by an unsuccessful search</li>
+</ul>
+</li>
+</ul>
+<h4 id="sequence-based-dictionary-implementation"><a name="user-content-sequence-based-dictionary-implementation" href="#sequence-based-dictionary-implementation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Sequence-based dictionary implementation</h4>
+<p><img alt="Imgur" src="http://i.imgur.com/0AtfG2O.png" /></p>
+<ul>
+<li>Unordered sequence:<ul>
+<li>Searching and removing takes O(n) time</li>
+<li>Inserting takes O(1) time</li>
+<li>Applications to log files (frequent insertions, rare searches, and removals)</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Imgur" src="http://i.imgur.com/0AtfG2O.png" /></p>
+<ul>
+<li>Array-based ordered sequence:<ul>
+<li>Searching takes O(n lg n) time (binary search)</li>
+<li>Inserting and removing takes O(n) time</li>
+<li>Useful when you need frequent searches, rare insertions and removals (i.e. a real-life dictionary)</li>
+</ul>
+</li>
+</ul>
+<p>However, if we organize our sequence as a tree, we can get insertion/removal times that are very close to the time we get for searches (log n), which improves our dictionary ADT. For this, we use binary search trees.</p>
+<p>A binary search tree is a binary tree T such that<br />
+<em> Each internal node stores an item (k,e) of a dictionary.<br />
+</em> Keys stored at nodes in the left subtree of v are less than or equal to k.<br />
+<em> Keys stored at nodes in the right subtree of v are greater than or equal to k.<br />
+</em> External nodes do not hold elements but serve as place holders.</p>
+<p><img alt="" src="http://i.imgur.com/4velnlQ.png" /></p>
+<p>A binary search tree T is a decision tree, where the question asked at an internal node v is whether the search key k is less than, equal to, or greater than the key stored at v.</p>
+<h4 id="algorithm_2"><a name="user-content-algorithm_2" href="#algorithm_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Algorithm</h4>
+<p>Algorithm TreeSearch(k,v):</p>
+<p><em>Input</em>: A search key k and a node v of a binary search tree T.</p>
+<p><em>Output</em>: A node w of the subtree T(v) of T rooted at v.</p>
+<pre><code>if (v is an external node) then return v
+if k = key(v) then return v
+if k &lt; key(v) then return TreeSearch(k,T.leftChild(v))
+if k &gt; key(v) then return TreeSearch(l,T.rightChild(v))
+</code></pre>
+<h4 id="example_2"><a name="user-content-example_2" href="#example_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Example</h4>
+<p><img alt="" src="http://i.imgur.com/5dery3a.png" /></p>
+<p><img alt="" src="http://i.imgur.com/fOzgd8B.png" /></p>
+<h4 id="insertion"><a name="user-content-insertion" href="#insertion" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Insertion</h4>
+<ul>
+<li>
+<p>To perform insertItem(k,e), let w be the node returned by TreeSearch(k,T.root())</p>
+</li>
+<li>
+<p>If w is external, we know that k is not stored in T. We call expandExternal(w) on T and store (k,e) in w.</p>
+</li>
+</ul>
+<p><img alt="" src="http://i.imgur.com/0nJvYyR.png" /></p>
+<ul>
+<li>If w is internal, we know another item with key k is stored at w. We call the algorithm recursively starting at T.rightChild(w) or T.leftChild(w).</li>
+</ul>
+<p><img alt="" src="http://i.imgur.com/pa0h1xK.png" /></p>
+<h4 id="removal"><a name="user-content-removal" href="#removal" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Removal</h4>
+<ul>
+<li>We locate the node <em>w</em> where the key is stored with algorithm TreeSearch.</li>
+<li>If w has an external child z, we remove w and z with removeAboveExternal(z)</li>
+</ul>
+<p><img alt="" src="http://i.imgur.com/6GGe93R.png" /></p>
+<ul>
+<li>If w has no external children:<ul>
+<li>Find the internal node y following w in order</li>
+<li>Move the item at y into w</li>
+<li>Perform removeAboveExternal(x), where x is the left child of y (guaranteed to be external)</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="http://i.imgur.com/tJsof36.png" /></p>
+<h4 id="time-complexity"><a name="user-content-time-complexity" href="#time-complexity" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Time complexity</h4>
+<ul>
+<li>A search, insertion, or removal visits the nodes along a root-to-leaf path, plus possibly the siblings of such nodes.</li>
+<li>Time O(1) is spent at each node.</li>
+<li>The running time of each operation is O(h), where h is the height of the tree.</li>
+<li>The height of a binary search tree is n in the worst case, where a binary search tree looks like a sorted sequence (only children on one side).</li>
+<li>To achieve good running time, we need to keep the tree balanced (with O(log n) height)</li>
+</ul>
+<h2 id="heaps"><a name="user-content-heaps" href="#heaps" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Heaps</h2>
+<p>A heap is a binary tree T that stores a collection of keys (or key-element pairs) at its internal nodes and that satisfies two additional properties.<br />
+<em> </em>Order property<em>: key(parent) ≤ key(child).<br />
+</em> <em>Structural property</em>: all levels are full, except the last one, which list left-filled. We want to get as close to a complete binary tree as possible, but empty nodes are all on the bottom right.</p>
+<p>Heaps are useful to find min/max values in a set. Note that we don&rsquo;t care about the order in which the children are positioned, unlike in binary search trees.</p>
+<h4 id="height"><a name="user-content-height" href="#height" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Height</h4>
+<p><img alt="" src="http://i.imgur.com/2gzw3AA.png" /></p>
+<h4 id="insertion_1"><a name="user-content-insertion_1" href="#insertion_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Insertion</h4>
+<p><img alt="" src="http://i.imgur.com/K5D0gfD.gif" /></p>
+<ul>
+<li>Upheap terminates when the new key is greater than the key of its parent or the top of the heap is reached.</li>
+<li>Total # of swaps &lt; (h - 1), which is O(log n).</li>
+</ul>
+<h4 id="removal_1"><a name="user-content-removal_1" href="#removal_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Removal</h4>
+<p><img alt="" src="http://i.imgur.com/QBmFebu.gif" /></p>
+<ul>
+<li>To remove the minimum node on a heap, we first promote the bottom right node to the top, which satisfies our structural property, but not our order property.</li>
+<li>To fix that, we downheap (comparing parent with the smallest child and switching the two).</li>
+<li>Downheap ends if the key is greater than both children or if the bottom fo the heap is reached.</li>
+<li>Total # of swaps ≤ (h-1), which is O(log n).</li>
+</ul>
+<h4 id="implementation"><a name="user-content-implementation" href="#implementation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Implementation</h4>
+<p>One might be tempted to implement heaps as trees. The problem with this is that we have to know where we have to figure out where to insert following elements into the heap.</p>
+<p>There are two cases for insertion:<br />
+* If the last node is the right child of every node going back to the root, then we know it&rsquo;s the last element of the level, and we have to start filling up the last level.</p>
+<p><img alt="" src="http://i.imgur.com/LTeefnl.png" /></p>
+<ul>
+<li>If the last node is the left child at any point of the tree, then we move right from the left-child-node, and go down all the way to the left.</li>
+</ul>
+<p><img alt="" src="http://i.imgur.com/wvEkicQ.png" /></p>
+<p>As you can tell, this is very complicated. If we were to represent our heap with vectors (arrays), inserting a new element would just mean placing it at the next available spot.</p>
+<p>A heap can be thus represented by a <em>vector</em>, where the node at rank <em>i</em> has:<br />
+<em> a left child at rank 2</em>i<em><br />
+</em> a right child at rank 2<em>i</em>+1</p>
+<p><img alt="" src="http://i.imgur.com/82DqBPt.png" /></p>
+<p>Notes:<br />
+<em> The leaves do not need to be explicitly stored<br />
+</em> Insertion and removal methods correspond to insertLast() and removeLast() on the vector.</p>
+<h4 id="heapsort"><a name="user-content-heapsort" href="#heapsort" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Heapsort</h4>
+<p>One of the main reasons for making heaps is to use them in sorting, since they&rsquo;re mostly used to find the smallest element in a set. Sorting using heaps is called <em>Heapsort</em>.</p>
+<ul>
+<li>All heap methods run in logarithmic time or better</li>
+<li>If we implement PriorityQueueSort using a heap for our priority queue, insertItem() and removeMin() each take O(log k), where k is the # of elements in the heap at a given time.</li>
+<li>We always have at most n elements in the heap, so the worst case time complexity of these methods is O(log n).</li>
+<li>Thus each phase takes O(n log n) time, so the algorithm runs in O(n log n) time as well.</li>
+<li>The O(n log n) running time of heapsort is much better than the O(n<sup>2</sup>) runtime of selection and insertion sort.</li>
+</ul>
+<h4 id="bottom-up-heap-construction"><a name="user-content-bottom-up-heap-construction" href="#bottom-up-heap-construction" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Bottom-up heap construction</h4>
+<p>We can in fact do an in-place heapsort, meaning that we can go through without actually making a heap separate from the unsorted array we started from. This saves the extra space of creating a second array, and we can do this in linear time. </p>
+<p>To do this, we do what we call bottom-up construction of a heap.</p>
+<ol>
+<li>Insert (n+1)/2 nodes</li>
+<li>Insert (n+1)/4 nodes and downheap</li>
+<li>Insert (n+1)/8 nodes and downheap</li>
+<li>&hellip;</li>
+</ol>
+<p><img alt="Heap construction process" src="http://i.imgur.com/rzV8yjT.gif" /></p>
+<p>The total cost of bottom-up heap construction with n keys takes O(n) time. You end up with n inserts, n/2 upheaps with total O(n) running time.</p>
+<p><img alt="Heap construction process" src="http://i.imgur.com/pz1y2OH.png" /></p>
+<p>Heapsort is preferable to Mergesort in many cases as it does not take any extra space.</p>
+<h2 id="counting-sort"><a name="user-content-counting-sort" href="#counting-sort" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Counting-Sort</h2>
+<p>Counting-sort is a sorting algorithm that doesn&rsquo;t actually use any comparisons. It counts how many times each possible value is encountered in A.</p>
+<h4 id="algorithm_3"><a name="user-content-algorithm_3" href="#algorithm_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Algorithm</h4>
+<p><em>Input</em>: An array A with the values and a value k that is an upper bound on the values to be sorted.</p>
+<p><em>Output</em>: An array B of sorted values.</p>
+<pre><code class="java">CountingSort(A,B,k)
+    for i &lt;-- 0 to k do 
+        C[i] &lt;-- 0 //C is called the count array
+
+    for j &lt;-- 1 to length[A] do
+        C[A[j]] &lt;-- C[A[j]]+1
+    //C[i] now contains the number of elements equal to i.
+
+    for i &lt;-- 1 to k
+        do C[i] &lt;-- C[i] + C[i-1]
+    //C[i] now contains the number of elements less than or equal to i.
+    //The new C contains the same information as the one obtained from the
+    // previous step, but says 
+
+    /*This satisfies what we call stability. This means that if we have two
+    numbers with the same value in our input, they will be in the same order
+    in our output.
+    We want this algorithm to have this property to combine it into another
+    algorithm that requires stability to function. */
+
+    //COPYING A[] INTO B[]
+
+    for j &lt;-- length[A] downto 1 do
+        B[C[A[j]]] &lt;-- A[j]
+        C[A[j]] &lt;-- C[A[j]] - 1
+
+    /*Why B[C[A[j]]]? C counts the number of elements that are smaller or
+    equal to a value A. If we place A[j] at the C[A[j]]-th index, then it's
+    exactly where it belongs in the sorted output.*/
+
+</code></pre>
+
+<p>This works in linear time, but the major downside to it because the counting array C[] gets crazy if <em>k</em> has very high values.</p>
+<h2 id="radix-sort"><a name="user-content-radix-sort" href="#radix-sort" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Radix Sort</h2>
+<p>Radix sort was developed by IBM even before personal computers were a thing, back when punchcards were used for calculations.</p>
+<p><em>Key idea</em>: Sort least significant digits first. By doing so, we don&rsquo;t mess up the order of previously sorted digits as we continue. This is why <em>stability</em> is so important in this case, because when we meet identical values on a certain digit, they keep their order from previous digits.</p>
+<h4 id="algorithm_4"><a name="user-content-algorithm_4" href="#algorithm_4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Algorithm</h4>
+<pre><code class="java">radixSort(A,d)
+    for i &lt;-- 1 to d do
+        stable sort array A on digit i
+
+</code></pre>
+
+<h4 id="proof"><a name="user-content-proof" href="#proof" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Proof</h4>
+<ul>
+<li>Assume digits 1,2,&hellip;,i-1 are sorted.</li>
+<li>Show that a stable sort on digit i leaves digits 1,&hellip;,i sorted:<ul>
+<li>If 2 digits in position i are different, ordering by position i is correct, and positions 1,&hellip;,i-1 are irrelevant.</li>
+<li>If 2 digits in position i are equal, numbers are already in the right order (by inductive hypothesis). The stable sort on digit i leaves them in the right order.</li>
+</ul>
+</li>
+</ul>
+<h4 id="runtime-analysis_2"><a name="user-content-runtime-analysis_2" href="#runtime-analysis_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Runtime Analysis</h4>
+<p>Assuming that Counting Sort is the stable sort used as an intermediate:<br />
+<em> Θ(n+k) per pass (digits range in range 0&hellip;k)<br />
+</em> d passes<br />
+<em> Θ(d(n+k)) total<br />
+</em> If k = O(n), time = Θ(dn)</p>
+<h4 id="how-to-break-each-key-into-digits"><a name="user-content-how-to-break-each-key-into-digits" href="#how-to-break-each-key-into-digits" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>How to break each key into digits?</h4>
+<ul>
+<li><em>n</em> words</li>
+<li><em>b</em> bits per word</li>
+<li>Break each word into <em>r</em>-bit digits. Have <em>d</em> = ceil(<em>b</em>/<em>r</em>)</li>
+<li>Use Counting Sort, <em>k</em> = 2<sup><em>r</em></sup>-1</li>
+<li>Time: Θ(b/r * (n + 2<sup>r</sup>))</li>
+</ul>
+<p>How to choose r? Balance b/r and n + 2<sup>r</sup>. Choosing r ~ lg n gives us Θ(bn/lgn).</p>
+<ul>
+<li>If we choose r &lt; lg n, then b/r &gt; b/lg n, and n + 2<sup>r</sup> doesn&rsquo;t improve.</li>
+<li>If we choose r &gt; lg n, then n + 2<sup>r</sup> gets big.</li>
+</ul>
+<p>Thus, to sort 2<sup>16</sup> 32-bit numbers, use r = lg 2<sup>16</sup> = 16 bits.</p>
+<h4 id="comparison-to-mergesort-and-quicksort"><a name="user-content-comparison-to-mergesort-and-quicksort" href="#comparison-to-mergesort-and-quicksort" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Comparison to mergesort and quicksort</h4>
+<ul>
+<li>1 million (2<sup>20</sup>) 32-bit integers.</li>
+<li>Radix sort: ceil(32/20) = 2 passes.</li>
+<li>Mergesort/quicksort: lg (n) = 20 passes.</li>
+</ul>
+<p>(Remember that each radix sort &ldquo;pass&rdquo; is really just two passses - one to take census, and one to move data.)</p>
+<p>However, the downside of this is that it uses 65536 memory cells.</p>
+<h4 id="breaking-n-log-n-limit"><a name="user-content-breaking-n-log-n-limit" href="#breaking-n-log-n-limit" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Breaking n log n limit</h4>
+<p>How does radix sort violate the ground rules for a comparison sort? It uses counting sort to gain information about keys rather than directly comparing 2 keys. Keys are used as array indices.</p>
+<h2 id="quicksort"><a name="user-content-quicksort" href="#quicksort" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Quicksort</h2>
+<p>Quicksort is a divide and conquer algorithm that is the fastest method used for comparison sorting. Its major drawback is that its worse case is quadratic. However, on average, it runs a lot faster than the other methods. It runs in O(n log n) time, but the hidden constant in front of quicksort is a lot smaller than other logarithmic methods (e.g. mergesort or heapsort).</p>
+<h4 id="runtime-analysis_3"><a name="user-content-runtime-analysis_3" href="#runtime-analysis_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Runtime analysis</h4>
+<ul>
+<li>Worst case: Already sorted array (either increasing or decreasing)</li>
+<li>Recurrence relation: T(n) = T(n-1) + c*n+d</li>
+</ul>
+<h4 id="in-place-algorithms"><a name="user-content-in-place-algorithms" href="#in-place-algorithms" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>In-place algorithms</h4>
+<p>An algorithm is <strong>in-place</strong> if it uses only a constant amount of memory in addition to that used to store the input. These are important because if the data set to be sorted takes a lot of space already, we don&rsquo;t want an algorithm that takes up twice as much space.</p>
+<ul>
+<li>Mergesort isn&rsquo;t in-place because its merge procedure requires a temporary array.</li>
+<li>Selection sort and Insertion sort are in-place, because we&rsquo;re only moving elements within the input array.</li>
+</ul>
+<h4 id="algorithm_5"><a name="user-content-algorithm_5" href="#algorithm_5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Algorithm</h4>
+<p><strong>Partition step</strong></p>
+<p><em>Input</em>: An array A with indices start and stop</p>
+<p><em>Output</em>: Returns an index j and rearranges the elements of A such that for all i<j, A[i]≤A[j] and for all k>j, A[k]≥A[j].</p>
+<p><pre><code class="java">    pivot &lt;-- A[stop]
+    left &lt;-- start
+    right &lt;-- stop - 1
+
+    while left &lt;= right do
+        while (left &lt;= right and A[left] &lt;= pivot) do left &lt;-- left + 1
+        while (left &lt;= right and A[right] &lt;= pivot) do right &lt;-- right - 1
+        if (left &lt; right) then exchange A[left] and A[right]
+    exchange A[stop] and A[left]
+    return left
+</code></pre><br />
+<img alt="" src="http://i.imgur.com/ESWt07g.gif" /></p>
+<p><strong>Sorting step</strong></p>
+<p><em>Input</em>: An array A to sort indices start and stop.</p>
+<p><em>Output</em>: A[start&hellip;stop] is sorted.</p>
+<pre><code class="java">if (start&lt;stop) then
+    pivot &lt;-- partition(A, start, stop)
+    quickSort(A, start, pivot-1)
+    quickSort(A, pivot+1, stop)
+
+</code></pre>
+
+<h4 id="improvements"><a name="user-content-improvements" href="#improvements" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Improvements</h4>
+<p>Quicksort gets a lot slower if the array is already sorted.</p>
+<p>A solution to this is to always find the median before sorting, but although that guarantees O(n log n) running time, it worsens the average case so that the algorithm becomes just another O(n log n) sort rather than the quickest.</p>
+<p>To solve this, we can choose to randomize the pivot. To do so, we choose an element at a position <em>i</em> and swap it with the element at the last position before continuing with our normal Quicksort. The chances of reaching the worst-case are drastically decreased.</p>
+<h1 id="strings-pattern-matching"><a name="user-content-strings-pattern-matching" href="#strings-pattern-matching" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Strings &amp; Pattern Matching</h1>
+<ul>
+<li>The objective of string searching is to find the location of a specific text pattern within a larger body of text (e.g. a sentence, paragraph, book, etc.)</li>
+<li>As with most algorithms, the main considerations are speed and efficiency.</li>
+</ul>
+<h2 id="brute-force_1"><a name="user-content-brute-force_1" href="#brute-force_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Brute Force</h2>
+<ul>
+<li>The Brute Force algorithm compares the pattern to the text, one character at a time, until unmatching characters are found.</li>
+<li>The algorithm can be designed to stop on either the first occurrence of the pattern, or upon reaching the end of the text.</li>
+</ul>
+<p><img alt="" src="http://i.imgur.com/6lNMkP7.png" /></p>
+<h4 id="algorithm_6"><a name="user-content-algorithm_6" href="#algorithm_6" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Algorithm</h4>
+<pre><code class="java">do
+    if (text letter == pattern letter)
+        compare next letter of pattern to next letter of text
+    else
+        move pattern down text by one letter
+until (entire pattern found or end of text)
+
+</code></pre>
+
+<h4 id="complexity"><a name="user-content-complexity" href="#complexity" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Complexity</h4>
+<ul>
+<li>Given a pattern with M characters in length, and a text N characters in length&hellip;</li>
+<li>Worst case: compares the pattern to each substring of text of length M.<ul>
+<li>Total number of comparisons: M(N-M+1)</li>
+<li>Worst case time complexity: O(MN)<br />
+<img alt="" src="http://i.imgur.com/4SPRuJ8.png" /></li>
+</ul>
+</li>
+<li>Best case if pattern: Finds pattern in the first M positions of text.<ul>
+<li>Total number of comparisons: M</li>
+<li>Best case time complexity: O(M)<br />
+<img alt="" src="http://i.imgur.com/30IsoLw.png" /></li>
+</ul>
+</li>
+<li>Best case if pattern not found: Always mismatches on the first character.<ul>
+<li>Total number of comparisons: N</li>
+<li>Best case time complexity: O(N)<br />
+<img alt="" src="http://i.imgur.com/30IsoLw.png" /></li>
+</ul>
+</li>
+</ul>
+<h2 id="rabin-karp"><a name="user-content-rabin-karp" href="#rabin-karp" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Rabin-Karp</h2>
+<ul>
+<li>The Rabin-Karp string searching algorithm calculates a hash value for the pattern, and for each M-character subsequence of text to be compared.</li>
+<li>If the hash values are unequal, the algorithm will calculate the hash value for next M-character sequence.</li>
+<li>If the hash values are equal, the algorithm will do a Brute-Force comparison between the pattern and the M-character sequence.</li>
+<li>In this way, there is only one comparison per text subsequence, and Brute Force is only needed when hash values match.</li>
+</ul>
+<h4 id="algorithm_7"><a name="user-content-algorithm_7" href="#algorithm_7" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Algorithm</h4>
+<pre><code class="java">
+//pattern is M characters long.
+
+hash_p //hash value of pattern
+hash_t //hash value of first M letters in body of text
+
+do
+    if (hash_p == hash_t)
+        brute force comparison of pattern and selected section of text
+
+    hash_t &lt;-- hash value of next section of text, one character over
+
+until (end of text or brute force comparison == true)
+
+</code></pre>
+
+<h4 id="math"><a name="user-content-math" href="#math" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Math</h4>
+<ul>
+<li>Consider an M-character sequence as an M-digit number in base b, where b is the number of letters in the alphabet. The text subsequence t[i..i+M-1] is mapped to the number <strong>x(i) = t[i]⋅b<sup>M-1</sup> + t[i+1]⋅b<sup>M-2</sup> +&hellip;+ t[i+M-1]</strong></li>
+<li>Furthermore, given x(i) we can compute x(i+1) for the next subsequence t[i+1&hellip;i+M] in constant time, as follows:<br />
+<img alt="" src="http://i.imgur.com/CO0afvM.png" /></li>
+<li>In this way, we never explicitly compute a new value. We simply adjust the existing value as we move over one character.</li>
+<li>If M is large, the resulting value will be enormous. For this reason, we hash the value by taking its modulo over a prime number Q.</li>
+<li>The mod function (% in Java) is particularly useful in this case due to several of its inherent properties:<ul>
+<li>[(x mod q) + (y mod q)] = (x+y) mod q</li>
+<li>(x mod q) mod q = x mod q<br />
+<img alt="" src="http://i.imgur.com/P09GvHT.png" /></li>
+</ul>
+</li>
+<li>If a sufficiently large prime number is used for the hash function, the hashed values of two different patterns will usually be distinct.</li>
+<li>If this is the case, searching takes O(N) time, where N is the number of characters in the larger body of text.</li>
+<li>It is always possible to construct a scenario with a worst case complexity of O(MN). However, this is likely to happen only if the prime number used for hashing is small.</li>
+</ul>
+<h2 id="knuth-morris-pratt"><a name="user-content-knuth-morris-pratt" href="#knuth-morris-pratt" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Knuth-Morris-Pratt</h2>
+<ul>
+<li>The KMP string searching algorithm differs from the brute-force algorithm by keeping track of information gained from previous comparisons.</li>
+<li>A <strong>failure function</strong> (<em>f</em>) is computed that indicates how much of the last comparison can be reused if it fails.</li>
+<li>Specifically, <em>f</em> is defined to be the longest prefix of the pattern P[0&hellip;j] that is also a suffix of P[1&hellip;j]. <strong>N.B. Not a suffix of P[0&hellip;j]</strong>.</li>
+</ul>
+<h4 id="example_3"><a name="user-content-example_3" href="#example_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Example</h4>
+<p>The value of the KMP failure function:</p>
+<table>
+<thead>
+<tr>
+<th>j</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P[j]</td>
+<td>a</td>
+<td>b</td>
+<td>a</td>
+<td>b</td>
+<td>a</td>
+<td>c</td>
+</tr>
+<tr>
+<td>f(j)</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>This shows how much of the beginning of the string matches up to the portion immediately preceding a failed comparison.</li>
+<li>If the comparison fails at (4), we know the a,b in positions 2,3 is identical to positions 0,1.</li>
+</ul>
+<h4 id="algorithm_8"><a name="user-content-algorithm_8" href="#algorithm_8" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Algorithm</h4>
+<p><strong>Input</strong>: Strings <em>T</em> (text) with <em>n</em> characters and <em>P</em> pattern with <em>m</em> characters.</p>
+<p><strong>Output</strong>: Starting index of the first substring of <em>T</em> matching <em>P</em>, or an indication that <em>P</em> is not a substring of <em>T</em>.</p>
+<pre><code class="java">KMPMatch(T,P)
+    f &lt;-- KMPFailureFunction(P) //build failure function
+    i &lt;-- 0
+    j &lt;-- 0
+
+    while i&lt;n do
+        if P[j] == T[i] then
+            if j == m-1 then
+                return i - m - 1 //a match
+            i &lt;-- i+1
+            j &lt;-- j+1
+        else if j&gt;0 then //no match but we have advanced
+            j &lt;-- f(j-1) //j indexes just after matching prefix in P
+        else
+            i &lt;-- i+1
+
+    return &quot;There is no substring of T matching P!&quot;
+
+</code></pre>
+
+<p><strong>Input</strong>: String <em>P</em> (pattern) with <em>m</em> characters.</p>
+<p><strong>Output</strong>: The failure function <em>f</em> for <em>P</em>, which maps <em>j</em> to the length of the longest prefix of <em>P</em> that is a suffix of P[i&hellip;j].</p>
+<pre><code class="java">
+KMPFailureFunction(P)
+
+    i &lt;-- 1
+    j &lt;-- 0
+
+    while i &lt;= m-1 do
+        if P[j] == P[i] then //we have matched j+1 characters
+            f(i) &lt;-- j+1
+            i &lt;-- i+1
+            j &lt;-- j+1
+        else if j&gt;0 then //j indexes just after a prefix of P that matches
+            j &lt;-- f(j-1)
+        else //there is no match
+            f(i) &lt;-- 0
+            i &lt;-- i + 1
+
+</code></pre>
+
+<h4 id="graphical-representation"><a name="user-content-graphical-representation" href="#graphical-representation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Graphical representation</h4>
+<p><img alt="" src="http://i.imgur.com/1aE96z3.png" /></p>
+<h4 id="time-complexity-analysis"><a name="user-content-time-complexity-analysis" href="#time-complexity-analysis" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Time Complexity Analysis</h4>
+<ul>
+<li>define <em>k = i - j</em></li>
+<li>In every iteration through the while loop, one of three things happens:<ul>
+<li>if T[i] = P[j], <em>i</em> increases by 1, as does <em>j</em>. <em>k</em> remains the same.</li>
+<li>if T[i] != P[j] and <em>j</em> &gt; 0, <em>i</em> does not change and <em>k</em> increases by at least 1, since <em>k</em> changes from <em>i - j</em> to <em>i - f(j-1)</em>.</li>
+<li>If T[i] != P[j] and <em>j</em> = 0, <em>i</em> increases by 1 and <em>j</em> remains the same, so <em>k</em> increases by 1.</li>
+</ul>
+</li>
+<li>In each iteration of the loop, either <em>i</em> or <em>k</em> increase by at least 1, so the greatest possible number of loops is <em>2n</em>.</li>
+<li>This is assuming <em>f</em> has already been computed.</li>
+<li>However, <em>f</em> is computed in much the same manner as <strong>KMPMatch</strong>, so its time complexity argument is analogous. <strong>KMPFailureFunction</strong> is O(m).</li>
+<li><strong>Total time complexity: O(n+m).</strong></li>
+</ul>
+<h2 id="regular-expressions"><a name="user-content-regular-expressions" href="#regular-expressions" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Regular Expressions</h2>
+<p>Regular expressions (RegEx) is notation for describing a set of strings, possible of infinite size.</p>
+<h4 id="notation"><a name="user-content-notation" href="#notation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Notation</h4>
+<ul>
+<li><strong>ε</strong> denotes the empty string.</li>
+<li><strong>ab+c</strong> denotes the set {ab,c}</li>
+<li>a* denotes the set {ε,a,aa,aaa,&hellip;}</li>
+</ul>
+<h4 id="examples_1"><a name="user-content-examples_1" href="#examples_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Examples</h4>
+<ul>
+<li>(a+b)&#42;: all the strings from the alphabet {a,b}</li>
+<li>b&#42;(ab&#42;a)&#42;b&#42; strings with an even number of a&rsquo;s</li>
+<li>(a+b)&#42;sun(a+b)&#42; strings containing the pattern &ldquo;sun&rdquo;</li>
+<li>(a+b)(a+b)(a+b)a 4-letter strings ending in a</li>
+</ul>
+<h4 id="finite-state-automatons"><a name="user-content-finite-state-automatons" href="#finite-state-automatons" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Finite State Automatons</h4>
+<p>Regular expressions are computed using Finite State Automatons. FSA can be combined to create OR or AND logic. The creation of the automaton and its subsequent checking process both run in linear time.</p></article></body></html>
