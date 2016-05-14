@@ -40,8 +40,7 @@
 }
 
 .jumbotron {
-    font-family:monospace;
-    height:14em;
+    height:10em;
     color: #FFFFFF;
     background: rgba(17, 0, 84, 1);
     background: -moz-linear-gradient(left, rgba(17, 0, 84, 1) 0%, #328d99 100%);
@@ -53,12 +52,12 @@
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#110054', endColorstr='#328d99', GradientType=1);
 }
 
-.jumbotron > h1 {
+.jumbotron h1 {
   font-size:2em;
   margin-bottom:0em;
 }
 
-.jumbotron > p {
+.jumbotron p {
   margin-top:0em;
   font-size:1em;
 }
