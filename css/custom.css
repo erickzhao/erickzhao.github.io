@@ -1,0 +1,72 @@
+
+
+.panel-default > .panel-heading{
+  color: #FFFFFF;
+  border-radius:0;
+  background: rgba(17, 0, 84, 1);
+  background: -moz-linear-gradient(left, rgba(17, 0, 84, 1) 0%, #328d99 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(17, 0, 84, 1)), color-stop(100%, #328d99));
+  background: -webkit-linear-gradient(left, rgba(17, 0, 84, 1) 0%, #328d99 100%);
+  background: -o-linear-gradient(left, rgba(17, 0, 84, 1) 0%, #328d99 100%);
+  background: -ms-linear-gradient(left, rgba(17, 0, 84, 1) 0%, #328d99 100%);
+  background: linear-gradient(to right, #110054 0%, #328d99 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#110054', endColorstr='#328d99', GradientType=1);
+}
+
+.nav-pills {
+    transition: all 0.3s ease 0s;
+    font-family:monospace;
+    background: rgba(17, 0, 84, 1);
+    background: -moz-linear-gradient(left, rgba(17, 0, 84, 1) 0%, #328d99 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(17, 0, 84, 1)), color-stop(100%, #328d99));
+    background: -webkit-linear-gradient(left, rgba(17, 0, 84, 1) 0%, #328d99 100%);
+    background: -o-linear-gradient(left, rgba(17, 0, 84, 1) 0%, #328d99 100%);
+    background: -ms-linear-gradient(left, rgba(17, 0, 84, 1) 0%, #328d99 100%);
+    background: linear-gradient(to right, #110054 0%, #328d99 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#110054', endColorstr='#328d99', GradientType=1);
+}
+.nav-pills > li > a {
+    color: #FFFFFF;
+}
+.nav-pills > li > a:hover {
+    opacity: 0.5;
+    background-color: #222222;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus{
+    background: #222222;
+    border-radius:0;
+    color: #FFFFFF;
+}
+
+.jumbotron {
+    font-family:monospace;
+    height:14em;
+    color: #FFFFFF;
+    background: rgba(17, 0, 84, 1);
+    background: -moz-linear-gradient(left, rgba(17, 0, 84, 1) 0%, #328d99 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(17, 0, 84, 1)), color-stop(100%, #328d99));
+    background: -webkit-linear-gradient(left, rgba(17, 0, 84, 1) 0%, #328d99 100%);
+    background: -o-linear-gradient(left, rgba(17, 0, 84, 1) 0%, #328d99 100%);
+    background: -ms-linear-gradient(left, rgba(17, 0, 84, 1) 0%, #328d99 100%);
+    background: linear-gradient(to right, #110054 0%, #328d99 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#110054', endColorstr='#328d99', GradientType=1);
+}
+
+.jumbotron > h1 {
+  font-size:2em;
+  margin-bottom:0em;
+}
+
+.jumbotron > p {
+  margin-top:0em;
+  font-size:1em;
+}
+
+.body {
+    font-family: monospace;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
