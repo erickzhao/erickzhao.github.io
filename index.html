@@ -4,9 +4,15 @@
 	<title>Hello World</title>
 	<!--Stylesheets-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/content/css/custom.css">
+	<link rel="icon" href="/content/images/favicon.ico">
 </head>
 <body ng-app="Portfolio">
 
+<!--Header & Navbar-->
+<div main-nav></div>
+
+<!--Main page content-->
 <div ng-view></div>
 
 
@@ -17,8 +23,8 @@
 	<!--Bootstrap-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<!--Angular and dependencies-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js"></script>
 
@@ -29,7 +35,9 @@
 	<!--Routes-->
 <script src="/app/app.routes.js"></script>
 	<!--Controllers-->
-<script src="/app/components/homepage.controller.js"></script>
+<script src="/app/components/about.controller.js"></script>
+	<!--Directives-->
+<script src="/app/layout/nav.directive.js"></script>
 
 </body>
 </html>

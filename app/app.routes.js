@@ -5,15 +5,25 @@ angular
 
 function config($routeProvider){
 	$routeProvider
-	.when("/",{
-		templateUrl : "/app/components/homepage.html",
-		controller : "HomepageController",
-		controllerAs : "vm"
-	})
-	.otherwise({
-		templateUrl : "/app/components/homepage.html",
-		controller : "HomepageController",
-		controllerAs: "vm"
-	});
+		.when("/about",{
+			templateUrl : "/app/components/about.html",
+			controller : "AboutController",
+			controllerAs : "vm"
+		})
+		.when("/projects",{
+			templateUrl : "/app/components/projects.html"
+		})
+		.when("/art",{
+			templateUrl : "/app/components/art.html"
+		})
+		.when("/lastfm",{
+			templateUrl : "/app/components/lastfm.html"
+		})
+		.when("/resume",{
+			templateUrl : "/app/components/resume.html"
+		})
+		.otherwise({
+			redirectTo : "/about"
+		});
 	
 }
