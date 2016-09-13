@@ -11,7 +11,9 @@ function config($routeProvider){
 			controllerAs : "vm"
 		})
 		.when("/projects",{
-			templateUrl : "/app/components/projects.html"
+			templateUrl : "/app/components/projects.html",
+			controller : "ProjectsController",
+			controllerAs : "vm"
 		})
 		.when("/art",{
 			templateUrl : "/app/components/art.html"

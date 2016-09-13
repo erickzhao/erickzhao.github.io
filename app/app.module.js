@@ -1,2 +1,2 @@
 angular
-	.module('Portfolio',['ngRoute']);
+	.module('Portfolio',['ngRoute','ngSanitize']);
