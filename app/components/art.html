@@ -1,1 +1,10 @@
 This is my art page
+
+
+<div class="row">
+	<div ng-repeat="piece in vm.artPieces">
+		<div class="col-xs-12 col-md-12 col-lg-12">
+			<img class = "img-responsive thumbnail" ng-src="{{piece.photos[0].original_size.url}}">
+		</div>
+	</div>
+</div>

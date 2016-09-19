@@ -6,3 +6,9 @@
 .navbar .navbar-collapse {
     text-align: center;
 }
+
+.thumbnail {
+	width:30%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
