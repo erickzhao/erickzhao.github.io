@@ -21,7 +21,9 @@ function config($routeProvider){
 			controllerAs : "vm"
 		})
 		.when("/lastfm",{
-			templateUrl : "/app/components/lastfm.html"
+			templateUrl : "/app/components/lastfm.html",
+			controller : "LastfmController",
+			controllerAs : "vm"
 		})
 		.when("/resume",{
 			templateUrl : "/app/components/resume.html"

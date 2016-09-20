@@ -1,1 +1,25 @@
 This is my last.fm page
+
+<div class="container" id="lastfm-container">
+	<div class="row">
+		<div ng-repeat="album in vm.albums | limitTo: 3">
+			<div class="col-sm-2 col-md-2 col-lg-2 col-sm-push-3 col-md-push-3 col-lg-push-3 albumart">
+				<img class="img-responsive" ng-src="{{album.image[3]['#text']}}">
+			</div>						
+		</div>		
+	</div>
+	<div class="row">
+		<div ng-repeat="album in vm.albums | limitTo: 3:3">
+			<div class="col-sm-2 col-md-2 col-lg-2 col-sm-push-3 col-md-push-3 col-lg-push-3 albumart">
+				<img class="img-responsive" ng-src="{{album.image[3]['#text']}}">
+			</div>						
+		</div>		
+	</div>
+	<div class="row">
+		<div ng-repeat="album in vm.albums | limitTo: 3:6">
+			<div class="col-sm-2 col-md-2 col-lg-2 col-sm-push-3 col-md-push-3 col-lg-push-3 albumart">
+				<img class="img-responsive" ng-src="{{album.image[3]['#text']}}">
+			</div>						
+		</div>		
+	</div>
+</div>

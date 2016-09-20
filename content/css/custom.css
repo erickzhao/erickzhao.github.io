@@ -12,3 +12,14 @@
 	margin: 0 auto;
 	margin-bottom: 20px;
 }
+
+.albumart {
+	padding-left: 0px;
+	padding-right: 0px;
+	border: 1px black solid;
+}
+
+#lastfm-container {
+	margin: 0 auto;
+	width: 100%;
+}
