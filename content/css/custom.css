@@ -1,25 +1,56 @@
-.navbar .navbar-nav {
+body {
+  letter-spacing: 1px;
+  color: #424242;
+  word-wrap: break-word;
+  font-family: "Lato", sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oswald", sans-serif; }
+
+.navbar-default {
+  font-family: "Oswald", sans-serif;
+  background-color: #FFFFFF; }
+  .navbar-default .navbar-nav {
     display: inline-block;
     float: none;
-}
+    text-transform: uppercase;
+    letter-spacing: 3px; }
+    .navbar-default .navbar-nav li {
+      width: 115px;
+      margin: 0px 12px 0px 12px; }
+  .navbar-default .navbar-collapse {
+    text-align: center; }
 
-.navbar .navbar-collapse {
-    text-align: center;
-}
+.jumbotron {
+  color: white;
+  background-color: #ed867d;
+  background: url("https://hd.unsplash.com/photo-1469106233956-20341cc41f8b");
+  background-size: cover;
+  margin-bottom: 0px; }
+
+.about-page-block {
+  padding: 50px;
+  line-height: 2.5;
+  outline: solid;
+  outline-offset: -15px;
+  outline-color: grey; }
+
+#profile-img {
+  padding: 20px;
+  float: none; }
 
 .thumbnail {
-	width:400px;
-	margin: 0 auto;
-	margin-bottom: 20px;
-}
+  width: 400px;
+  margin: 0 auto;
+  margin-bottom: 20px; }
 
 .albumart {
-	padding-left: 0px;
-	padding-right: 0px;
-	border: 1px black solid;
-}
+  padding-left: 0px;
+  padding-right: 0px;
+  border: 1px black solid; }
 
 #lastfm-container {
-	margin: 0 auto;
-	width: 100%;
-}
+  margin: 0 auto;
+  width: 100%; }
+
+/*# sourceMappingURL=custom.css.map */
