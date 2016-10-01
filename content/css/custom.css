@@ -35,8 +35,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 2.5;
   outline: solid;
   outline-offset: -15px;
-  outline-color: grey;
+  outline-color: #e7e7e7;
   outline-width: thin; }
+  .about-page-block img {
+    max-height: 350px; }
 
 #profile-img {
   padding: 20px;
