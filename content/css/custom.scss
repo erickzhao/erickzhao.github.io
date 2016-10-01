@@ -7,6 +7,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
 }
 
 //-------HEADER SECTION---------------
@@ -38,6 +39,7 @@ h1, h2, h3, h4, h5, h6 {
     background: url("https://hd.unsplash.com/photo-1469106233956-20341cc41f8b");
     background-size: cover;
     margin-bottom: 0px;
+    height: 250px;
 }
 
 //--------ABOUT PAGE-------------------
@@ -48,6 +50,7 @@ h1, h2, h3, h4, h5, h6 {
     outline: solid;
     outline-offset: -15px;
     outline-color: grey;
+    outline-width: thin;
 }
 
 #profile-img {
