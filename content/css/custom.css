@@ -28,7 +28,10 @@ h1, h2, h3, h4, h5, h6 {
   background: url("https://hd.unsplash.com/photo-1469106233956-20341cc41f8b");
   background-size: cover;
   margin-bottom: 0px;
-  height: 250px; }
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .about-page-block {
   padding: 50px;
