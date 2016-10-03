@@ -44,6 +44,18 @@ h1, h2, h3, h4, h5, h6 {
   padding: 20px;
   float: none; }
 
+.project-box {
+  margin: 0 auto;
+  padding: 20px;
+  outline-offset: -10px;
+  outline: solid;
+  outline-color: #e7e7e7;
+  outline-width: thin; }
+
+.project-text {
+  margin: 15px;
+  text-align: justify; }
+
 .thumbnail {
   width: 400px;
   margin: 0 auto;

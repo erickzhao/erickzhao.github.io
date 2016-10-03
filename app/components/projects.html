@@ -1,14 +1,13 @@
-<h3>Front-end projects</h3>
-
-
-<div class="row">
-	<div ng-repeat="project in vm.projects.data">
-		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-			<h4>{{project.title}}</h4>
-			<img class="img-responsive" ng-src="{{project.images.small}}">
-
-			<div ng-bind-html="project.details"></div>
-
+<div class="animated fadeInUp">
+	<h3 class="text-center">Front-end projects</h3>
+	<div class="row" id="project-page">
+		<div ng-repeat="project in vm.projects.data">
+			<div class="col-xs-12 col-sm-4 col-lg-3 project-box">
+				<h4 class="text-center">{{project.title}}</h4>
+				<img class="img-responsive center-block" ng-src="{{project.images.small}}">
+				<div ng-bind-html="project.details" class="project-text"></div>
+			</div>
 		</div>
 	</div>
 </div>
+
