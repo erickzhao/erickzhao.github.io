@@ -1,23 +1,23 @@
-This is my last.fm page
+<p>Inspired by <a href="http://www.tapmusic.net">Tapmusic.net's last.fm collage generator</a>, I have used last.fm's API to get my own personal 3x3 album grid, which shows the 9 albums that I have listened to over the past month. You can check out my profile <a href="http://www.last.fm/user/hvta">here</a>.</p>
 
 <div class="container animated fadeInUp" id="lastfm-container">
 	<div class="row">
 		<div ng-repeat="album in vm.albums | limitTo: 3">
-			<div class="col-sm-2 col-md-2 col-lg-2 col-sm-push-3 col-md-push-3 col-lg-push-3 albumart">
+			<div class="col-xs-2 col-xs-push-3 albumart">
 				<img class="img-responsive" ng-src="{{album.image[3]['#text']}}">
 			</div>						
 		</div>		
 	</div>
 	<div class="row">
 		<div ng-repeat="album in vm.albums | limitTo: 3:3">
-			<div class="col-sm-2 col-md-2 col-lg-2 col-sm-push-3 col-md-push-3 col-lg-push-3 albumart">
+			<div class="col-xs-2 col-xs-push-3 albumart">
 				<img class="img-responsive" ng-src="{{album.image[3]['#text']}}">
 			</div>						
 		</div>		
 	</div>
 	<div class="row">
 		<div ng-repeat="album in vm.albums | limitTo: 3:6">
-			<div class="col-sm-2 col-md-2 col-lg-2 col-sm-push-3 col-md-push-3 col-lg-push-3 albumart">
+			<div class="col-xs-2 col-xs-push-3 albumart">
 				<img class="img-responsive" ng-src="{{album.image[3]['#text']}}">
 			</div>						
 		</div>		

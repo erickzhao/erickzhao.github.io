@@ -33,6 +33,10 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.hvr-underline-from-left:before {
+    background: #2f4557;
+}
+
 .jumbotron {
     color: white;
     background-color: #ed867d;
@@ -43,6 +47,10 @@ h1, h2, h3, h4, h5, h6 {
     display:flex;
     align-items: center;
     justify-content: center;
+    letter-spacing: 15px;
+    a {
+        color: #FFFFFF;
+    }
 
 }
 
@@ -88,7 +96,7 @@ h1, h2, h3, h4, h5, h6 {
 .thumbnail {
     width: 400px;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 //--------LASTFM PAGE-------------------
@@ -102,4 +110,5 @@ h1, h2, h3, h4, h5, h6 {
 #lastfm-container {
     margin: 0 auto;
     width: 100%;
+    padding: 50px;
 }
