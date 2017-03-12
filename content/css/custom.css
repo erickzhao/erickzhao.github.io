@@ -79,7 +79,7 @@ p {
   outline: solid;
   outline-color: #e7e7e7;
   outline-width: thin;
-  height: 380px; }
+  height: 400px; }
   .project-box img {
     padding: 20px; }
 
@@ -100,4 +100,5 @@ p {
   margin: 0 auto;
   width: 100%;
   padding: 50px; }
+
 /*# sourceMappingURL=custom.css.map */

@@ -2,7 +2,7 @@
 	<h3 class="text-center animated fadeInUp">Toy projects</h3>
 	<div class="row animated fadeInUp">
 		<div ng-repeat="project in vm.projects.data">
-			<div class="col-xs-12 col-sm-4 col-lg-3 project-box">
+			<div class="col-xs-12 col-sm-4 project-box">
 				<h4 class="text-center">{{project.title}}</h4>
 				<a ng-href={{project.link}}><img class="img-responsive center-block" ng-src="{{project.images.small}}"></a>
 				<div ng-bind-html="project.details" class="project-text"></div>

@@ -25,9 +25,6 @@ function config($routeProvider){
 			controller : "LastfmController",
 			controllerAs : "vm"
 		})
-		.when("/resume",{
-			templateUrl : "/app/components/resume.html"
-		})
 		.otherwise({
 			redirectTo : "/about"
 		});
