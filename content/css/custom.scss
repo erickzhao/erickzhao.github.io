@@ -3,6 +3,7 @@ body {
     color: #424242;
     word-wrap: break-word;
     font-family: "Lato", sans-serif;
+    text-align: justify;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -51,7 +52,6 @@ h1, h2, h3, h4, h5, h6 {
     a {
         color: #FFFFFF;
     }
-
 }
 
 //--------ABOUT PAGE-------------------
@@ -74,8 +74,12 @@ h1, h2, h3, h4, h5, h6 {
     float: none;
 }
 
-//--------PROJECTS PAGE-----------------
+.icon {
+    font-size: 5em;
+    margin: 20px;
+}
 
+//--------PROJECTS PAGE-----------------
 
 .project-box {
     margin: 0 auto;
@@ -88,7 +92,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .project-text {
     margin: 15px;
-    text-align: justify;
 }
 
 //----------TUMBLR PAGE-----------------

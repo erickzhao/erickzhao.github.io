@@ -2,7 +2,8 @@ body {
   letter-spacing: 1px;
   color: #424242;
   word-wrap: break-word;
-  font-family: "Lato", sans-serif; }
+  font-family: "Lato", sans-serif;
+  text-align: justify; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Oswald", sans-serif;
@@ -32,9 +33,15 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
   margin-bottom: 0px;
   height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   letter-spacing: 15px; }
   .jumbotron a {
     color: #FFFFFF; }
@@ -53,6 +60,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 20px;
   float: none; }
 
+.icon {
+  font-size: 5em;
+  margin: 20px; }
+
 .project-box {
   margin: 0 auto;
   padding: 20px;
@@ -62,8 +73,7 @@ h1, h2, h3, h4, h5, h6 {
   outline-width: thin; }
 
 .project-text {
-  margin: 15px;
-  text-align: justify; }
+  margin: 15px; }
 
 .thumbnail {
   width: 400px;
@@ -79,5 +89,4 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   width: 100%;
   padding: 50px; }
-
 /*# sourceMappingURL=custom.css.map */

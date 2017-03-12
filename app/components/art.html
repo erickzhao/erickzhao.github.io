@@ -2,7 +2,7 @@
 
 <div class="row animated fadeInUp">
 	<div ng-repeat="piece in vm.artPieces">
-		<div class="col-xs-12 col-md-12 col-lg-12">
+		<div class="col-xs-12">
 			<a ng-href="{{piece.post_url}}"><img class="img-responsive thumbnail" ng-src="{{piece.photos[0].original_size.url}}"></a>
 		</div>
 	</div>
