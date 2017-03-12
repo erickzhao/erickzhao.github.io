@@ -7,6 +7,8 @@ function LastfmController($http){
 
 	var vm = this;
 
+	vm.hasLoaded = false;
+
 	var apiKey = "c11bf2042886b7c2303b6eca97055d10";
 	var userName = "hvta";
 
@@ -18,6 +20,7 @@ function LastfmController($http){
 		return $http.get(lastfmEndpoint)
 			.then(function(response){
 				vm.albums = response.data.topalbums.album;
+				vm.hasLoaded = true;
 			})
 			.catch(function(error){
 				console.log(error);

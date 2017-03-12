@@ -1,6 +1,8 @@
 <p class="animated fadeInUp">Inspired by <a href="http://www.tapmusic.net">Tapmusic.net's last.fm collage generator</a>, I have used last.fm's API to get my own personal 3x3 album grid, which shows the 9 albums that I have listened to over the past month. You can check out my profile <a href="http://www.last.fm/user/hvta">here</a>.</p>
 
-<div class="container animated fadeInUp" id="lastfm-container">
+<div class="spinner" ng-show="!vm.hasLoaded"></div>
+
+<div class="container animated fadeInUp" id="lastfm-container" ng-show="vm.hasLoaded">
 	<div class="row">
 		<div ng-repeat="album in vm.albums | limitTo: 3">
 			<div class="col-xs-2 col-xs-push-3 albumart">
