@@ -1,6 +1,10 @@
+$light-grey: #e7e7e7;
+$dark-grey: #424242;
+
+
 body {
     letter-spacing: 1px;
-    color: #424242;
+    color: $dark-grey;
     word-wrap: break-word;
     font-family: "Lato", sans-serif;
     text-align: justify;
@@ -23,7 +27,7 @@ p {
 .navbar-default {
 
     font-family: "Oswald", sans-serif;
-    background-color: #FFFFFF;
+    background-color: white;
 
     .navbar-nav {
         display: inline-block;
@@ -39,15 +43,13 @@ p {
     .navbar-collapse {
         text-align: center;
     }
-}
-
-.hvr-underline-from-left:before {
-    background: #2f4557;
+    .hvr-underline-from-left:before {
+        background: #2f4557;
+    }
 }
 
 .jumbotron {
     color: white;
-    background-color: #ed867d;
     background: url("https://hd.unsplash.com/photo-1469106233956-20341cc41f8b");
     background-size: cover;
     margin-bottom: 0px;
@@ -56,8 +58,13 @@ p {
     align-items: center;
     justify-content: center;
     letter-spacing: 15px;
+
     a {
-        color: #FFFFFF;
+        color: white;
+        &:hover {
+            color: $dark-grey;
+            transition: ease-in-out 0.3s all;
+        }
     }
 }
 
@@ -67,7 +74,7 @@ p {
     padding: 50px;
     outline: solid;
     outline-offset: -15px;
-    outline-color: #e7e7e7;
+    outline-color: $light-grey;
     outline-width: thin;
     height: 450px;
     img {
@@ -101,7 +108,7 @@ p {
     padding: 20px;
     outline-offset: -10px;
     outline: solid;
-    outline-color: #e7e7e7;
+    outline-color: $light-grey;
     outline-width: thin;
     height: 400px;
 }

@@ -17,7 +17,7 @@ p {
 
 .navbar-default {
   font-family: "Oswald", sans-serif;
-  background-color: #FFFFFF; }
+  background-color: white; }
   .navbar-default .navbar-nav {
     display: inline-block;
     float: none;
@@ -28,13 +28,11 @@ p {
       margin: 0px 12px 0px 12px; }
   .navbar-default .navbar-collapse {
     text-align: center; }
-
-.hvr-underline-from-left:before {
-  background: #2f4557; }
+  .navbar-default .hvr-underline-from-left:before {
+    background: #2f4557; }
 
 .jumbotron {
   color: white;
-  background-color: #ed867d;
   background: url("https://hd.unsplash.com/photo-1469106233956-20341cc41f8b");
   background-size: cover;
   margin-bottom: 0px;
@@ -50,7 +48,11 @@ p {
           justify-content: center;
   letter-spacing: 15px; }
   .jumbotron a {
-    color: #FFFFFF; }
+    color: white; }
+    .jumbotron a:hover {
+      color: #424242;
+      -webkit-transition: ease-in-out 0.3s all;
+      transition: ease-in-out 0.3s all; }
 
 .about-page-block {
   padding: 50px;
