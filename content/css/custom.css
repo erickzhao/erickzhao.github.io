@@ -7,7 +7,13 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Oswald", sans-serif;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-align: center; }
+
+p {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 2; }
 
 .navbar-default {
   font-family: "Oswald", sans-serif;
@@ -48,11 +54,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-page-block {
   padding: 50px;
-  line-height: 2.5;
   outline: solid;
   outline-offset: -15px;
   outline-color: #e7e7e7;
-  outline-width: thin; }
+  outline-width: thin;
+  height: 450px; }
   .about-page-block img {
     max-height: 350px; }
 
@@ -60,9 +66,11 @@ h1, h2, h3, h4, h5, h6 {
   padding: 20px;
   float: none; }
 
-.icon {
-  font-size: 5em;
-  margin: 20px; }
+#skills {
+  margin: 20px;
+  text-align: center; }
+  #skills .icon {
+    font-size: 2em; }
 
 .project-box {
   margin: 0 auto;
@@ -70,7 +78,10 @@ h1, h2, h3, h4, h5, h6 {
   outline-offset: -10px;
   outline: solid;
   outline-color: #e7e7e7;
-  outline-width: thin; }
+  outline-width: thin;
+  height: 380px; }
+  .project-box img {
+    padding: 20px; }
 
 .project-text {
   margin: 15px; }

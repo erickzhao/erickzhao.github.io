@@ -12,7 +12,7 @@ function ProjectsController($http){
 
 		var codepenUsername = "helvetica";
 		var tag = "b";
-
+		
 		var codepenEndpoint = "http://cpv2api.com/pens/public/"+codepenUsername+"?tag="+tag;
 
 		return $http.get(codepenEndpoint)
@@ -22,8 +22,6 @@ function ProjectsController($http){
 			.catch(function(error){
 
 			});
-
-	
 	}
 }
 
