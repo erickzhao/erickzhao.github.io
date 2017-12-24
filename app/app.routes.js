@@ -15,9 +15,9 @@ function config($routeProvider){
 			controller : "ProjectsController",
 			controllerAs : "vm"
 		})
-		.when("/art",{
-			templateUrl : "/app/components/art.html",
-			controller : "ArtController",
+		.when("/photo",{
+			templateUrl : "/app/components/photo.html",
+			controller : "PhotoController",
 			controllerAs : "vm"
 		})
 		.when("/lastfm",{

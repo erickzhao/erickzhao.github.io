@@ -1,9 +1,0 @@
-<p class="animated fadeInUp">This page contains my personal artwork, which I make exclusively with Adobe Photoshop CS6. I post these (along with aesthetically similar pictures) on my tumblr blog, and I used their API to display my 10 most recent pieces on this webpage. To check out more of my art, click <a href="http://midori1017.tumblr.com/tagged/midori1017">here</a> (redirects to my blog).</p>
-
-<div class="row animated fadeInUp">
-	<div ng-repeat="piece in vm.artPieces">
-		<div class="col-xs-12">
-			<a ng-href="{{piece.post_url}}"><img class="img-responsive thumbnail" ng-src="{{piece.photos[0].original_size.url}}"></a>
-		</div>
-	</div>
-</div>
