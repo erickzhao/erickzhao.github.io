@@ -6,9 +6,9 @@ function ProjectsController($http){
 
 	var vm = this;
 
-	getProjects();
+	getCodepen();
 
-	function getProjects(){
+	function getCodepen(){
 
 		var codepenUsername = "helvetica";
 		var tag = "b";
@@ -17,11 +17,35 @@ function ProjectsController($http){
 
 		return $http.get(codepenEndpoint)
 			.then(function(response){
-				vm.projects = response.data;
+				vm.codepen = response.data;
 			})
 			.catch(function(error){
-
+				console.error(error);
 			});
 	}
+
+	vm.projects = [
+		{
+			title: 'ballr',
+			link: 'https://devpost.com/software/ballr-9v21gh',
+			description: 'Advanced basketball analytics for drawing out timeout plays.',
+			repo: 'https://github.com/alexboii/Ballr',
+			slug: 'ballr'
+		},
+		{
+			title: 'invite-contributors',
+			link: 'https://probot.github.io/apps/invite-contributors/',
+			description: 'Invite authors of merged pull requests to your GitHub organization.',
+			repo: 'https://github.com/erickzhao/invite-contributors',
+			slug: 'invite-contributors'
+		},
+		{
+			title: 'Static HTML Webpack Boilerplate',
+			link: 'https://github.com/erickzhao/static-html-webpack-boilerplate',
+			description: 'A starting point for static website development with modern tooling.',
+			repo: 'https://github.com/erickzhao/static-html-webpack-boilerplate',
+			slug: 'static-html-webpack-boilerplate'
+		}
+	]
 }
 
