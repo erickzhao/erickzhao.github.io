@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
@@ -40,12 +41,13 @@ module.exports = {
       cssProcessorOptions: { discardComments: { removeAll: true } },
       canPrint: true
     }),
+    new HtmlWebpackPlugin({
+      filename: 'index.html', // Output
+      template: './src/index.html' // Input
+    }),
     new CopyWebpackPlugin([{
       from:'./src/images/*',
       to:'./images/[name].[ext]'
-    },{
-      from:'./src/*.html*',
-      to: './[name].[ext]'
     }])
   ],
   stats: {
