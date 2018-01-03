@@ -22,6 +22,10 @@
     "babel-minify": "^0.2.0",
     "babel-preset-env": "^1.6.1",
     "css-loader": "^0.28.7",
+    "cssnano": "^3.10.0",
+    "eslint": "^4.14.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^2.30.1",
     "http-server": "^0.10.0",
@@ -34,7 +38,8 @@
     "webpack-dev-server": "^2.9.3"
   },
   "dependencies": {
-    "copy-webpack-plugin": "^4.2.0"
+    "copy-webpack-plugin": "^4.2.0",
+    "typed.js": "^2.0.6"
   },
   "browserslist": [
     "> 1%",
