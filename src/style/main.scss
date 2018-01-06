@@ -3,12 +3,16 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Muli');
 @import 'nav';
 @import 'sections';
-
 body {
   font-family: 'Muli', 'Helvetica Neue', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
 }
 
@@ -17,14 +21,30 @@ section:not(#hero) {
 }
 
 .btn {
+  text-transform: uppercase;
+  letter-spacing: 1px;
   border-radius: 0px;
   border: 0px;
-
+  overflow: hidden;
+  position: relative;
   &.btn-primary {
     background-color: $primary;
-    overflow: hidden;
+    &::after {
+      clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
+      transition: all 0.3s linear;
+      content: "";
+      position: absolute;
+      width: 400%;
+      top: 0;
+      bottom: 0;
+      z-index: 2;
+      background-color: $light;
+      transform: translateX(-130%);
+    }
     &:hover {
-      
+      &::after {
+        transform: translateX(30%);
+      }
     }
   }
 }
