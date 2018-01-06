@@ -1,17 +1,42 @@
 #hero {
-    color: black;
+  color: black;
+  background-color: transparent;
+  #hero--main {
+    @extend .fill-viewport;
     background-color: transparent;
-    padding-top: 30vh;
-    display:flex;
+    padding-top: 25vh;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 80px;
+    padding-right: 80px;
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
-
-    h1 {
-        max-width: 600px;
+    @media (max-width: 480px) {
+      padding-left: 10px;
+      padding-right: 10px;
     }
-
-    #button-container {
-        display: flex;
-        justify-content: flex-end;
+  }
+  h1 {
+    max-width: 600px;
+  }
+  #button-container {
+    display: flex;
+    justify-content: flex-end;
+    @media (max-width: 768px) {
+      justify-content: center;
     }
+  }
+  .parallax-layer {
+    @extend .fill-viewport;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-size: 2000px;
+    background-repeat: no-repeat;
+    background-image: url('/images/810.jpg');
+    z-index: -2;
+  }
 }

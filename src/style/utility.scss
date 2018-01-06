@@ -1,19 +1,45 @@
 .fill-viewport {
-    height: 700px;
-    height: 100vh;
+  height: 700px;
+  height: 100vh;
 }
 
 .highlight {
-    font-weight: 600;
-    position: relative;
-    &::after {
-        content: "";
-        position: absolute;
-        height: 16px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: -1;
-        background-color: lightgray;
+  font-weight: 600;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    height: 16px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: lightgray;
+  }
+}
+
+.wipe {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  font-weight: 600;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    animation: 0.5s ease-out 0s 1 slideInFromLeft;
+    top: -200%;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: lightgray;
+  }
+  @keyframes slideInFromLeft {
+    0% {
+      top: 100%;
     }
+    100% {
+      top: -100%;
+    }
+  }
 }

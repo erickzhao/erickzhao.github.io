@@ -1,8 +1,8 @@
 @import '__variables';
+@import 'utility';
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Muli');
 @import 'nav';
 @import 'sections';
-@import 'utility';
 
 body {
   font-family: 'Muli', 'Helvetica Neue', sans-serif;
@@ -14,4 +14,17 @@ h1, h2, h3, h4, h5, h6 {
 
 section:not(#hero) {
   margin: 100px;
+}
+
+.btn {
+  border-radius: 0px;
+  border: 0px;
+
+  &.btn-primary {
+    background-color: $primary;
+    overflow: hidden;
+    &:hover {
+      
+    }
+  }
 }

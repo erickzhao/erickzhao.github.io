@@ -13,17 +13,27 @@
 <body>
   <nav>
   </nav>
-  <section id="hero" class="container fill-viewport">
-    <div>
-      <h1>I'm <span class="highlight">Erick</span>, and I study <span class="highlight">Software Engineering</span> in Montreal, Canada.</h1>
-      <h2>I love <span class="highlight">______________</span>.</h2>
+  <section id="hero">
+    <div class="parallax-layer"></div>
+    <div id="hero--main">
+      <div>
+        <h1>I'm <span class="highlight">Erick</span>, and I study <span class="highlight">Software Engineering</span> in Montreal, Canada.</h1>
+        <div id="typed-strings">
+          <p>web development.</p>
+          <p>graphic design.</p>
+          <p>photography.</p>
+          <p>brewing kombucha.</p>
+        </div>
+        <h2>I'm into
+          <span id="typed"></span>
+        </h2>
+      </div>
+      <div id="button-container">
+        <a href="#about">
+          <button type="button" class="btn btn-primary">Find out more</button>
+        </a>
+      </div>
     </div>
-    <div id="button-container">
-      <a href="#about">
-        <button type="button" class="btn btn-light">Find out more</button>
-      </a>
-    </div>
-    <div id="hero--overlay"/>
   </section>
 
   <section id="about">
