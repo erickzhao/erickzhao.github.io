@@ -3,6 +3,10 @@
   height: 100vh;
 }
 
+.text-container {
+  z-index: 10;
+}
+
 .highlight {
   font-weight: 600;
   position: relative;
@@ -18,28 +22,24 @@
   }
 }
 
-.wipe {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  font-weight: 600;
+.wipe-hover {
+  overflow: hidden;
   position: relative;
-  &::before {
+  &::after {
+    clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
+    transition: all 0.3s linear;
     content: "";
     position: absolute;
-    animation: 0.5s ease-out 0s 1 slideInFromLeft;
-    top: -200%;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    background-color: lightgray;
+    width: 400%;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: $light;
+    transform: translateX(-130%);
   }
-  @keyframes slideInFromLeft {
-    0% {
-      top: 100%;
-    }
-    100% {
-      top: -100%;
+  &:hover {
+    &::after {
+      transform: translateX(30%);
     }
   }
 }
