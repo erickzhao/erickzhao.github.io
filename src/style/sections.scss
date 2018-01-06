@@ -35,7 +35,7 @@
     left: 0;
     overflow: hidden;
     background-size: 1500px;
-    background-position: 500px 200px;
+    background-position: center;
     background-image: url('/images/810.jpg');
     z-index: -2;
   }
@@ -85,6 +85,7 @@ section:not(#hero) {
         height: 100%;
         background: url("/images/headshot-2.jpg");
         background-repeat: no-repeat;
+        background-size: contain;
         z-index: 2;
       }
     }
@@ -96,4 +97,8 @@ section:not(#hero) {
       }
     }
   }
+}
+
+#experiences {
+
 }
