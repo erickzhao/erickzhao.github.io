@@ -4,7 +4,7 @@
   #hero--main {
     @extend .fill-viewport;
     background-color: transparent;
-    padding-top: 25vh;
+    padding-top: 20vh;
     max-width: 1000px;
     margin: 0 auto;
     padding-left: 80px;
@@ -34,8 +34,7 @@
     top: 0;
     left: 0;
     overflow: hidden;
-    background-size: 2000px;
-    background-repeat: no-repeat;
+    background-size: 1500px;
     background-image: url('/images/810.jpg');
     z-index: -2;
   }

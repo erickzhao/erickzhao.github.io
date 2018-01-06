@@ -3,7 +3,7 @@ const hero = document.getElementById('hero');
 
 
 hero.addEventListener('mousemove', (e) => {
-  const factor = 6;
+  const factor = 15;
   const offsetX = document.documentElement.clientWidth / 4;
   const offsetY = document.documentElement.clientHeight / 4;
   const posX = (e.pageX);
