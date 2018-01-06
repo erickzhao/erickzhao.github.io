@@ -13,18 +13,17 @@
 <body>
   <nav>
   </nav>
-  <section id="hero" class="container">
-    <div class="fill-viewport" style="padding-top: 25vh; display:flex; flex-direction: column; justify-content: space-around;">
-      <div class="text-align:center">
-        <h1 style="max-width: 600px;">I'm Erick, and I'm studying Software Eng in Montreal, Canada.</h1>
-        <h2>I enjoy ______________.</h2>
-      </div>
-      <div style="display:flex; justify-content: flex-end;">
-        <a href="#about">
-          <button type="button" class="btn btn-light">Find out more</button>
-        </a>
-      </div>
+  <section id="hero" class="container fill-viewport">
+    <div>
+      <h1>I'm <span class="highlight">Erick</span>, and I study <span class="highlight">Software Engineering</span> in Montreal, Canada.</h1>
+      <h2>I love <span class="highlight">______________</span>.</h2>
     </div>
+    <div id="button-container">
+      <a href="#about">
+        <button type="button" class="btn btn-light">Find out more</button>
+      </a>
+    </div>
+    <div id="hero--overlay"/>
   </section>
 
   <section id="about">

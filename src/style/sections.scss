@@ -1,4 +1,17 @@
 #hero {
     color: black;
-    background-color: white;
+    background-color: transparent;
+    padding-top: 30vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    h1 {
+        max-width: 600px;
+    }
+
+    #button-container {
+        display: flex;
+        justify-content: flex-end;
+    }
 }
