@@ -25,6 +25,13 @@ p {
   }
 }
 
+a {
+  color: $light;
+  &:hover {
+    color: darken($light, 20%);
+  }
+}
+
 .btn {
   text-transform: uppercase;
   letter-spacing: 1px;
