@@ -3,6 +3,10 @@
   height: 100vh;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 @mixin img-fluid {
   max-width:100%;
   height:auto;
