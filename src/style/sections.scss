@@ -131,7 +131,7 @@ section {
       background: linear-gradient(to bottom, $primary, $dark);
 
     #project--nav {
-      padding: 60px 0px;
+      padding: 100px 60px;
       display: inline-block;
       position: sticky;
       top: 0;
@@ -139,6 +139,7 @@ section {
       ul {
         top: 0;
         list-style: none;
+        padding: 0;
         li {
           a {
             color: black;
@@ -149,6 +150,10 @@ section {
             }
           }
         }
+      }
+
+      #project--up, #project--down {
+        display: block;
       }
     }
   }

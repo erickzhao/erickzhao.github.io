@@ -41,3 +41,20 @@ a {
     background-color: $primary;
   }
 }
+
+.nav-icon {
+  margin: 10px 0px;
+  padding: 0;
+  border: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+  &#project--up {
+    background: url('/images/arrow-up.svg');
+  }
+
+  &#project--down {
+    background: url('/images/arrow-down.svg');
+  }
+}
