@@ -43,8 +43,26 @@
   }
 }
 
-section:not(#hero) {
-  max-width: 1000px;
+.container {
+  @media (min-width: 576px) {
+    max-width: 540;
+  }
+
+  @media (min-width: 768px) {
+
+  }
+
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+}
+
+section {
+  padding: 0px 15px;
   margin: 100px auto;
   h1 {
     font-size: 36px;
@@ -94,13 +112,57 @@ section:not(#hero) {
     .headshot {
       position: relative;
       @media (max-width: 768px) {
-        max-width:100%;
-        height:auto;
+        @include img-fluid;
       }
     }
   }
 }
 
-#experiences {
+#projects {
+  #project--container {
+    position: relative;
+    width: 100vw;
+    left: calc(-50vw + 50%);
+    display: flex;
+  }
+  #project--nav-panel {
+    padding: 20px;
+    width: 35%;
+      background: linear-gradient(to bottom, $primary, $dark);
 
+    #project--nav {
+      padding: 60px 0px;
+      display: inline-block;
+      position: sticky;
+      top: 0;
+      font-size: 24px;
+      ul {
+        top: 0;
+        list-style: none;
+        li {
+          a {
+            color: black;
+
+            &.active {
+              color: white;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #project--list {
+    max-width: 600px;
+    margin: 0 auto;
+
+    .project {
+      padding: 40px;
+    }
+    .project--screenshot {
+      margin: 20px;
+      @include img-fluid;
+    }
+  }
 }

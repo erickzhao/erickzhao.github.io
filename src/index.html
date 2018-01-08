@@ -13,7 +13,7 @@
 <body>
   <nav>
   </nav>
-  <section id="hero">
+  <header id="hero">
     <div class="parallax-layer"></div>
     <div id="hero--main">
       <div>
@@ -31,7 +31,7 @@
         </a>
       </div>
     </div>
-  </section>
+  </header>
 
   <section id="about" class="container">
     <h1>About <span class="highlight">me</span></h1>
@@ -161,8 +161,96 @@
         </div>
     </div>
   </section>
-  <section id="projects" class="container">
-    <h1>My <span class="highlight">projects</span></h1>
+  <section id="projects">
+    <div class="container">
+      <h1>My <span class="highlight">projects</span></h1>
+    </div>
+    <div id="project--container">
+      <div id="project--nav-panel">
+        <nav id="project--nav">
+          <ul>
+            <li><a class="active" href="#project--ballr">ballr</a></li>
+            <li><a href="#project--invite">invite-contributors</a></li>
+            <li><a href="#project--boilerplate">static website boilerplate</a></li>
+            <li><a href="#project--design">web design</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div id="project--list">
+        <div class="project" id="project--ballr">
+          <img class="project--screenshot" src="/images/project-screenshots/ballr.png"/>
+          <h2>ballr</h2>
+          <p>
+            ballr is a 36-hour project submitted to McGill CodeJam 2017. We used basketball
+            shot data to develop an analytics app that would help coaches draw up plays off
+            timeouts by visualizing player efficiency on different areas of the court.
+            <br/>
+            <ul>
+              <li>🥈 2nd Place - Overall</li>
+              <li>🏅 1st Place - Sports Category</li>
+            </ul>
+          </p>
+          <ul class="tag">
+            <li>Data</li>
+            <li>ES6</li>
+            <li>ReactJS</li>
+            <li>KonvaReact</li>
+            <li>Flask</li>
+            <li>scikit-learn</li>
+          </ul>
+        </div>
+        <div class="project" id="project--invite">
+          <img class="project--screenshot" src="/images/project-screenshots/invite.png"/>
+          <h2>invite-contributors</h2>
+          <p>
+            invite-contributors is a GitHub app that automatically invites authors
+            of pull requests to your GitHub organization when their PR gets merged.
+            Tested, deployed, and installed by many organizations (including Chai).
+            Written as a contribution to Hacktoberfest 2017 🎃.
+          </p>
+          <ul class="tag">
+            <li>GitHub App</li>
+            <li>NodeJS</li>
+            <li>Probot</li>
+            <li>ES6</li>
+            <li>Heroku</li>
+            <li>TravisCI</li>
+            <li>expect</li>
+          </ul>
+        </div>
+        <div class="project" id="project--boilerplate">
+          <img class="project--screenshot" src="/images/project-screenshots/webpack.svg"/>
+          <h2>static website boilerplate</h2>
+          <p>
+            A non-opinionated Webpack 3 setup that helps kickstart static
+            web page development (much like this one). Includes live reloading,
+            SCSS and ES6 transpilation, style autoprefixing, and minification.
+            Still working out the kinks.
+          </p>
+          <ul class="tag">
+            <li>Boilerplate</li>
+            <li>Webpack 3</li>
+            <li>Babel</li>
+          </ul>
+        </div>
+        <div class="project" id="project--design">
+          <h2>web design</h2>
+          <p>
+            I make static web page designs sometimes. Here are some that
+            I've made in the past.
+          </p>
+          <ul class="tag">
+            <li>Design</li>
+            <li>Bootstrap</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>ES6</li>
+            <li>Babel</li>
+            <li>Webpack</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="contact" class="container">
