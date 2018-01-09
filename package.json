@@ -38,6 +38,7 @@
     "webpack-dev-server": "^2.9.3"
   },
   "dependencies": {
+    "basiclightbox": "^4.0.0",
     "copy-webpack-plugin": "^4.2.0",
     "simple-slider": "^1.0.0",
     "smoothscroll": "^0.4.0",
