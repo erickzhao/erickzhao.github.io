@@ -126,6 +126,12 @@ section {
     display: flex;
   }
   #project--nav-panel {
+
+    @media (max-width: 768px) {
+      visibility: hidden;
+      width: 0;
+    }
+
     padding: 20px;
     width: 35%;
       background: linear-gradient(to bottom, $primary, $dark);
