@@ -1,6 +1,6 @@
 const basicLightbox = require('basiclightbox');
 
-const photos = document.querySelectorAll('.thumbnail');
+const photos = document.querySelectorAll('.thumbnail-container');
 
 photos.forEach((ph) => {
   ph.addEventListener('click', () => {
