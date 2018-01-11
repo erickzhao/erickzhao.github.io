@@ -179,6 +179,11 @@ section {
 }
 
 #photography {
+  & > div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  }
   .thumbnail-container {
     display: inline-block;
     position: relative;
