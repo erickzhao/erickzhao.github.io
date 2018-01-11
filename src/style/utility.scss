@@ -69,6 +69,17 @@
   }
 }
 
+.media-links {
+  @extend .inline-list;
+  img {
+    transition: 0.25s all ease-in-out;
+    width: 40px;
+    &:hover {
+      width: 50px;
+    }
+  }
+}
+
 ul.tag {
   @extend .inline-list;
   li {

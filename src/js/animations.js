@@ -24,9 +24,11 @@ const createObserver = (elements) => {
 };
 
 window.addEventListener('load', () => {
-  const elements = document.querySelectorAll('.timeline--block');
+  const timelineElements = document.querySelectorAll('.timeline--block');
+  const projectElements = document.querySelectorAll('.project');
   if (IntersectionObserver) {
-    createObserver(elements);
+    createObserver(timelineElements);
+    createObserver(projectElements);
   }
 }, false);
 
