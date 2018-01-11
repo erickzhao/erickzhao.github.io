@@ -2,7 +2,7 @@ const handleIntersect = (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.remove('hidden');
-      entry.target.classList.add('animated', 'bounceIn');
+      entry.target.classList.add('animated', 'fadeInUp');
     }
   });
 };
