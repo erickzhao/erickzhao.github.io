@@ -94,7 +94,7 @@ __webpack_require__(0),__webpack_require__(3),__webpack_require__(6),__webpack_r
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-var Typed=__webpack_require__(4),type=new Typed('#typed',{stringsElement:'#typed-strings',smartBackspace:!0,loop:!0,typeSpeed:35});
+var Typed=__webpack_require__(4),type=new Typed('#typed',{stringsElement:'#typed-strings',smartBackspace:!0,loop:!0,typeSpeed:45});
 
 /***/ }),
 /* 4 */
@@ -133,7 +133,7 @@ var smoothScroll=__webpack_require__(0),upBtn=document.getElementById('project--
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-var handleIntersect=function(a){a.forEach(function(a){a.isIntersecting&&(a.target.classList.remove('hidden'),a.target.classList.add('animated','bounceIn'))})},createObserver=function(a){if(IntersectionObserver){var b=new IntersectionObserver(handleIntersect,{root:null,rootMargin:'0px',threshold:0.5});a.forEach(function(a){a.classList.add('hidden'),b.observe(a)})}};window.addEventListener('load',function(){var a=document.querySelectorAll('.timeline--block');IntersectionObserver&&createObserver(a)},!1);
+var handleIntersect=function(a){a.forEach(function(a){a.isIntersecting&&(a.target.classList.remove('hidden'),a.target.classList.add('animated','fadeInUp'))})},createObserver=function(a){if(IntersectionObserver){var b=new IntersectionObserver(handleIntersect,{root:null,rootMargin:'0px',threshold:0.5});a.forEach(function(a){a.classList.add('hidden'),b.observe(a)})}};window.addEventListener('load',function(){var a=document.querySelectorAll('.timeline--block'),b=document.querySelectorAll('.project');IntersectionObserver&&(createObserver(a),createObserver(b))},!1);
 
 /***/ }),
 /* 9 */
@@ -157,7 +157,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-var basicLightbox=__webpack_require__(12),photos=document.querySelectorAll('.thumbnail');photos.forEach(function(a){a.addEventListener('click',function(){var b=a.getAttribute('data-src');basicLightbox.create('<img src="'+b+'">').show()})});
+var basicLightbox=__webpack_require__(12),photos=document.querySelectorAll('.thumbnail-container');photos.forEach(function(a){a.addEventListener('click',function(){var b=a.getAttribute('data-src');basicLightbox.create('<img src="'+b+'">').show()})});
 
 /***/ }),
 /* 12 */

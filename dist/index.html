@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,13 +14,11 @@
 <link href="style.bundle.css" rel="stylesheet"></head>
 
 <body>
-  <nav>
-  </nav>
   <header id="hero">
     <div class="parallax-layer"></div>
     <div id="hero--main">
       <div>
-        <h1>I'm <span class="highlight">Erick</span>, and I study <span class="highlight">Software Engineering</span> in Montreal, Canada.</h1>
+        <h1>I'm <span class="highlight">Erick</span> 🙋🏻‍♂️, and I study <span class="highlight">Software Engineering</span> ⚙️ in Montreal, Canada.</h1>
         <h2>I'm into <span id="typed"></span></h2>
         <div id="typed-strings" style="display: none";>
           <p>web development.</p>
@@ -31,7 +28,7 @@
       </div>
       <div id="button-container">
         <a href="#about">
-          <button type="button" class="btn btn-primary wipe-hover">Find out more</button>
+          <button type="button" class="btn btn-erick">Find out more</button>
         </a>
       </div>
     </div>
@@ -39,13 +36,13 @@
 
   <section id="about" class="container">
     <h1>About <span class="highlight">me</span></h1>
-    <div class="row">
-      <div class="col-12 col-sm-6 col-lg-5">
+    <div id="about-container" class="row">
+      <div class="col-12 col-lg-5">
         <div class="headshot-container wipe-hover">
           <img class="headshot" src="/images/headshot-1.jpg"/>
         </div>
       </div>
-      <div class="text-container col-12 col-sm-6 col-lg-7">
+      <div class="text-container col-12 col-lg-7">
         <p>
           In my third year of Software Engineering at McGill University.
           I've interned at Ubisoft Montreal as a web developer. Serving as VP Communications at the McGill
@@ -297,25 +294,92 @@
   </section>
 
   <section id="photography" class="container">
-    <h1>My <span class="highlight">snaps</span></h1>
-    <img class="thumbnail" src="/images/photos/1-thumb.jpg" data-src="/images/photos/1-full.jpg"/>
-    <img class="thumbnail" src="/images/photos/2-thumb.jpg" data-src="/images/photos/2-full.jpg"/>
-    <img class="thumbnail" src="/images/photos/3-thumb.jpg" data-src="/images/photos/3-full.jpg"/>
-    <img class="thumbnail" src="/images/photos/4-thumb.jpg" data-src="/images/photos/4-full.jpg"/>
-    <img class="thumbnail" src="/images/photos/5-thumb.jpg" data-src="/images/photos/5-full.jpg"/>
-    <img class="thumbnail" src="/images/photos/6-thumb.jpg" data-src="/images/photos/6-full.jpg"/>
-    <img class="thumbnail" src="/images/photos/7-thumb.jpg" data-src="/images/photos/7-full.jpg"/>
-    <img class="thumbnail" src="/images/photos/8-thumb.jpg" data-src="/images/photos/8-full.jpg"/>
-    <img class="thumbnail" src="/images/photos/9-thumb.jpg" data-src="/images/photos/9-full.jpg"/>
-    <img class="thumbnail" src="/images/photos/10-thumb.jpg" data-src="/images/photos/10-full.jpg"/>
-    <img class="thumbnail" src="/images/photos/11-thumb.jpg" data-src="/images/photos/11-full.jpg"/>
-    <img class="thumbnail" src="/images/photos/12-thumb.jpg" data-src="/images/photos/12-full.jpg"/>
-    <img class="thumbnail" src="/images/photos/13-thumb.jpg" data-src="/images/photos/13-full.jpg"/>
-    <img class="thumbnail" src="/images/photos/14-thumb.jpg" data-src="/images/photos/14-full.jpg"/>
-    <img class="thumbnail" src="/images/photos/15-thumb.jpg" data-src="/images/photos/15-full.jpg"/>
+    <h1>My <span class="highlight">photos</span></h1>
+    <div>
+      <div class="thumbnail-container" data-src="/images/photos/1-full.jpg">
+        <img class="thumbnail" src="/images/photos/1-thumb.jpg"/>
+      </div>
+      <div class="thumbnail-container" data-src="/images/photos/2-full.jpg">
+        <img class="thumbnail" src="/images/photos/2-thumb.jpg"/>
+      </div>
+      <div class="thumbnail-container" data-src="/images/photos/3-full.jpg">
+        <img class="thumbnail" src="/images/photos/3-thumb.jpg"/>
+      </div>
+      <div class="thumbnail-container" data-src="/images/photos/4-full.jpg">
+        <img class="thumbnail" src="/images/photos/4-thumb.jpg"/>
+      </div>
+      <div class="thumbnail-container" data-src="/images/photos/5-full.jpg">
+        <img class="thumbnail" src="/images/photos/5-thumb.jpg"/>
+      </div>
+      <div class="thumbnail-container" data-src="/images/photos/6-full.jpg">
+        <img class="thumbnail" src="/images/photos/6-thumb.jpg"/>
+      </div>
+      <div class="thumbnail-container" data-src="/images/photos/7-full.jpg">
+        <img class="thumbnail" src="/images/photos/7-thumb.jpg"/>
+      </div>
+      <div class="thumbnail-container" data-src="/images/photos/8-full.jpg">
+        <img class="thumbnail" src="/images/photos/8-thumb.jpg"/>
+      </div>
+      <div class="thumbnail-container" data-src="/images/photos/9-full.jpg">
+        <img class="thumbnail" src="/images/photos/9-thumb.jpg"/>
+      </div>
+      <div class="thumbnail-container" data-src="/images/photos/10-full.jpg">
+        <img class="thumbnail" src="/images/photos/10-thumb.jpg"/>
+      </div>
+      <div class="thumbnail-container" data-src="/images/photos/11-full.jpg">
+        <img class="thumbnail" src="/images/photos/11-thumb.jpg"/>
+      </div>
+      <div class="thumbnail-container" data-src="/images/photos/12-full.jpg">
+        <img class="thumbnail" src="/images/photos/12-thumb.jpg"/>
+      </div>
+      <div class="thumbnail-container" data-src="/images/photos/13-full.jpg">
+        <img class="thumbnail" src="/images/photos/13-thumb.jpg"/>
+      </div>
+      <div class="thumbnail-container" data-src="/images/photos/14-full.jpg">
+        <img class="thumbnail" src="/images/photos/14-thumb.jpg"/>
+      </div>
+      <div class="thumbnail-container" data-src="/images/photos/15-full.jpg">
+        <img class="thumbnail" src="/images/photos/15-thumb.jpg"/>
+      </div>
+      <div class="thumbnail-container" data-src="/images/photos/16-full.jpg">
+        <img class="thumbnail" src="/images/photos/16-thumb.jpg"/>
+      </div>
+      <div class="thumbnail-container" data-src="/images/photos/17-full.jpg">
+        <img class="thumbnail" src="/images/photos/17-thumb.jpg"/>
+      </div>
+      <div class="thumbnail-container" data-src="/images/photos/18-full.jpg">
+        <img class="thumbnail" src="/images/photos/18-thumb.jpg"/>
+      </div>
+      <div class="thumbnail-container" data-src="/images/photos/19-full.jpg">
+        <img class="thumbnail" src="/images/photos/19-thumb.jpg"/>
+      </div>
+      <div class="thumbnail-container" data-src="/images/photos/20-full.jpg">
+        <img class="thumbnail" src="/images/photos/20-thumb.jpg"/>
+      </div>
+      <div class="thumbnail-container" data-src="/images/photos/21-full.jpg">
+        <img class="thumbnail" src="/images/photos/21-thumb.jpg"/>
+      </div>
+    </div>
+    <div id="flickr-btn">
+      <a href="https://www.flickr.com/photos/151758913@N02/">
+        <button type="button" class="btn btn-erick">
+          See more on <img id="flickr-logo" src="/images/icons/flickr.svg"/>
+        </button>
+      </a>
+    </div>
   </section>
 
-  <section id="contact" class="container">
-    <h1>Get in <span class="highlight">touch</span></h1>
-  </section>
+  <footer>
+    <div id="footer-container">
+      <ul class="media-links" class="inline-list">
+        <li><a href="https://www.github.com/erickzhao"><img src="/images/icons/github.svg"/></a></li>
+        <li><a href="https://www.linkedin.com/in/erickzhao"><img src="/images/icons/linkedin.svg"/></a></li>
+        <li><a href="https://medium.com/@erickzhao"><img src="/images/icons/medium.svg"/></a></li>
+        <li><a href-<img src="/images/icons/codepen.svg"/></li>
+      </ul>
+      <span><a class="inline-block wipe-hover" href="mailto:erick.zhao@mail.mcgill.ca">erick.zhao@mail.mcgill.ca</a></span>
+      <p>designed with ❤️ by 🙋🏻‍♂️</p>
+    </div>
+    
+  </footer>
 <script type="text/javascript" src="app.bundle.js"></script></body>
