@@ -1,8 +1,8 @@
 @import 'timeline';
 
 #hero {
-  color: black;
-  background-color: transparent;
+  color: white;
+  background-color: $dark;
   #hero--main {
     @extend .fill-viewport;
     background-color: transparent;
@@ -86,11 +86,19 @@ section {
 }
 
 #about {
-  p {
-    background-color: $primary;
-    color: white;
-    padding: 30px;
-    margin-top: 50px;
+
+  #about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    p {
+      background-color: $primary;
+      color: white;
+      padding: 25px;
+      @media (min-width: 960px) {
+        margin-top: 70px;
+      }
+      max-width: 500px;
+    }
   }
   .headshot-container {
     position: relative;
@@ -126,15 +134,16 @@ section {
     display: flex;
   }
   #project--nav-panel {
-
-    @media (max-width: 768px) {
+    @media (max-width: 960px) {
       visibility: hidden;
       width: 0;
+      margin: 0;
+      padding: 0;
     }
 
     padding: 20px;
     width: 35%;
-      background: linear-gradient(to bottom, $primary, $dark);
+    background: linear-gradient(to bottom, $primary, $light);
 
     #project--nav {
       padding: 100px 60px;
@@ -148,7 +157,7 @@ section {
         padding: 0;
         li {
           a {
-            color: black;
+            color: $dark;
 
             &.active {
               color: white;
@@ -169,11 +178,14 @@ section {
     margin: 0 auto;
 
     .project {
-      padding: 40px;
+      @media (min-width: 960px) {
+        padding: 40px;
+      }
     }
     .project--screenshot {
-      margin: 20px;
       @include img-fluid;
+      max-width: 500px;
+      margin: 20px;
     }
   }
 }
@@ -206,7 +218,7 @@ section {
   }
 
   #flickr-btn {
-    margin: 20px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     button {
@@ -214,7 +226,7 @@ section {
       align-items: center;
     }
     img {
-      height: 1rem;
+      height: 16px;
       padding-left: 7px;
     }
   } 
@@ -232,6 +244,6 @@ footer {
       width: 40px;
     }
   }
-  background-color: $primary;
+  background-color: $dark;
   color: white;
 }

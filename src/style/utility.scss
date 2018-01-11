@@ -3,6 +3,10 @@
   height: 100vh;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .hidden {
   visibility: hidden;
 }
@@ -34,9 +38,10 @@
 .wipe-hover {
   overflow: hidden;
   position: relative;
+  transition: 0.25s all ease-in-out;
   &::after {
     clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
-    transition: all 0.3s linear;
+    transition: all 0.25s linear;
     content: "";
     position: absolute;
     width: 400%;
@@ -47,6 +52,7 @@
     transform: translateX(-130%);
   }
   &:hover {
+    text-decoration: none;
     &::after {
       transform: translateX(30%);
     }
