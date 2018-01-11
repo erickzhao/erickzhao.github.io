@@ -53,11 +53,18 @@
   }
 }
 
-ul.tag {
+.inline-list {
   list-style-type: none;
   padding: 0;
   li {
     display: inline-block;
+    margin: 2px;
+  }
+}
+
+ul.tag {
+  @extend .inline-list;
+  li {
     font-weight: 600;
     font-size: 12px;
     padding: 3px 8px;
