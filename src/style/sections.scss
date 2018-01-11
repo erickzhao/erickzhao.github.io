@@ -1,8 +1,6 @@
 @import 'timeline';
 
 #hero {
-  color: white;
-  background-color: $dark;
   #hero--main {
     @extend .fill-viewport;
     background-color: transparent;
@@ -38,7 +36,8 @@
     overflow: hidden;
     background-size: 1500px;
     background-position: center;
-    background-image: url('/images/810.jpg');
+    // background-image: url('/images/810.jpg');
+  
     z-index: -2;
   }
 }
@@ -91,6 +90,7 @@ section {
     max-width: 1000px;
     margin: 0 auto;
     p {
+      box-shadow: 5px 5px black;
       background-color: $primary;
       color: white;
       padding: 25px;
