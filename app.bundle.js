@@ -133,7 +133,7 @@ var smoothScroll=__webpack_require__(0),upBtn=document.getElementById('project--
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-var handleIntersect=function(a){a.forEach(function(a){a.isIntersecting&&(a.target.classList.remove('hidden'),a.target.classList.add('animated','fadeInUp'))})},createObserver=function(a){if(IntersectionObserver){var b=new IntersectionObserver(handleIntersect,{root:null,rootMargin:'0px',threshold:0.5});a.forEach(function(a){a.classList.add('hidden'),b.observe(a)})}};window.addEventListener('load',function(){var a=document.querySelectorAll('.timeline--block'),b=document.querySelectorAll('.project');IntersectionObserver&&(createObserver(a),createObserver(b))},!1);
+var handleIntersect=function(a){a.forEach(function(a){a.isIntersecting&&(a.target.classList.remove('hidden'),a.target.classList.add('animated','fadeInUp'))})},createObserver=function(a){if(IntersectionObserver){var b=new IntersectionObserver(handleIntersect,{root:null,rootMargin:'0px',threshold:0.5});a.forEach(function(a){a.classList.add('hidden'),b.observe(a)})}};window.addEventListener('load',function(){var a=document.querySelectorAll('.timeline--block');IntersectionObserver&&createObserver(a)},!1);
 
 /***/ }),
 /* 9 */

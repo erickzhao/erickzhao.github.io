@@ -8,7 +8,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 module.exports = {
   entry: ['./src/js/app.js', './src/style/main.scss'],
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, ''),
     filename: 'app.bundle.js',
   },
   module: {
@@ -17,8 +17,8 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         query: {
-          presets: ['env', 'minify']
-        }
+          presets: ['env', 'minify'],
+        },
       },
       {
         test: /\.(sass|scss)$/,
