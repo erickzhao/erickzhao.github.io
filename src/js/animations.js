@@ -25,10 +25,8 @@ const createObserver = (elements) => {
 
 window.addEventListener('load', () => {
   const timelineElements = document.querySelectorAll('.timeline--block');
-  const projectElements = document.querySelectorAll('.project');
   if (IntersectionObserver) {
     createObserver(timelineElements);
-    createObserver(projectElements);
   }
 }, false);
 
