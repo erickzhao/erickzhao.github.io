@@ -41,7 +41,7 @@
     top: 0;
     left: 0;
     overflow: hidden;
-    background-size: 120%;
+    background-size: 50%;
     background-position: center;
 
     &:nth-of-type(1) {
@@ -75,7 +75,7 @@
 
 section {
   padding: 0px 15px;
-  margin: 100px auto;
+  margin: 200px auto;
   h1 {
     font-size: 36px;
     text-transform: uppercase;
@@ -197,6 +197,7 @@ section {
       @media (min-width: 960px) {
         padding: 40px;
       }
+      margin-top: 50px;
     }
     .project--screenshot {
       @include img-fluid;
