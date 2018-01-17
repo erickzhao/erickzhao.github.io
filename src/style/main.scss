@@ -1,13 +1,13 @@
 @import '__variables';
 @import 'utility';
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Muli');
-@import 'nav';
 @import 'sections';
 
 body {
   font-family: 'Muli', 'Helvetica Neue', sans-serif;
   counter-reset: h1counter;
   color: $dark;
+  background-color: $bg-light;
 }
 
 h1,
@@ -28,14 +28,17 @@ p {
 }
 
 a {
-  color: $light;
+  color: $primary;
+  transition: 0.2s all linear;
   &:hover {
-    color: darken($light, 20%);
+    color: darken($primary, 30%);
+    text-decoration: none;
   }
 }
 
 .btn {
   color: white;
+  padding: 12px 10px;
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -47,7 +50,7 @@ a {
     &:focus, &:active, &:hover {
       background-color: $light;
       color: $dark;
-      box-shadow:  5px 5px black;
+      box-shadow:  5px 5px $dark;
     }
   }
 }

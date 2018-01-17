@@ -32,7 +32,7 @@
     right: 0;
     bottom: 0;
     z-index: -1;
-    background-color: $light;
+    background-color: $primary;
   }
 }
 
@@ -92,4 +92,27 @@ ul.tag {
     background-color: transparent;
     color: $primary;
   }
+}
+
+.dark {
+  color: $off-white;
+  h1 {
+    &:before {
+      color: $primary;
+    }
+
+    .highlight {
+      &:after {
+        background-color: $light;
+      }
+    }
+  }
+  background-color: $dark;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  overflow: hidden;
+  background-size: 100%;
+  background-position: center;
+  background-image: url('/images/bg-2.svg');
+  z-index: 1;
 }

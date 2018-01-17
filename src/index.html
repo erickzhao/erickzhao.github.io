@@ -15,10 +15,11 @@
 
 <body>
   <header id="hero">
-    <div class="parallax-layer"></div>
     <div id="hero--main">
-      <div>
-        <h1>I'm <span class="highlight">Erick</span> 🙋🏻‍♂️, and I study <span class="highlight">Software Engineering</span> ⚙️ in Montreal, Canada.</h1>
+      <div class="parallax-layer"></div>
+      <div class="parallax-layer"></div>
+      <div id="description">
+        <h1>I'm <span class="highlight">Erick</span> 🙋🏻‍♂️, and I study <span class="highlight">Software</span> <span class="highlight">Engineering</span> ⚙️ in Montreal, Canada.</h1>
         <h2>I'm into <span id="typed"></span></h2>
         <div id="typed-strings" style="display: none";>
           <p>web development.</p>
@@ -34,24 +35,26 @@
     </div>
   </header>
 
-  <section id="about" class="container">
-    <h1>About <span class="highlight">me</span></h1>
-    <div id="about-container" class="row">
-      <div class="col-12 col-lg-5">
-        <div class="headshot-container wipe-hover">
-          <img class="headshot" src="/images/headshot-1.jpg"/>
-        </div>
-      </div>
-      <div class="text-container col-12 col-lg-7">
-        <p>
-          In my third year of Software Engineering at McGill University.
-          I've interned at Ubisoft Montreal as a web developer. Serving as VP Communications at the McGill
-          <a href="https://ecsess.mcgilleus.ca">Electrical, Computer, and Software Engineering Student Society</a>
-          (a mouthful, I know), and director for <a href="https://gamedevmcgill.itch.io/">Game Dev McGill</a>.
-          I love hacking away at stuff and building cute interfaces. I write stuff sometimes on <a href="">Medium</a>
-          and share my thoughts sometimes on <a href="">Twitter</a>. Check me out!
-        </p>
-      </div>
+  <section id="about" class="dark">
+    <div class="container">
+        <h1>About <span class="highlight">me</span></h1>
+        <div id="about-container" class="row">
+          <div class="col-12 col-lg-5">
+            <div class="headshot-container wipe-hover">
+              <img class="headshot" src="/images/headshot-1.jpg"/>
+            </div>
+          </div>
+          <div class="text-container col-12 col-lg-7">
+            <p>
+              In my third year of Software Engineering at McGill University.
+              I've interned at Ubisoft Montreal as a web developer. Serving as VP Communications at the McGill
+              <a href="https://ecsess.mcgilleus.ca">Electrical, Computer, and Software Engineering Student Society</a>
+              (a mouthful, I know), and director for <a href="https://gamedevmcgill.itch.io/">Game Dev McGill</a>.
+              I love hacking away at stuff and building cute interfaces. I write stuff sometimes on <a href="">Medium</a>
+              and share my thoughts sometimes on <a href="">Twitter</a>. Check me out!
+            </p>
+          </div>
+    </div>
     </div>
   </section>
   <section id="experiences" class="container">
@@ -386,7 +389,7 @@
     </div>
   </section>
 
-  <footer>
+  <footer class="dark">
     <div id="footer-container">
       <ul class="media-links" class="inline-list">
         <li><a href="https://www.github.com/erickzhao"><img src="/images/icons/github.svg"/></a></li>
