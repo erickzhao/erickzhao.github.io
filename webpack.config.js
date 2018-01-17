@@ -46,8 +46,8 @@ module.exports = {
       template: './src/index.html', // Input
     }),
     new CopyWebpackPlugin([{
-      from: './src/images/',
-      to: './images/',
+      from: './src/static/',
+      to: './static/',
     }]),
   ],
   stats: {
