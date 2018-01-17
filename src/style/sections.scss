@@ -55,24 +55,6 @@
   }
 }
 
-.container {
-  @media (min-width: 576px) {
-    max-width: 540px;
-  }
-
-  @media (min-width: 768px) {
-
-  }
-
-  @media (min-width: 992px) {
-    max-width: 960px;
-  }
-
-  @media (min-width: 1200px) {
-    max-width: 1140px;
-  }
-}
-
 section {
   padding: 0px 15px;
   margin: 200px auto;
@@ -198,6 +180,14 @@ section {
         padding: 40px;
       }
       margin-top: 50px;
+
+      img.link-arrow {
+        margin-left: 10px;
+        width: 20px;
+        &:hover {
+          animation: tada 1s;
+        }
+      }
     }
     .project--screenshot {
       @include img-fluid;
