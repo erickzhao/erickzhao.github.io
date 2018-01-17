@@ -225,16 +225,19 @@ section {
   }
 
   #flickr-btn {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    button {
+    a {
       display: flex;
       align-items: center;
     }
     img {
       height: 16px;
       padding-left: 7px;
+    }
+
+    &:hover {
+      img {
+        filter: invert(1);
+      }
     }
   } 
 }
