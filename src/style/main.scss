@@ -5,6 +5,7 @@
 
 body {
   font-family: 'Muli', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
   counter-reset: h1counter;
   color: $dark;
   background-color: $bg-light;
