@@ -1,9 +1,11 @@
-@import 'timeline';
+@import "timeline";
 
 #hero {
-  background: linear-gradient(45 degrees, $primary, $light);
+  background: linear-gradient(to bottom left, $primary, $light);
+
   #hero--main {
     @extend .fill-viewport;
+
     padding: 15vh 0;
     max-width: 1000px;
     margin: 0 auto;
@@ -12,18 +14,22 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
     @media (max-width: 480px) {
       padding-left: 10px;
       padding-right: 10px;
     }
   }
+
   #button-container {
     display: flex;
     justify-content: flex-end;
+
     @media (max-width: 768px) {
       justify-content: center;
     }
   }
+
   #description {
     padding: 10px;
     color: $dark;
@@ -34,8 +40,10 @@
       min-height: 80px;
     }
   }
+
   .parallax-layer {
     @extend .fill-viewport;
+
     width: 100%;
     position: absolute;
     top: 0;
@@ -45,13 +53,12 @@
     background-position: center;
 
     &:nth-of-type(1) {
-      background-image: url('/static/bg-1.svg');
+      background-image: url("/static/bg-1.svg");
     }
 
     &:nth-of-type(2) {
-      background-image: url('/static/bg-2.svg');
+      background-image: url("/static/bg-2.svg");
     }
-  
   }
 }
 
@@ -76,7 +83,51 @@ section {
       counter-increment: h1counter;
       z-index: -1;
     }
-    
+  }
+}
+
+#photography {
+  & > div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .thumbnail-container {
+    display: inline-block;
+    position: relative;
+    margin: 2px;
+    padding: 0;
+    &::before {
+      transition: 0.25s linear all;
+      content: "";
+      height: 100%;
+      width: 100%;
+      background: rgba($dark, 0);
+      z-index: 5;
+      position: absolute;
+    }
+    &:hover {
+      &::before {
+        background: rgba($dark, 0.5);
+      }
+    }
+  }
+
+  #flickr-btn {
+    a {
+      display: flex;
+      align-items: center;
+    }
+    img {
+      height: 16px;
+      padding-left: 7px;
+    }
+
+    &:hover {
+      img {
+        filter: invert(1);
+      }
+    }
   }
 }
 
@@ -165,7 +216,8 @@ section {
         }
       }
 
-      #project--up, #project--down {
+      #project--up,
+      #project--down {
         display: block;
       }
     }
@@ -197,53 +249,9 @@ section {
   }
 }
 
-#photography {
-  & > div {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  }
-  .thumbnail-container {
-    display: inline-block;
-    position: relative;
-    margin: 2px;
-    padding: 0;
-    &::before {
-      transition: 0.25s linear all;
-      content: "";
-      height: 100%;
-      width: 100%;
-      background: rgba($dark, 0);
-      z-index: 5;
-      position: absolute;
-    }
-    &:hover {
-      &::before {
-        background: rgba($dark, 0.5);
-      }
-    }
-  }
-
-  #flickr-btn {
-    a {
-      display: flex;
-      align-items: center;
-    }
-    img {
-      height: 16px;
-      padding-left: 7px;
-    }
-
-    &:hover {
-      img {
-        filter: invert(1);
-      }
-    }
-  } 
-}
-
 footer {
   position: relative;
+
   #footer-container {
     position: relative;
     z-index: 5;
@@ -252,6 +260,7 @@ footer {
     max-width: 500px;
     margin: 0 auto;
   }
+
   background-color: $dark;
   color: white;
 }

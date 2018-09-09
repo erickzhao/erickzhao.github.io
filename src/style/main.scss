@@ -1,10 +1,10 @@
-@import '__variables';
-@import 'utility';
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Muli');
-@import 'sections';
+@import "__variables";
+@import "utility";
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Muli");
+@import "sections";
 
 body {
-  font-family: 'Muli', 'Helvetica Neue', sans-serif;
+  font-family: "Muli", "Helvetica Neue", sans-serif;
   box-sizing: border-box;
   counter-reset: h1counter;
   color: $dark;
@@ -17,7 +17,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", sans-serif;
 }
 
 p {
@@ -31,6 +31,7 @@ p {
 a {
   color: $primary;
   transition: 0.2s all linear;
+
   &:hover {
     color: darken($primary, 30%);
     text-decoration: none;
@@ -45,13 +46,18 @@ a {
   letter-spacing: 1px;
   border-radius: 0px;
   border: 0px;
+
   &.btn-erick {
     @extend .wipe-hover;
+
     background-color: $primary;
-    &:focus, &:active, &:hover {
+
+    &:focus,
+    &:active,
+    &:hover {
       background-color: $light;
       color: $dark;
-      box-shadow:  5px 5px $dark;
+      box-shadow: 5px 5px $dark;
     }
   }
 }
@@ -65,10 +71,10 @@ a {
   cursor: pointer;
 
   &#project--up {
-    background: url('/static/icons/arrow-up.svg');
+    background: url("/static/icons/arrow-up.svg");
   }
 
   &#project--down {
-    background: url('/static/icons/arrow-down.svg');
+    background: url("/static/icons/arrow-down.svg");
   }
 }

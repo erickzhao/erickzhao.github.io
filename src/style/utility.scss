@@ -12,8 +12,8 @@
 }
 
 @mixin img-fluid {
-  max-width:100%;
-  height:auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .text-container {
@@ -24,6 +24,7 @@
   font-weight: 600;
   position: relative;
   z-index: 10;
+
   &::after {
     content: "";
     position: absolute;
@@ -40,6 +41,7 @@
   overflow: hidden;
   position: relative;
   transition: 0.25s all ease-in-out;
+
   &::after {
     clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
     transition: all 0.25s linear;
@@ -52,8 +54,10 @@
     background-color: $light;
     transform: translateX(-130%);
   }
+
   &:hover {
     text-decoration: none;
+
     &::after {
       transform: translateX(30%);
     }
@@ -71,9 +75,11 @@
 
 .media-links {
   @extend .inline-list;
+
   img {
     transition: 0.25s all ease-in-out;
     width: 40px;
+
     &:hover {
       width: 50px;
     }
@@ -82,6 +88,7 @@
 
 ul.tag {
   @extend .inline-list;
+
   li {
     font-weight: 600;
     font-size: 12px;
@@ -96,24 +103,26 @@ ul.tag {
 
 .dark {
   color: $off-white;
+
   h1 {
-    &:before {
+    &::before {
       color: $primary;
     }
 
     .highlight {
-      &:after {
+      &::after {
         background-color: $light;
       }
     }
   }
+
   background-color: $dark;
   padding-top: 75px;
   padding-bottom: 75px;
   overflow: hidden;
   background-size: 100%;
   background-position: center;
-  background-image: url('/static/bg-2.svg');
+  background-image: url("/static/bg-2.svg");
   z-index: 1;
 }
 
@@ -126,10 +135,6 @@ ul.tag {
 .container {
   @media (min-width: 576px) {
     max-width: 540px;
-  }
-
-  @media (min-width: 768px) {
-
   }
 
   @media (min-width: 992px) {
