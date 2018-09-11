@@ -46,8 +46,8 @@
         </div>
         <div class="text-container col-12 col-lg-7">
           <p>
-            In my third year of Software Engineering at McGill University.
-            I've interned at Ubisoft Montreal as a web developer. Serving as VP Communications at the McGill
+            In my fourth year of Software Engineering at McGill University.
+            I've interned at Shopify and Ubisoft Montreal as a web developer. Serving as VP Technical Development at the McGill
             <a href="https://ecsess.mcgilleus.ca">Electrical, Computer, and Software Engineering Student Society</a>
             (a mouthful, I know), and director for <a href="https://gamedevmcgill.itch.io/">Game Dev McGill</a>.
             I love hacking away at stuff and building cute interfaces. I write stuff sometimes on <a href="https://medium.com/@erickzhao">Medium</a>
@@ -66,6 +66,71 @@
     <div class="container">
     <h1>My <span class="highlight">experiences</span></h1>
     <div id="timeline--wrapper">
+
+      	<div class="timeline--block">
+            <div class="timeline--img">
+              <img src="/static/timeline-icons/mcgill.svg" alt="ECSESS">
+            </div>
+            <div class="timeline--content">
+              <h2>McGill Electrical, Computer, and Software Engineering Student Society</h2>
+              <h3>VP Technical Development</h3>
+              <p>
+                My main responsibility is to lead a committee of 11 students to organize a
+                250-student hackathon in our engineering department. I'm also responsible for
+                organizing workshops and activities related to tech advocacy.
+              </p>
+              <ul class="tag">
+                <li>Leadership</li>
+                <li>Involvement</li>
+                <li>Hackathon</li>
+              </ul>
+              <span class="timeline--date">May 2018 - Present</span>
+            </div>
+        </div>
+        <div class="timeline--block">
+            <div class="timeline--img">
+              <img src="/static/timeline-icons/hackmcgill.svg" alt="Shopify Logo">
+            </div>
+            <div class="timeline--content">
+              <h2>HackMcGill</h2>
+              <h3>Developer/Designer</h3>
+              <p>
+                Developer and designer for McHacks 6. Responsible for coding 
+                static landing page for website, as well as contributing to
+                design system.
+              </p>
+              <ul class="tag">
+                <li>Involvement</li>
+                <li>Hackathon</li>
+              </ul>
+              <span class="timeline--date">May 2018 - Present</span>
+            </div>
+        </div>
+        <div class="timeline--block">
+            <div class="timeline--img">
+              <img src="/static/timeline-icons/shopify.svg" alt="Shopify Logo">
+            </div>
+            <div class="timeline--content">
+              <h2>Shopify</h2>
+              <h3>Front-end Developer Intern</h3>
+              <p>
+                At Shopify, I was a front-end developer on the Themes team. My main
+                role was to develop new themes in Liquid and SCSS, but I also worked
+                on build tooling with Gulp, and rewrote the
+                <a href="https://www.npmjs.com/package/@shopify/themekit">@Shopify/themekit</a>
+                npm library.
+              </p>
+              <ul class="tag">
+                <li>Internship</li>
+                <li>UX</li>
+                <li>JavaScript</li>
+                <li>SCSS</li>
+                <li>Node.js</li>
+                <li>Gulp</li>
+              </ul>
+              <span class="timeline--date">May 2018 - Aug 2018</span>
+            </div>
+        </div>
       	<div class="timeline--block">
           <div class="timeline--img">
             <img src="/static/timeline-icons/datadive.svg" alt="Data Dive">
@@ -83,7 +148,7 @@
               <li>Hackathon</li>
               <li>Achievement</li>
             </ul>
-            <span class="timeline--date">Aug 2017 - Present</span>
+            <span class="timeline--date">Nov 2017</span>
           </div>
         </div>
       	<div class="timeline--block">
@@ -102,7 +167,7 @@
               <li>Adobe Photoshop</li>
               <li>Web Development</li>
             </ul>
-            <span class="timeline--date">Aug 2017 - Present</span>
+            <span class="timeline--date">Aug 2017 - May 2018</span>
           </div>
         </div>
         <div class="timeline--block">
@@ -227,6 +292,25 @@
         </nav>
       </div>
       <div id="project--list">
+        <div class="project" id="project--subreddit-sampler">
+            <img class="project--screenshot" src="/static/project-screenshots/sampler.png"/>
+            <h2>Subreddit Sampler
+              <a href="https:/subreddit-sampler.herokuapp.com">
+                <img class="link-arrow" src="/static/icons/right-arrow.svg"/>
+              </a>
+            </h2>
+            <p>
+              Subreddit Sampler is a music discovery tool that generates Spotify playlists
+              from the top posts from a subreddit on Reddit. Uses Spotify's OAuth Authentication
+              API to save the playlists directly into your Spotify account.
+            </p>
+            <ul class="tag">
+              <li>ReactJS</li>
+              <li>Express</li>
+              <li>Spotify API</li>
+              <li>Reddit API</li>
+            </ul>
+        </div>
         <div class="project" id="project--ballr">
           <img class="project--screenshot" src="/static/project-screenshots/ballr.png"/>
           <h2>ballr<a href="https://devpost.com/software/ballr-9v21gh"><img class="link-arrow" src="/static/icons/right-arrow.svg"/></a></h2>
@@ -270,17 +354,19 @@
         </div>
         <div class="project" id="project--boilerplate">
           <img class="project--screenshot" src="/static/project-screenshots/webpack.svg"/>
-          <h2>static website boilerplate<a href="https://github.com/erickzhao/static-html-webpack-boilerplate"><img class="link-arrow" src="/static/icons/right-arrow.svg"/></a></h2>
+          <h2>Static HTML Webpack Boilerplate<a href="https://github.com/erickzhao/static-html-webpack-boilerplate"><img class="link-arrow" src="/static/icons/right-arrow.svg"/></a></h2>
           <p>
-            A non-opinionated Webpack 3 setup that helps kickstart static
+            A non-opinionated Webpack 4 setup that helps kickstart static
             web page development (much like this one). Includes live reloading,
             SCSS and ES6 transpilation, style autoprefixing, and minification.
-            Still working out the kinks.
+            Also contains continuous integration with Travis CI, with automated
+            deploys to GitHub Pages in the build pipeline.
           </p>
           <ul class="tag">
             <li>Boilerplate</li>
-            <li>Webpack 3</li>
+            <li>Webpack</li>
             <li>Babel</li>
+            <li>Travis CI</li>
           </ul>
         </div>
         <div class="project" id="project--ubiheard">
