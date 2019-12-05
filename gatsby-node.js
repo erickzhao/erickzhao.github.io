@@ -101,7 +101,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   [...Array(pageCount)].forEach((_val, pageNum) => {
     createPage({
-      path: pageNum === 0 ? `/` : `/${pageNum + 1}/`,
+      path: pageNum === 0 ? `/blog/` : `/blog/${pageNum + 1}/`,
       component: listingPage,
       context: {
         limit: postsPerPage,
@@ -133,7 +133,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const prevEdge = postsEdges[prevID];
 
     createPage({
-      path: edge.node.fields.slug,
+      path: `/blog${edge.node.fields.slug}`,
       component: postPage,
       context: {
         slug: edge.node.fields.slug,
