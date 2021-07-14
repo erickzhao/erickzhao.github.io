@@ -29,11 +29,11 @@ p {
 }
 
 a {
-  color: $primary;
+  color: $accent;
   transition: 0.2s all linear;
 
   &:hover {
-    color: darken($primary, 30%);
+    color: darken($accent, 30%);
     text-decoration: none;
   }
 }
@@ -55,6 +55,7 @@ a {
     &:focus,
     &:active,
     &:hover {
+      border: 2px solid $dark;
       background-color: $light;
       color: $dark;
       box-shadow: 5px 5px $dark;

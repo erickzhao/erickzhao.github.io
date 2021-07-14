@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "basiclightbox": "^4.0.0",
+    "p5": "^1.4.0",
     "simple-slider": "^1.0.0",
     "smoothscroll": "^0.4.0",
     "typed.js": "^2.0.6"

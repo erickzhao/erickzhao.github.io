@@ -33,7 +33,7 @@
     right: 0;
     bottom: 0;
     z-index: -1;
-    background-color: $primary;
+    background-color: $accent;
   }
 }
 
@@ -51,7 +51,7 @@
     top: 0;
     bottom: 0;
     z-index: 2;
-    background-color: $light;
+    background-color: $accent;
     transform: translateX(-130%);
   }
 
