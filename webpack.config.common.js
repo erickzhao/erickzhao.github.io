@@ -18,8 +18,10 @@ const generateHTMLPlugins = () =>
     }));
 
 module.exports = {
-  node: {
-    fs: 'empty',
+  resolve: {
+    fallback: {
+      fs: false,
+    },
   },
   entry: ['./src/js/app.js', './src/style/main.scss'],
   output: {
@@ -34,9 +36,9 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        query: {
-          presets: ['env'],
-        },
+        // query: {
+        //   presets: ['env'],
+        // },
       },
       {
         test: /\.(sass|scss)$/,
@@ -60,10 +62,12 @@ module.exports = {
       filename: '[name].css',
       chunkFilename: '[id].css',
     }),
-    new CopyWebpackPlugin([{
-      from: './src/static/',
-      to: './static/',
-    }]),
+    new CopyWebpackPlugin({
+      patterns: [{
+        from: './src/static/',
+        to: './static/',
+      }],
+    }),
     ...generateHTMLPlugins(),
   ],
   stats: {
