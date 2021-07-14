@@ -1,12 +1,11 @@
 @import "timeline";
 
 #hero {
-  background: linear-gradient(to bottom left, $primary, $light);
+  background: white;
 
   #hero--main {
-    @extend .fill-viewport;
 
-    padding: 15vh 0;
+    padding: 15vh 0 0 0;
     max-width: 1000px;
     margin: 0 auto;
     padding-left: 80px;
@@ -15,18 +14,9 @@
     flex-direction: column;
     justify-content: space-around;
 
-    @media (max-width: 480px) {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-  }
-
-  #button-container {
-    display: flex;
-    justify-content: flex-end;
-
     @media (max-width: 768px) {
-      justify-content: center;
+      padding-left: 16px;
+      padding-right: 16px;
     }
   }
 
@@ -34,7 +24,12 @@
     padding: 10px;
     color: $dark;
     position: relative;
-    max-width: 600px;
+    max-width: 700px;
+
+    h1 {
+      font-weight: 900;
+      font-size: 108px;
+    }
 
     h2 {
       min-height: 80px;
