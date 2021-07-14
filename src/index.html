@@ -18,7 +18,7 @@
     <div id="hero--main">
       <div id="app" style="position:absolute;"></div>
       <div id="description">
-        <h1><span class="highlight">Erick Zhao</span>.</h1>
+        <h1 class="highlight">Erick Zhao</h1>
         <p>🙋🏻‍♂️ I'm a software engineer based in Vancouver.</p>
         <p>❤️ I'm into <span id="typed" style="font-weight: bold;"></span></p>
         <div id="typed-strings" style="display: none";>
@@ -33,7 +33,7 @@
 
   <section id="about">
     <div class="container">
-      <h1>What I'm up to now</h1>
+      <h1>My <span class="highlight">occupation</span></h1>
       <div id="about-container" class="row">
         <div class="col-12 col-lg-5">
           <div class="headshot-container wipe-hover">
@@ -53,148 +53,23 @@
     </div>
     <div class="centre-btn-container">
       <a href="/static/cv.pdf" class="btn btn-erick">
-        Check out my CV
+        (Old) Resumé
       </a>
     </div>
     </div>
   </section>
-  <section id="projects">
-    <div class="container">
-      <h1>My <span class="highlight">projects</span></h1>
-    </div>
-    <div id="project--container">
-      <div id="project--nav-panel">
-        <nav id="project--nav">
-          <ul>
-            <li><a class="active" href="#project--subreddit-sampler">subreddit sampler</a></li>
-            <li><a class="active" href="#project--ballr">ballr</a></li>
-            <li><a href="#project--invite">invite-contributors</a></li>
-            <li><a href="#project--boilerplate">static webpack boilerplate</a></li>
-            <li><a href="#project--ubiheard">ubiheard</a></li>
-            <li><a href="#project--design">web design</a></li>
-          </ul>
-          <button class="nav-icon" id="project--up"></button>
-          <button class="nav-icon" id="project--down"></button>
-        </nav>
+  <section id="projects" class="container">
+      <h1>Selected <span class="highlight">projects</span></h1>
+      <div id="project-list"></div>
+      <div class="centre-btn-container">
+        <a href="https://github.com/erickzhao" class="btn btn-erick">
+          GitHub Profile
+        </a>
       </div>
-      <div id="project--list">
-        <div class="project" id="project--subreddit-sampler">
-            <img class="project--screenshot" src="/static/project-screenshots/sampler.png"/>
-            <h2>Subreddit Sampler
-              <a href="https://subreddit-sampler.herokuapp.com">
-                <img class="link-arrow" src="/static/icons/right-arrow.svg"/>
-              </a>
-            </h2>
-            <p>
-              Subreddit Sampler is a music discovery tool that generates Spotify playlists
-              from the top posts from a subreddit on Reddit. Uses Spotify's OAuth Authentication
-              API to save the playlists directly into your Spotify account.
-            </p>
-            <ul class="tag">
-              <li>ReactJS</li>
-              <li>Express</li>
-              <li>Spotify API</li>
-              <li>Reddit API</li>
-            </ul>
-        </div>
-        <div class="project" id="project--ballr">
-          <img class="project--screenshot" src="/static/project-screenshots/ballr.png"/>
-          <h2>ballr<a href="https://devpost.com/software/ballr-9v21gh"><img class="link-arrow" src="/static/icons/right-arrow.svg"/></a></h2>
-          <p>
-            ballr is a 36-hour project submitted to McGill CodeJam 2017. We used basketball
-            shot data to develop an analytics app that would help coaches draw up plays off
-            timeouts by visualizing player efficiency on different areas of the court.
-            <br/>
-            <ul>
-              <li>🥈 2nd Place - Overall</li>
-              <li>🏅 1st Place - Sports Category</li>
-            </ul>
-          </p>
-          <ul class="tag">
-            <li>Data</li>
-            <li>ES6</li>
-            <li>ReactJS</li>
-            <li>KonvaReact</li>
-            <li>Flask</li>
-            <li>scikit-learn</li>
-          </ul>
-        </div>
-        <div class="project" id="project--invite">
-          <img class="project--screenshot" src="/static/project-screenshots/invite.png"/>
-          <h2>invite-contributors<a href="https://probot.github.io/apps/invite-contributors/"><img class="link-arrow" src="/static/icons/right-arrow.svg"/></a></h2>
-          <p>
-            invite-contributors is a GitHub app that automatically invites authors
-            of pull requests to your GitHub organization when their PR gets merged.
-            Tested, deployed, and installed by many organizations (including Chai).
-            Written as a contribution to Hacktoberfest 2017 🎃.
-          </p>
-          <ul class="tag">
-            <li>GitHub App</li>
-            <li>NodeJS</li>
-            <li>Probot</li>
-            <li>ES6</li>
-            <li>Heroku</li>
-            <li>TravisCI</li>
-            <li>expect</li>
-          </ul>
-        </div>
-        <div class="project" id="project--boilerplate">
-          <img class="project--screenshot" src="/static/project-screenshots/webpack.svg"/>
-          <h2>Static HTML Webpack Boilerplate<a href="https://github.com/erickzhao/static-html-webpack-boilerplate"><img class="link-arrow" src="/static/icons/right-arrow.svg"/></a></h2>
-          <p>
-            A non-opinionated Webpack 4 setup that helps kickstart static
-            web page development (much like this one). Includes live reloading,
-            SCSS and ES6 transpilation, style autoprefixing, and minification.
-            Also contains continuous integration with Travis CI, with automated
-            deploys to GitHub Pages in the build pipeline.
-          </p>
-          <ul class="tag">
-            <li>Boilerplate</li>
-            <li>Webpack</li>
-            <li>Babel</li>
-            <li>Travis CI</li>
-          </ul>
-        </div>
-        <div class="project" id="project--ubiheard">
-          <img class="project--screenshot" src="/static/project-screenshots/ubiheard.png"/>
-          <h2>ubiheard<a href="https://github.com/erickzhao/ubiheard"><img class="link-arrow" src="/static/icons/right-arrow.svg"/></a></h2>
-          <p>
-            A mock project made in 2 work days at the Ubisoft Club as part of our
-            department's 2017 FedEx day. Based on the concept of <a href="https://www.uservoice.com/">
-            UserVoice</a>, Ubiheard would have given players the opportunity to give feedback on Ubisoft's
-            popular online video games for future gameplay updates.
-          </p>
-          <ul class="tag">
-            <li>Prototype</li>
-            <li>AngularJS</li>
-          </ul>
-        </div>
-        <div class="project" id="project--design">
-            <div style="height: 350px; width: 100%;" data-simple-slider>
-              <img class="img-fluid" src="/static/project-screenshots/mcgamejam.png"/>
-              <img class="img-fluid" src="/static/project-screenshots/aifred.png"/>
-            </div>
-          <h2>web design</h2>
-          <p>
-            I make static web page designs sometimes. Here are some that
-            I've made in the past. (More detailed descriptions coming soon.)
-          </p>
-          <ul class="tag">
-            <li>Design</li>
-            <li>Bootstrap</li>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>ES6</li>
-            <li>Babel</li>
-            <li>Webpack</li>
-          </ul>
-        </div>
-      </div>
-    </div>
   </section>
 
   <section id="photography" class="container">
-    <h1>My <span class="highlight">photos</span></h1>
+    <h1>Some <span class="highlight">photos</span></h1>
     <div>
       <div class="thumbnail-container" data-src="/static/photos/1-full.jpg">
         <img class="thumbnail" src="/static/photos/1-thumb.jpg"/>
