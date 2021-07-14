@@ -1,12 +1,9 @@
-@import "timeline";
-
 #hero {
-  background: linear-gradient(to bottom left, $primary, $light);
+  background: white;
 
   #hero--main {
-    @extend .fill-viewport;
 
-    padding: 15vh 0;
+    padding: 15vh 0 0 0;
     max-width: 1000px;
     margin: 0 auto;
     padding-left: 80px;
@@ -15,18 +12,9 @@
     flex-direction: column;
     justify-content: space-around;
 
-    @media (max-width: 480px) {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-  }
-
-  #button-container {
-    display: flex;
-    justify-content: flex-end;
-
     @media (max-width: 768px) {
-      justify-content: center;
+      padding-left: 16px;
+      padding-right: 16px;
     }
   }
 
@@ -34,30 +22,16 @@
     padding: 10px;
     color: $dark;
     position: relative;
-    max-width: 600px;
+    max-width: 700px;
 
-    h2 {
-      min-height: 80px;
-    }
-  }
-
-  .parallax-layer {
-    @extend .fill-viewport;
-
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    background-size: 50%;
-    background-position: center;
-
-    &:nth-of-type(1) {
-      background-image: url("/static/bg-1.svg");
+    h1 {
+      font-weight: 900;
+      font-size: 108px;
     }
 
-    &:nth-of-type(2) {
-      background-image: url("/static/bg-2.svg");
+    p {
+      margin-bottom: 6px;
+      // font-family: 'Courier New', Courier, monospace;
     }
   }
 }
@@ -74,8 +48,9 @@ section {
     z-index: 10;
     &::before {
       font-size: 60px;
-      color: $light;
-      font-weight: 600;
+      opacity: 0.5;
+      color: $accent;
+      font-weight: 700;
       position: absolute;
       top: -30px;
       left: -20px;
@@ -139,9 +114,10 @@ section {
       padding: 0;
     }
     p {
-      box-shadow: 10px 10px $primary;
-      background-color: $light;
-      color: $dark;
+      border: 2px solid $light;
+      box-shadow: 10px 10px $accent;
+      background-color: $dark;
+      color: $light;
       padding: 25px;
       @media (min-width: 960px) {
         margin-top: 70px;
@@ -152,6 +128,7 @@ section {
   .headshot-container {
     position: relative;
     display: inline-block;
+    border: 2px solid $accent;
     &:hover {
       &::before {
         position: absolute;
@@ -171,80 +148,6 @@ section {
       @media (max-width: 768px) {
         @include img-fluid;
       }
-    }
-  }
-}
-
-#projects {
-  #project--container {
-    position: relative;
-    width: 100vw;
-    left: calc(-50vw + 50%);
-    display: flex;
-  }
-  #project--nav-panel {
-    @media (max-width: 960px) {
-      visibility: hidden;
-      width: 0;
-      margin: 0;
-      padding: 0;
-    }
-
-    padding: 20px;
-    width: 35%;
-    background: linear-gradient(to bottom, $primary, $light);
-
-    #project--nav {
-      padding: 100px 60px;
-      display: inline-block;
-      position: sticky;
-      top: 0;
-      font-size: 24px;
-      ul {
-        top: 0;
-        list-style: none;
-        padding: 0;
-        li {
-          a {
-            color: $dark;
-
-            &.active {
-              color: white;
-              font-weight: 600;
-            }
-          }
-        }
-      }
-
-      #project--up,
-      #project--down {
-        display: block;
-      }
-    }
-  }
-
-  #project--list {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 15px;
-
-    .project {
-      @media (min-width: 960px) {
-        padding: 40px;
-      }
-      margin-top: 50px;
-
-      img.link-arrow {
-        margin-left: 10px;
-        width: 20px;
-        &:hover {
-          animation: tada 1s;
-        }
-      }
-    }
-    .project--screenshot {
-      max-width: 500px;
-      @include img-fluid;
     }
   }
 }

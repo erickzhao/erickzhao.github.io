@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Erick Zhao - Homepage</title>
+  <title>Homepage — Erick Zhao</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
     crossorigin="anonymous">
   <link rel="stylesheet"
@@ -16,28 +16,24 @@
 <body>
   <header id="hero">
     <div id="hero--main">
-      <div class="parallax-layer"></div>
-      <div class="parallax-layer"></div>
+      <div id="app" style="position:absolute;"></div>
       <div id="description">
-        <h1>I'm <span class="highlight">Erick</span> 🙋🏻‍♂️, and I study <span class="highlight">Software</span> <span class="highlight">Engineering</span> ⚙️ in Montreal, Canada.</h1>
-        <h2>I'm into <span id="typed"></span></h2>
+        <h1 class="highlight">Erick Zhao</h1>
+        <p>🙋🏻‍♂️ I'm a software engineer based in Vancouver.</p>
+        <p>❤️ I'm into <span id="typed" style="font-weight: bold;"></span></p>
         <div id="typed-strings" style="display: none";>
-          <p>web development.</p>
+          <p>building web experiences.</p>
+          <p>open source governance.</p>
+          <p>technical writing.</p>
           <p>graphic design.</p>
-          <p>photography.</p>
         </div>
-      </div>
-      <div id="button-container">
-        <a href="#about">
-          <button type="button" class="btn btn-erick">Find out more</button>
-        </a>
       </div>
     </div>
   </header>
 
   <section id="about">
     <div class="container">
-      <h1>About <span class="highlight">me</span></h1>
+      <h1>My <span class="highlight">occupation</span></h1>
       <div id="about-container" class="row">
         <div class="col-12 col-lg-5">
           <div class="headshot-container wipe-hover">
@@ -46,370 +42,34 @@
         </div>
         <div class="text-container col-12 col-lg-7">
           <p>
-            In my fourth year of Software Engineering at McGill University.
-            I've interned at Shopify and Ubisoft Montreal as a web developer. Serving as VP Technical Development at the McGill
-            <a href="https://ecsess.mcgilleus.ca">Electrical, Computer, and Software Engineering Student Society</a>
-            (a mouthful, I know), and director for <a href="https://gamedevmcgill.itch.io/">Game Dev McGill</a>.
-            I love hacking away at stuff and building cute interfaces. I write stuff sometimes on <a href="https://medium.com/@erickzhao">Medium</a>
-            and share my thoughts sometimes on <a href="https://www.twitter.com/navdate">Twitter</a>. Check me out!
+            I'm currently working as a Software Engineer on the Desktop
+            team at Slack. The coolest part of my day job is maintaining
+            <a href="https://electronjs.org/">Electron</a>, your favourite
+            cross-platform desktop application framework. I spend a lot
+            of time working on its JavaScript ecosystem and maintaining
+            its developer community.
           </p>
         </div>
     </div>
     <div class="centre-btn-container">
       <a href="/static/cv.pdf" class="btn btn-erick">
-        Check out my CV
+        (Old) Resumé
       </a>
     </div>
     </div>
   </section>
-  <section id="experiences">
-    <div class="container">
-    <h1>My <span class="highlight">experiences</span></h1>
-    <div id="timeline--wrapper">
-
-      	<div class="timeline--block">
-            <div class="timeline--img">
-              <img src="/static/timeline-icons/mcgill.svg" alt="ECSESS">
-            </div>
-            <div class="timeline--content">
-              <h2>McGill Electrical, Computer, and Software Engineering Student Society</h2>
-              <h3>VP Technical Development</h3>
-              <p>
-                My main responsibility is to lead a committee of 11 students to organize a
-                250-student hackathon in our engineering department. I'm also responsible for
-                organizing workshops and activities related to tech advocacy.
-              </p>
-              <ul class="tag">
-                <li>Leadership</li>
-                <li>Involvement</li>
-                <li>Hackathon</li>
-              </ul>
-              <span class="timeline--date">May 2018 - Present</span>
-            </div>
-        </div>
-        <div class="timeline--block">
-            <div class="timeline--img">
-              <img src="/static/timeline-icons/hackmcgill.svg" alt="Shopify Logo">
-            </div>
-            <div class="timeline--content">
-              <h2>HackMcGill</h2>
-              <h3>Developer/Designer</h3>
-              <p>
-                Developer and designer for McHacks 6. Responsible for coding 
-                static landing page for website, as well as contributing to
-                design system.
-              </p>
-              <ul class="tag">
-                <li>Involvement</li>
-                <li>Hackathon</li>
-              </ul>
-              <span class="timeline--date">May 2018 - Present</span>
-            </div>
-        </div>
-        <div class="timeline--block">
-            <div class="timeline--img">
-              <img src="/static/timeline-icons/shopify.svg" alt="Shopify Logo">
-            </div>
-            <div class="timeline--content">
-              <h2>Shopify</h2>
-              <h3>Front-end Developer Intern</h3>
-              <p>
-                At Shopify, I was a front-end developer on the Themes team. My main
-                role was to develop new themes in Liquid and SCSS, but I also worked
-                on build tooling with Gulp, and rewrote the
-                <a href="https://www.npmjs.com/package/@shopify/themekit">@Shopify/themekit</a>
-                npm library.
-              </p>
-              <ul class="tag">
-                <li>Internship</li>
-                <li>UX</li>
-                <li>JavaScript</li>
-                <li>SCSS</li>
-                <li>Node.js</li>
-                <li>Gulp</li>
-              </ul>
-              <span class="timeline--date">May 2018 - Aug 2018</span>
-            </div>
-        </div>
-      	<div class="timeline--block">
-          <div class="timeline--img">
-            <img src="/static/timeline-icons/datadive.svg" alt="Data Dive">
-          </div>
-          <div class="timeline--content">
-            <h2>McGill CodeJam 2017</h2>
-            <h3>🏆 2nd Place Winner 🏆</h3>
-            <p>
-              CodeJam is an annual coding competition hosted at McGill. This year's theme was
-              Data Dive; teams had 36 hours to build something around given data sets. My team won
-              2nd place overall and 1st place in the Sports category. Check out my project
-              <a href="#projects">here</a>!
-            </p>
-            <ul class="tag">
-              <li>Hackathon</li>
-              <li>Achievement</li>
-            </ul>
-            <span class="timeline--date">Nov 2017</span>
-          </div>
-        </div>
-      	<div class="timeline--block">
-          <div class="timeline--img">
-            <img src="/static/timeline-icons/mcgill.svg" alt="ECSESS">
-          </div>
-          <div class="timeline--content">
-            <h2>McGill Electrical, Computer, and Software Engineering Student Society</h2>
-            <h3>VP Communications</h3>
-            <p>
-              I design cool posters, send newsletters, and maintain our social media presence
-              to get the news out to the 1100 students in my department. I also maintain our website.
-            </p>
-            <ul class="tag">
-              <li>Involvement</li>
-              <li>Adobe Photoshop</li>
-              <li>Web Development</li>
-            </ul>
-            <span class="timeline--date">Aug 2017 - May 2018</span>
-          </div>
-        </div>
-        <div class="timeline--block">
-          <div class="timeline--img">
-            <img src="/static/timeline-icons/ubisoft.svg" alt="Ubisoft">
-          </div>
-          <div class="timeline--content">
-            <h2>Ubisoft Montreal</h2>
-            <h3>Web Developer Intern</h3>
-            <p>
-              At Ubisoft, I developed an internal tool that facilitated the live ops for games
-              with millions of daily players, saving 15 developer hours a week. I created
-              user interfaces, handled front-end logic, and worked on its backend API.
-            </p>
-            <ul class="tag">
-              <li>Internship</li>
-              <li>AngularJS</li>
-              <li>TypeScript</li>
-              <li>C#</li>
-              <li>ASP.NET MVC</li>
-              <li>SQL Server</li>
-              <li>Redis</li>
-            </ul>
-            <span class="timeline--date">Jan 2017 - Aug 2017</span>
-          </div>
-        </div>
-        <div class="timeline--block">
-          <div class="timeline--img">
-            <img src="/static/timeline-icons/gdm.svg" alt="Picture">
-          </div>
-          <div class="timeline--content">
-            <h2>Game Dev McGill</h2>
-            <h3>Director</h3>
-            <p>
-              I'm a jack of all trades on our executive board. I do graphic design,
-              handle event photography, help with social media, and do outreach to
-              get the word out on our club.
-            </p>
-            <ul class="tag">
-              <li>Involvement</li>
-              <li>Adobe Photoshop</li>
-            </ul>
-            <span class="timeline--date">Sep 2016 - Present</span>
-          </div>
-        </div>
-        <div class="timeline--block">
-          <div class="timeline--img">
-            <img src="/static/timeline-icons/datadive.svg" alt="Picture">
-          </div>
-          <div class="timeline--content">
-            <h2>McGill CodeJam Committee 2016</h2>
-            <h3>VP Design</h3>
-            <p>
-              I was responsible for all branding associated with the event
-              (posters, banners, shirts, Snapchat geofilter, etc.) and took lots
-              of pictures.
-            </p>
-            <ul class="tag">
-              <li>Involvement</li>
-              <li>Adobe Photoshop</li>
-            </ul>
-            <span class="timeline--date">Sep 2016 - Nov 2016</span>
-          </div>
-        </div>
-        <div class="timeline--block">
-          <div class="timeline--img">
-            <img src="/static/timeline-icons/guiker.svg" alt="Picture">
-          </div>
-          <div class="timeline--content">
-            <h2>Guiker</h2>
-            <h3>Front-end Intern</h3>
-            <p>
-              My first experience in web development was a gentle one. I built web pages for this
-              growing startup's housing platform.
-            </p>
-            <ul class="tag">
-              <li>Internship</li>
-              <li>AngularJS</li>
-            </ul>
-            <span class="timeline--date">May 2016 - Aug 2016</span>
-          </div>
-        </div>
-        <div class="timeline--block">
-          <div class="timeline--img">
-            <img src="/static/timeline-icons/mcgill.svg" alt="Picture">
-          </div>
-          <div class="timeline--content">
-            <h2>McGill University</h2>
-            <h3>Software Engineering (B.Eng)</h3>
-            <ul>
-              <li>GPA: 3.7 / 4.00 ✏️</li>
-              <li>Recipient: J.B. Woodyatt Scholarship <br/>(High Academic Standing) 🏆</li>
-              <li>Expected graduation date: Dec 2019 🎓</li>
-            </ul>
-            <ul class="tag">
-                <li>Academics</li>
-                <li>Achievement</li>
-              </ul>
-            <span class="timeline--date">Sep 2015 - Present</span>
-          </div>
-        </div>
-    </div>
-
-    </div>
-  </section>
-  <section id="projects">
-    <div class="container">
-      <h1>My <span class="highlight">projects</span></h1>
-    </div>
-    <div id="project--container">
-      <div id="project--nav-panel">
-        <nav id="project--nav">
-          <ul>
-            <li><a class="active" href="#project--subreddit-sampler">subreddit sampler</a></li>
-            <li><a class="active" href="#project--ballr">ballr</a></li>
-            <li><a href="#project--invite">invite-contributors</a></li>
-            <li><a href="#project--boilerplate">static webpack boilerplate</a></li>
-            <li><a href="#project--ubiheard">ubiheard</a></li>
-            <li><a href="#project--design">web design</a></li>
-          </ul>
-          <button class="nav-icon" id="project--up"></button>
-          <button class="nav-icon" id="project--down"></button>
-        </nav>
+  <section id="projects" class="container">
+      <h1>Selected <span class="highlight">projects</span></h1>
+      <div id="project-list"></div>
+      <div class="centre-btn-container">
+        <a href="https://github.com/erickzhao" class="btn btn-erick">
+          GitHub Profile
+        </a>
       </div>
-      <div id="project--list">
-        <div class="project" id="project--subreddit-sampler">
-            <img class="project--screenshot" src="/static/project-screenshots/sampler.png"/>
-            <h2>Subreddit Sampler
-              <a href="https://subreddit-sampler.herokuapp.com">
-                <img class="link-arrow" src="/static/icons/right-arrow.svg"/>
-              </a>
-            </h2>
-            <p>
-              Subreddit Sampler is a music discovery tool that generates Spotify playlists
-              from the top posts from a subreddit on Reddit. Uses Spotify's OAuth Authentication
-              API to save the playlists directly into your Spotify account.
-            </p>
-            <ul class="tag">
-              <li>ReactJS</li>
-              <li>Express</li>
-              <li>Spotify API</li>
-              <li>Reddit API</li>
-            </ul>
-        </div>
-        <div class="project" id="project--ballr">
-          <img class="project--screenshot" src="/static/project-screenshots/ballr.png"/>
-          <h2>ballr<a href="https://devpost.com/software/ballr-9v21gh"><img class="link-arrow" src="/static/icons/right-arrow.svg"/></a></h2>
-          <p>
-            ballr is a 36-hour project submitted to McGill CodeJam 2017. We used basketball
-            shot data to develop an analytics app that would help coaches draw up plays off
-            timeouts by visualizing player efficiency on different areas of the court.
-            <br/>
-            <ul>
-              <li>🥈 2nd Place - Overall</li>
-              <li>🏅 1st Place - Sports Category</li>
-            </ul>
-          </p>
-          <ul class="tag">
-            <li>Data</li>
-            <li>ES6</li>
-            <li>ReactJS</li>
-            <li>KonvaReact</li>
-            <li>Flask</li>
-            <li>scikit-learn</li>
-          </ul>
-        </div>
-        <div class="project" id="project--invite">
-          <img class="project--screenshot" src="/static/project-screenshots/invite.png"/>
-          <h2>invite-contributors<a href="https://probot.github.io/apps/invite-contributors/"><img class="link-arrow" src="/static/icons/right-arrow.svg"/></a></h2>
-          <p>
-            invite-contributors is a GitHub app that automatically invites authors
-            of pull requests to your GitHub organization when their PR gets merged.
-            Tested, deployed, and installed by many organizations (including Chai).
-            Written as a contribution to Hacktoberfest 2017 🎃.
-          </p>
-          <ul class="tag">
-            <li>GitHub App</li>
-            <li>NodeJS</li>
-            <li>Probot</li>
-            <li>ES6</li>
-            <li>Heroku</li>
-            <li>TravisCI</li>
-            <li>expect</li>
-          </ul>
-        </div>
-        <div class="project" id="project--boilerplate">
-          <img class="project--screenshot" src="/static/project-screenshots/webpack.svg"/>
-          <h2>Static HTML Webpack Boilerplate<a href="https://github.com/erickzhao/static-html-webpack-boilerplate"><img class="link-arrow" src="/static/icons/right-arrow.svg"/></a></h2>
-          <p>
-            A non-opinionated Webpack 4 setup that helps kickstart static
-            web page development (much like this one). Includes live reloading,
-            SCSS and ES6 transpilation, style autoprefixing, and minification.
-            Also contains continuous integration with Travis CI, with automated
-            deploys to GitHub Pages in the build pipeline.
-          </p>
-          <ul class="tag">
-            <li>Boilerplate</li>
-            <li>Webpack</li>
-            <li>Babel</li>
-            <li>Travis CI</li>
-          </ul>
-        </div>
-        <div class="project" id="project--ubiheard">
-          <img class="project--screenshot" src="/static/project-screenshots/ubiheard.png"/>
-          <h2>ubiheard<a href="https://github.com/erickzhao/ubiheard"><img class="link-arrow" src="/static/icons/right-arrow.svg"/></a></h2>
-          <p>
-            A mock project made in 2 work days at the Ubisoft Club as part of our
-            department's 2017 FedEx day. Based on the concept of <a href="https://www.uservoice.com/">
-            UserVoice</a>, Ubiheard would have given players the opportunity to give feedback on Ubisoft's
-            popular online video games for future gameplay updates.
-          </p>
-          <ul class="tag">
-            <li>Prototype</li>
-            <li>AngularJS</li>
-          </ul>
-        </div>
-        <div class="project" id="project--design">
-            <div style="height: 350px; width: 100%;" data-simple-slider>
-              <img class="img-fluid" src="/static/project-screenshots/mcgamejam.png"/>
-              <img class="img-fluid" src="/static/project-screenshots/aifred.png"/>
-            </div>
-          <h2>web design</h2>
-          <p>
-            I make static web page designs sometimes. Here are some that
-            I've made in the past. (More detailed descriptions coming soon.)
-          </p>
-          <ul class="tag">
-            <li>Design</li>
-            <li>Bootstrap</li>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>ES6</li>
-            <li>Babel</li>
-            <li>Webpack</li>
-          </ul>
-        </div>
-      </div>
-    </div>
   </section>
 
   <section id="photography" class="container">
-    <h1>My <span class="highlight">photos</span></h1>
+    <h1>Some <span class="highlight">photos</span></h1>
     <div>
       <div class="thumbnail-container" data-src="/static/photos/1-full.jpg">
         <img class="thumbnail" src="/static/photos/1-thumb.jpg"/>
@@ -487,12 +147,9 @@
       <ul class="media-links" class="inline-list">
         <li><a href="https://www.github.com/erickzhao"><img src="/static/icons/github.svg"/></a></li>
         <li><a href="https://www.linkedin.com/in/erickzhao"><img src="/static/icons/linkedin.svg"/></a></li>
-        <li><a href="https://medium.com/@erickzhao"><img src="/static/icons/medium.svg"/></a></li>
-        <li><a href-<img src="/static/icons/codepen.svg"/></li>
       </ul>
-      <span><a class="inline-block wipe-hover" href="mailto:erick.zhao@mail.mcgill.ca">erick.zhao@mail.mcgill.ca</a></span>
+      <span><a class="inline-block wipe-hover" href="mailto:erick@hotmail.ca">erick [at] hotmail [dot] ca</a></span>
       <p>designed with ❤️ by 🙋🏻‍♂️</p>
     </div>
-    
   </footer>
 </body>

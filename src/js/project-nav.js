@@ -47,4 +47,3 @@ const setActiveAnchor = () => {
 };
 
 window.addEventListener('scroll', setActiveAnchor);
-

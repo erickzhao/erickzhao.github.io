@@ -1,11 +1,16 @@
 @import "__variables";
 @import "utility";
-@import url("https://fonts.googleapis.com/css?family=Montserrat|Muli");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono|Muli&display=swap");
 @import "sections";
+
+* {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+}
 
 body {
   font-family: "Muli", "Helvetica Neue", sans-serif;
-  box-sizing: border-box;
   counter-reset: h1counter;
   color: $dark;
   background-color: $bg-light;
@@ -17,7 +22,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", "Helvetica Neue", sans-serif;
+  font-family: "Roboto Mono", monospace;
 }
 
 p {
@@ -29,36 +34,33 @@ p {
 }
 
 a {
-  color: $primary;
+  color: $accent;
   transition: 0.2s all linear;
 
   &:hover {
-    color: darken($primary, 30%);
+    color: darken($accent, 30%);
     text-decoration: none;
   }
 }
 
-.btn {
+.btn-erick {
+  @extend .wipe-hover;
+
+  border: 2px solid $light;
   color: white;
   padding: 12px 10px;
   font-size: 16px;
-  text-transform: uppercase;
   letter-spacing: 1px;
-  border-radius: 0px;
-  border: 0px;
 
-  &.btn-erick {
-    @extend .wipe-hover;
+  background-color: $primary;
 
-    background-color: $primary;
-
-    &:focus,
-    &:active,
-    &:hover {
-      background-color: $light;
-      color: $dark;
-      box-shadow: 5px 5px $dark;
-    }
+  &:focus,
+  &:active,
+  &:hover {
+    border: 2px solid $dark;
+    background-color: $light;
+    color: $dark;
+    box-shadow: 5px 5px $dark;
   }
 }
 
