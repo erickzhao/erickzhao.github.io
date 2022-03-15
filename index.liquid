@@ -1,29 +1,46 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>ez</title>
-  <style>
-    ul {
-      display: inline;
-      margin: 0;
-      padding: 0;
-    }
-
-    li {
-      display: inline;
-      margin: 0 10px;
-      list-style-type: none;
-    }
-  </style>
-</head>
-<body style="background: white; color: coral;">
-  <strong>欢迎来到我的主页</strong>
-  Links:
-  <ul>
-    <li>
-      <a href="https://github.com/erickzhao">github</a>
-    </li>
-  </ul>
-</body>
-</html>
+---
+layout: home.liquid
+title: Homepage
+---
+<marquee><strong>欢迎来到我的主页!</strong></marquee>
+<main style="margin: 0 auto; width: 800px; padding:10px; display: grid; grid-gap: 16px; grid-template-columns: 200px 300px 300px;">
+  <nav style="background: salmon; border: 6px solid pink; border-bottom-color: white; grid-column: 1; grid-row: 1/3;">
+    <h3>Across cyberspace</h3>
+    <ul style="list-style: simp-chinese-formal; margin: 0;">
+      <li><a href="https://github.com/erickzhao">GitHub</a></li>
+      <li><a href="https://twitter.com/tokebac">Twitter</a></li>
+      <li><a href="https://instagram.com/erick32.dll/">Instagram</a></li>
+      <li><a href="https://anilist.co/user/misericorde">AniList</a></li>
+    </ul>
+  </nav>
+  <table style="grid-column: 2 / -1; grid-row: 1;">
+    <tr>
+      <th colspan="2"><img src="" alt=""/>Hi!!!</th>
+    </tr>
+    <tr>
+      <td rowspan="0" style="width: 20%"><img style="width: 100%" src="./img/me.jpg" alt="Orange mushroom"/></td>
+    </tr>
+    <tr>
+      <td>Name: Erick</td>
+    </tr>
+    <tr>
+      <td>Age: 25</td>
+    </tr>
+    <tr>
+      <td>Sign: Cancer ♋︎</td>
+    </tr>
+  </table>
+  <div style="background: aqua; border: 4px groove skyblue; border-bottom-color: white; grid-column: 2 / -1; grid-row: 2;">
+    <h2> Some thoughts... </h2>
+    <article style=" border: 4px groove skyblue; border-bottom-color: white;">
+      <h1> Lorem Ipsum Title </h1>
+      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+      <button>Read more</button>
+    </article>
+    <article style=" border: 4px groove skyblue; border-bottom-color: white;">
+      <h1> Lorem Ipsum Title </h1>
+      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+      <button>Read more</button>
+    </article>
+  </div>
+</main>
